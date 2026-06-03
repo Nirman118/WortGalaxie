@@ -1,0 +1,350 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-06-03T19:35:33.354Z",
+  "total_topics": 21,
+  "total_words": 147,
+  "levels": {
+    "A1": [
+      {
+        "id": "begruessing",
+        "topic": "Begrüßung",
+        "chapter": "A1 · Greetings",
+        "keys": [
+          "begrüßung",
+          "hallo",
+          "tschüss",
+          "wiedersehen"
+        ],
+        "word_count": 7,
+        "sa_count": 1,
+        "has_story": true,
+        "file": "a1/begruessing.json"
+      },
+      {
+        "id": "berufe",
+        "topic": "Berufe",
+        "chapter": "A1 · Work & Professions",
+        "keys": [
+          "berufe",
+          "beruf",
+          "job",
+          "arzt",
+          "lehrer"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "a1/berufe.json"
+      },
+      {
+        "id": "essen",
+        "topic": "Essen & Trinken",
+        "chapter": "A1 · Food & Drink",
+        "keys": [
+          "essen",
+          "trinken",
+          "food",
+          "brot",
+          "obst",
+          "kochen"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "a1/essen.json"
+      },
+      {
+        "id": "familie",
+        "topic": "Familie",
+        "chapter": "A1 · People & Family",
+        "keys": [
+          "familie",
+          "mutter",
+          "vater",
+          "kind",
+          "geschwister"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "a1/familie.json"
+      },
+      {
+        "id": "tagesablauf_a1",
+        "topic": "Tagesablauf",
+        "chapter": "A1 · Daily Routine",
+        "keys": [
+          "tagesablauf",
+          "routine",
+          "morgen",
+          "abend",
+          "alltag"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "a1/tagesablauf_a1.json"
+      },
+      {
+        "id": "wohnung",
+        "topic": "Wohnung",
+        "chapter": "A1 · Home & Living",
+        "keys": [
+          "wohnung",
+          "zimmer",
+          "zuhause",
+          "apartment",
+          "wohnen"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "a1/wohnung.json"
+      }
+    ],
+    "A2": [
+      {
+        "id": "arbeit",
+        "topic": "Arbeit",
+        "chapter": "A2 · Work & Office",
+        "keys": [
+          "arbeit",
+          "büro",
+          "kollege",
+          "gehalt",
+          "bewerbung"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "a2/arbeit.json"
+      },
+      {
+        "id": "schule",
+        "topic": "Schule",
+        "chapter": "A2 · School & Learning",
+        "keys": [
+          "schule",
+          "lernen",
+          "unterricht",
+          "prüfung",
+          "hausaufgaben"
+        ],
+        "word_count": 7,
+        "sa_count": 3,
+        "has_story": true,
+        "file": "a2/schule.json"
+      },
+      {
+        "id": "sport",
+        "topic": "Sport",
+        "chapter": "A2 · Sport & Fitness",
+        "keys": [
+          "sport",
+          "fußball",
+          "laufen",
+          "schwimmen",
+          "training"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "a2/sport.json"
+      },
+      {
+        "id": "tagesablauf_a2",
+        "topic": "Tagesablauf",
+        "chapter": "A2 · Daily Routine",
+        "keys": [
+          "tagesablauf",
+          "routine",
+          "pendeln",
+          "alltag"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "a2/tagesablauf_a2.json"
+      },
+      {
+        "id": "urlaub",
+        "topic": "Urlaub",
+        "chapter": "A2 · Travel & Holidays",
+        "keys": [
+          "urlaub",
+          "reisen",
+          "strand",
+          "hotel",
+          "flughafen"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "a2/urlaub.json"
+      },
+      {
+        "id": "wetter",
+        "topic": "Wetter",
+        "chapter": "A2 · Weather & Seasons",
+        "keys": [
+          "wetter",
+          "regen",
+          "sonne",
+          "temperatur",
+          "jahreszeit"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "a2/wetter.json"
+      }
+    ],
+    "B1": [
+      {
+        "id": "gefuehle",
+        "topic": "Gefühle",
+        "chapter": "B1 · Emotions & Feelings",
+        "keys": [
+          "gefühle",
+          "emotions",
+          "angst",
+          "freude",
+          "liebe"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "b1/gefuehle.json"
+      },
+      {
+        "id": "gesundheit",
+        "topic": "Gesundheit",
+        "chapter": "B1 · Health & Body",
+        "keys": [
+          "gesundheit",
+          "health",
+          "ernährung",
+          "krank",
+          "medikament"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "b1/gesundheit.json"
+      },
+      {
+        "id": "karriere",
+        "topic": "Karriere",
+        "chapter": "B1 · Career & Work",
+        "keys": [
+          "karriere",
+          "bewerbung",
+          "lebenslauf",
+          "beförderung",
+          "weiterbildung"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "b1/karriere.json"
+      },
+      {
+        "id": "sprache",
+        "topic": "Sprache lernen",
+        "chapter": "B1 · Language & Learning",
+        "keys": [
+          "sprache",
+          "vokabeln",
+          "grammatik",
+          "aussprache",
+          "fremdsprache"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "b1/sprache.json"
+      },
+      {
+        "id": "umwelt",
+        "topic": "Umwelt",
+        "chapter": "B1 · Environment & Climate",
+        "keys": [
+          "umwelt",
+          "klima",
+          "recycling",
+          "nachhaltig",
+          "energie"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "b1/umwelt.json"
+      }
+    ],
+    "B2": [
+      {
+        "id": "klimawandel",
+        "topic": "Klimawandel",
+        "chapter": "B2 · Climate Change",
+        "keys": [
+          "klimawandel",
+          "emissionen",
+          "erneuerbar",
+          "co2",
+          "energiewende"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "b2/klimawandel.json"
+      },
+      {
+        "id": "kommunikation",
+        "topic": "Kommunikation",
+        "chapter": "B2 · Communication",
+        "keys": [
+          "kommunikation",
+          "dialog",
+          "missverständnis",
+          "ausdrücken"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "b2/kommunikation.json"
+      },
+      {
+        "id": "politik",
+        "topic": "Politik",
+        "chapter": "B2 · Politics & Society",
+        "keys": [
+          "politik",
+          "demokratie",
+          "wahl",
+          "parlament",
+          "partei"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "b2/politik.json"
+      },
+      {
+        "id": "wirtschaft",
+        "topic": "Wirtschaft",
+        "chapter": "B2 · Economy & Finance",
+        "keys": [
+          "wirtschaft",
+          "inflation",
+          "steuern",
+          "unternehmen",
+          "börse"
+        ],
+        "word_count": 7,
+        "sa_count": 2,
+        "has_story": true,
+        "file": "b2/wirtschaft.json"
+      }
+    ]
+  }
+}

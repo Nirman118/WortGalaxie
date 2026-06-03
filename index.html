@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Wortgalaxie · German Vocabulary Explorer</title>
+<style>
+
+/* ── Google Fonts ─────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600;700;800&display=swap');
+
+/* ── Design tokens ────────────────────────────────── */
+:root,[data-theme="dark"]{
+  --bg:#05081a;
+  --bg2:#0c1030;
+  --sf:rgba(255,255,255,.06);
+  --sf2:rgba(255,255,255,.10);
+  --sf3:rgba(255,255,255,.15);
+  --bd:rgba(255,255,255,.12);
+  --bd2:rgba(255,255,255,.22);
+  --tx:#eeeadc;
+  --tx2:#b0b8d8;
+  --tx3:#8890b0;
+  --ac:#7ec8ff;
+  --acb:rgba(126,200,255,.12);
+  --acbd:rgba(126,200,255,.35);
+  --btnbg:#2060c0;
+  --btnhv:#3070d8;
+  --stbg:rgba(255,255,255,.05);
+  --stbd:rgba(255,255,255,.10);
+  --strbg:rgba(60,20,130,.12);
+  --strbd:rgba(130,100,220,.28);
+  --hero-glow:rgba(126,200,255,.07);
+  /* 3D card shadows */
+  --card-shadow:0 4px 0 rgba(0,0,0,.45),0 8px 24px rgba(0,0,0,.35);
+  --card-hover-shadow:0 7px 0 rgba(0,0,0,.4),0 14px 32px rgba(0,0,0,.4);
+  --card-top:rgba(255,255,255,.07);
+  --green:#3ecf70; --blue:#7ec8ff; --amber:#f5c842; --red:#ff7070; --purple:#c0a0ff;
+}
+[data-theme="light"]{
+  --bg:#f5f0e8;
+  --bg2:#ebe6d8;
+  --sf:rgba(255,255,255,.96);
+  --sf2:rgba(255,255,255,.80);
+  --sf3:rgba(255,255,255,.65);
+  --bd:rgba(40,30,10,.18);
+  --bd2:rgba(40,30,10,.32);
+  --tx:#0e0c06;
+  --tx2:#2e2a1e;
+  --tx3:#5a5040;
+  --ac:#0d4a90;
+  --acb:rgba(13,74,144,.13);
+  --acbd:rgba(13,74,144,.38);
+  --btnbg:#0d4a90;
+  --btnhv:#1558a8;
+  --stbg:rgba(255,255,255,.88);
+  --stbd:rgba(40,30,10,.14);
+  --strbg:rgba(200,185,240,.22);
+  --strbd:rgba(110,80,200,.28);
+  --hero-glow:rgba(13,74,144,.06);
+  --card-shadow:0 4px 0 rgba(0,0,0,.20),0 8px 20px rgba(0,0,0,.12);
+  --card-hover-shadow:0 7px 0 rgba(0,0,0,.18),0 14px 28px rgba(0,0,0,.15);
+  --card-top:rgba(255,255,255,.95);
+  --green:#0f6030; --blue:#0d4a90; --amber:#6a4400; --red:#8c1f1f; --purple:#4a2898;
+}
+
+/* ── Reset ────────────────────────────────────────── */
+*{box-sizing:border-box;margin:0;padding:0;}
+
+/* ── Body ─────────────────────────────────────────── */
+body{
+  background:var(--bg);color:var(--tx);
+  font-family:'Nunito Sans',system-ui,sans-serif;
+  font-size:17px;min-height:100vh;
+  padding:0 1.25rem 6rem;
+  overflow-x:hidden;
+  transition:background .3s,color .3s;
+  letter-spacing:.01em;
+}
+
+/* ── Ambient background ───────────────────────────── */
+#stars{position:fixed;top:0;left:0;width:1px;height:1px;z-index:-3;}
+#nebula{
+  position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:
+    radial-gradient(ellipse 65% 45% at 12% 20%,rgba(55,25,130,.22) 0%,transparent 70%),
+    radial-gradient(ellipse 55% 38% at 88% 72%,rgba(15,55,130,.18) 0%,transparent 65%);
+}
+[data-theme="light"] #nebula,[data-theme="light"] #stars{opacity:0;}
+[data-theme="light"] body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:repeating-linear-gradient(to bottom,transparent,transparent 28px,rgba(60,50,30,.055) 28px,rgba(60,50,30,.055) 29px);
+}
+
+/* ── Layout ───────────────────────────────────────── */
+.container{max-width:940px;margin:0 auto;position:relative;z-index:1;}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:20px;backdrop-filter:blur(8px);}
+
+/* ── 3D card mixin ────────────────────────────────── */
+.card3d{
+  background:var(--sf);
+  border:1px solid var(--bd);
+  border-radius:18px;
+  backdrop-filter:blur(8px);
+  box-shadow:var(--card-shadow);
+  position:relative;
+  transition:transform .18s cubic-bezier(.34,1.4,.64,1),box-shadow .18s;
+}
+.card3d:hover{transform:translateY(-4px);box-shadow:var(--card-hover-shadow);}
+.card3d::before{
+  content:"";position:absolute;inset:0;
+  border-radius:18px;
+  background:linear-gradient(160deg,var(--card-top) 0%,transparent 45%);
+  pointer-events:none;
+}
+
+/* ── Header ───────────────────────────────────────── */
+.header{text-align:center;padding:2.8rem 0 1.8rem;position:relative;}
+.logo{
+  font-family:'Nunito',sans-serif;
+  font-size:60px;font-weight:900;
+  letter-spacing:-.01em;line-height:1;
+}
+[data-theme="dark"] .logo{
+  text-shadow:0 0 60px rgba(126,200,255,.4),0 0 120px rgba(126,200,255,.15);
+}
+.logo span{color:var(--ac);}
+.logo-sub{
+  font-size:11px;letter-spacing:.20em;text-transform:uppercase;
+  color:var(--tx3);font-family:'Nunito Sans',sans-serif;margin-top:5px;font-weight:700;
+}
+.tagline{font-size:17px;color:var(--tx2);margin-top:9px;font-weight:700;}
+.free-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:14px;padding:6px 18px;border-radius:20px;
+  border:1.5px solid rgba(80,210,100,.45);
+  color:var(--green);margin-top:11px;
+  background:rgba(50,150,70,.12);
+  font-weight:800;letter-spacing:.01em;
+}
+
+/* ── Theme toggle ─────────────────────────────────── */
+.theme-btn{
+  position:absolute;right:0;top:2.8rem;
+  background:var(--sf2);border:1.5px solid var(--bd2);
+  border-radius:22px;padding:8px 18px;
+  cursor:pointer;font-family:'Nunito Sans',sans-serif;
+  font-size:15px;font-weight:700;color:var(--tx2);
+  transition:background .15s,border-color .15s;
+}
+.theme-btn:hover{background:var(--sf3);border-color:var(--ac);color:var(--ac);}
+
+/* ── Level pills ──────────────────────────────────── */
+.level-row{display:flex;gap:9px;justify-content:center;margin-bottom:1.5rem;flex-wrap:wrap;}
+.lvl-btn{
+  padding:9px 22px;border-radius:22px;
+  border:1.5px solid var(--bd2);
+  background:transparent;color:var(--tx2);
+  font-family:'Nunito',sans-serif;font-size:16px;font-weight:800;
+  cursor:pointer;transition:all .16s;letter-spacing:.01em;
+}
+.lvl-btn:hover,.lvl-btn.active{
+  background:var(--acb);border-color:var(--ac);color:var(--ac);
+  transform:translateY(-2px);
+  box-shadow:0 3px 12px rgba(126,200,255,.2);
+}
+.lvl-btn.active{font-weight:900;}
+
+/* ── Search card ──────────────────────────────────── */
+.search-card{padding:1.5rem 1.5rem 1.2rem;margin-bottom:1.3rem;}
+.search-row{display:flex;gap:10px;flex-wrap:wrap;}
+.inp,.sel{
+  padding:12px 18px;border:1.5px solid var(--bd2);
+  border-radius:13px;background:var(--sf2);
+  color:var(--tx);font-family:'Nunito Sans',sans-serif;
+  font-size:17px;font-weight:700;outline:none;
+  transition:border-color .15s,box-shadow .15s;
+}
+.inp{flex:1;min-width:140px;}
+.inp::placeholder{color:var(--tx3);font-weight:500;}
+.inp:focus,.sel:focus{
+  border-color:var(--ac);
+  box-shadow:0 0 0 3px var(--acb);
+}
+.sel{min-width:200px;max-width:235px;cursor:pointer;font-size:16px;}
+.sel option{background:var(--bg);color:var(--tx);}
+.go-btn{
+  padding:12px 28px;border-radius:13px;border:none;
+  background:var(--btnbg);color:#fff;
+  font-family:'Nunito',sans-serif;font-size:18px;font-weight:900;
+  cursor:pointer;
+  transition:background .15s,transform .12s;
+  white-space:nowrap;
+  box-shadow:0 4px 0 rgba(0,0,0,.35);
+  letter-spacing:.01em;
+}
+.go-btn:hover{background:var(--btnhv);transform:translateY(-2px);box-shadow:0 6px 0 rgba(0,0,0,.3);}
+.go-btn:active{transform:translateY(1px);box-shadow:0 2px 0 rgba(0,0,0,.4);}
+.cat-sugg{overflow:hidden;max-height:0;transition:max-height .4s,opacity .3s;opacity:0;}
+.cat-sugg.open{max-height:240px;opacity:1;}
+.chips,.sug-chips{display:flex;flex-wrap:wrap;gap:8px;}
+.chips{margin-top:13px;}
+.chip,.sug-chip{
+  padding:6px 15px;border-radius:20px;font-size:15px;font-weight:700;
+  font-family:'Nunito Sans',sans-serif;border:1.5px solid var(--bd2);
+  color:var(--tx2);cursor:pointer;background:transparent;transition:all .13s;
+}
+.sug-chip{border-color:var(--acbd);color:var(--ac);}
+.sug-chip:hover,.chip:hover{
+  background:var(--acb);color:var(--tx);
+  border-color:var(--acbd);transform:translateY(-1px);
+}
+.sug-intro{font-size:14px;color:var(--tx3);margin-bottom:9px;margin-top:13px;font-weight:700;}
+
+/* ── Word Ticker / Marquee ────────────────────────── */
+.word-ticker{
+  overflow:hidden;white-space:nowrap;
+  margin:0 0 1.6rem;
+  padding:.5rem 0;
+  border-top:1px solid var(--bd);
+  border-bottom:1px solid var(--bd);
+  mask-image:linear-gradient(to right,transparent 0%,black 8%,black 92%,transparent 100%);
+}
+.word-ticker-inner{
+  display:inline-block;
+  animation:ticker 38s linear infinite;
+  font-size:15px;font-weight:600;color:var(--tx3);
+  letter-spacing:.04em;
+}
+.word-ticker-inner:hover{animation-play-state:paused;}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── Hero area (empty state) ──────────────────────── */
+.hero-area{
+  display:flex;gap:2.8rem;align-items:center;
+  padding:2.2rem 0 2.8rem;flex-wrap:wrap;
+}
+.hero-preview{
+  flex:0 0 auto;
+  background:var(--hero-glow);
+  border:1.5px solid var(--bd);border-radius:22px;
+  padding:.6rem;backdrop-filter:blur(4px);
+  box-shadow:var(--card-shadow);
+}
+.hero-preview svg{width:272px;height:170px;display:block;}
+.hero-text{flex:1;min-width:240px;}
+.hero-title{
+  font-family:'Nunito',sans-serif;font-weight:900;
+  font-size:32px;line-height:1.2;margin-bottom:.8rem;
+}
+[data-theme="dark"] .hero-title{color:var(--ac);}
+[data-theme="light"] .hero-title{color:var(--tx);}
+.hero-desc{font-size:17px;color:var(--tx2);line-height:1.7;margin-bottom:1.3rem;font-weight:600;}
+.hero-stats{display:flex;gap:1rem;flex-wrap:wrap;}
+.hstat{
+  display:flex;flex-direction:column;align-items:center;
+  background:var(--sf2);border:1.5px solid var(--bd);
+  border-radius:14px;padding:.7rem 1.2rem;min-width:68px;
+  box-shadow:0 3px 0 rgba(0,0,0,.22);
+}
+.hstat-n{font-family:'Nunito',sans-serif;font-size:28px;font-weight:900;color:var(--ac);line-height:1;}
+.hstat-l{font-size:12px;color:var(--tx3);margin-top:3px;font-weight:700;}
+
+/* ── Topic index ──────────────────────────────────── */
+.topic-index{margin-bottom:2.2rem;}
+.ti-header{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:1.1rem;padding-bottom:.7rem;
+  border-bottom:1.5px solid var(--bd);
+}
+.ti-title{font-family:'Nunito',sans-serif;font-size:22px;font-weight:900;color:var(--tx);}
+.ti-count{font-size:14px;color:var(--tx3);font-weight:700;}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(172px,1fr));gap:14px;}
+.topic-card{
+  background:var(--sf);border:1.5px solid var(--bd);
+  border-radius:18px;padding:1.1rem 1.2rem;
+  cursor:pointer;transition:all .18s;
+  position:relative;overflow:hidden;
+  box-shadow:var(--card-shadow);
+}
+.topic-card::before{
+  content:"";position:absolute;inset:0;border-radius:18px;
+  background:linear-gradient(160deg,var(--card-top) 0%,transparent 40%);
+  pointer-events:none;
+}
+.topic-card::after{
+  content:"";position:absolute;inset:0;border-radius:18px;
+  background:radial-gradient(ellipse 80% 60% at 50% 0%,var(--acb),transparent 70%);
+  opacity:0;transition:opacity .2s;pointer-events:none;
+}
+.topic-card:hover{
+  border-color:var(--acbd);
+  transform:translateY(-5px);
+  box-shadow:var(--card-hover-shadow);
+}
+.topic-card:hover::after{opacity:1;}
+.topic-card:focus{outline:2.5px solid var(--ac);outline-offset:3px;}
+.tc-level{
+  display:inline-block;font-size:10px;font-weight:800;
+  padding:2px 9px;border-radius:5px;letter-spacing:.08em;
+  background:var(--acb);color:var(--ac);border:1px solid var(--acbd);
+  font-family:'Nunito Sans',sans-serif;margin-bottom:5px;
+}
+.tc-chap{display:block;font-size:11px;color:var(--tx3);font-weight:700;letter-spacing:.03em;margin-bottom:6px;}
+.tc-name{font-family:'Nunito',sans-serif;font-size:21px;font-weight:900;color:var(--tx);line-height:1.2;margin-bottom:5px;}
+.tc-words{font-size:13px;color:var(--tx3);font-weight:700;}
+[data-theme="light"] .tc-name{color:#0e0c06;}
+[data-theme="light"] .tc-words{color:#5a5040;}
+[data-theme="light"] .tc-chap{color:#5a5040;}
+[data-theme="light"] .nf-t{color:#0e0c06;}
+[data-theme="light"] .nf-lv{color:#5a5040;}
+
+/* ── Not-found ────────────────────────────────────── */
+.nf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px;margin-top:18px;text-align:left;}
+.nf-card{background:var(--sf);border:1.5px solid var(--bd);border-radius:14px;padding:11px 15px;cursor:pointer;transition:all .14s;box-shadow:var(--card-shadow);}
+.nf-card:hover{background:var(--acb);border-color:var(--acbd);transform:translateY(-3px);}
+.nf-lv{font-size:11px;font-weight:700;color:var(--tx3);margin-bottom:4px;}
+.nf-t{font-size:18px;font-weight:800;color:var(--tx);}
+
+/* ── Result header ────────────────────────────────── */
+.result-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1.3rem;flex-wrap:wrap;gap:10px;}
+.result-title{font-family:'Nunito',sans-serif;font-size:38px;font-weight:900;color:var(--tx);}
+[data-theme="light"] .result-title{color:#0e0c06;}
+.result-sub{font-size:15px;color:var(--tx3);margin-top:4px;font-weight:700;}
+[data-theme="light"] .result-sub{color:#5a5040;}
+.btn-ghost{padding:9px 22px;border-radius:13px;border:1.5px solid var(--bd2);background:transparent;color:var(--tx);font-family:'Nunito Sans',sans-serif;font-size:16px;font-weight:700;cursor:pointer;transition:background .13s;}
+.btn-ghost:hover{background:var(--sf2);}
+
+/* ── Learn banner ─────────────────────────────────── */
+.learn-banner{margin-bottom:1.6rem;}
+.learn-steps{display:flex;gap:10px;flex-wrap:wrap;}
+.learn-step{
+  flex:1;min-width:200px;
+  display:flex;align-items:flex-start;gap:14px;
+  padding:1rem 1.2rem;
+  border-radius:16px;
+  border:1.5px solid var(--bd);
+  background:var(--sf);
+  position:relative;
+  overflow:hidden;
+}
+.learn-step::before{
+  content:"";position:absolute;inset:0;
+  border-radius:16px;
+  background:linear-gradient(135deg,var(--card-top) 0%,transparent 60%);
+  pointer-events:none;
+}
+.step-icon{
+  font-size:30px;flex-shrink:0;
+  width:52px;height:52px;display:flex;align-items:center;justify-content:center;
+  border-radius:12px;
+  background:var(--acb);border:1.5px solid var(--acbd);
+}
+.step-num{
+  font-family:'Nunito',sans-serif;font-size:10px;font-weight:900;
+  color:var(--ac);letter-spacing:.12em;text-transform:uppercase;
+  margin-bottom:4px;
+}
+.step-title{font-family:'Nunito',sans-serif;font-size:16px;font-weight:900;color:var(--tx);line-height:1.2;}
+[data-theme="light"] .step-title{color:#0e0c06;}
+.step-desc{font-size:13px;color:var(--tx2);font-weight:600;line-height:1.5;margin-top:4px;}
+[data-theme="light"] .step-desc{color:#2e2a1e;}
+
+/* ── Legend ───────────────────────────────────────── */
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:1.1rem;}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:16px;font-weight:700;color:var(--tx2);}
+.ldot{width:11px;height:11px;border-radius:50%;flex-shrink:0;}
+
+/* ── Word web ─────────────────────────────────────── */
+.web-outer{margin-bottom:1.6rem;}
+.web-controls{display:flex;gap:7px;justify-content:flex-end;margin-bottom:7px;align-items:center;}
+.wc-btn{padding:6px 15px;border-radius:9px;font-size:17px;font-weight:700;border:1.5px solid var(--bd2);background:var(--sf);color:var(--tx2);cursor:pointer;font-family:'Nunito Sans',sans-serif;transition:all .13s;}
+.wc-btn:hover{background:var(--acb);color:var(--tx);border-color:var(--acbd);}
+.web-hint{font-size:13px;color:var(--tx3);margin-right:auto;font-weight:700;}
+.web-card{padding:1.1rem;overflow:hidden;touch-action:none;cursor:grab;position:relative;}
+.web-card:active{cursor:grabbing;}
+.web-card svg{display:block;width:100%;overflow:visible;transform-origin:50% 50%;}
+.wn{cursor:pointer;transform-box:fill-box;transform-origin:50% 50%;transition:transform .2s cubic-bezier(.34,1.56,.64,1);}
+.wn:hover{transform:scale(1.14);filter:drop-shadow(0 0 10px rgba(126,200,255,.6));}
+.vn{cursor:pointer;transform-box:fill-box;transform-origin:50% 50%;transition:transform .18s cubic-bezier(.34,1.56,.64,1);}
+.vn:hover{transform:scale(1.24);filter:drop-shadow(0 0 8px rgba(126,200,255,.65));}
+
+/* ═══════════════════════════════════════════════════════
+   SECTION BLOCKS — each section has its own identity
+══════════════════════════════════════════════════════ */
+.section-block{
+  border-radius:20px;margin-bottom:1.8rem;
+  overflow:hidden;
+  box-shadow:var(--card-shadow);
+}
+
+/* Section label strip */
+.sec-label-strip{
+  display:flex;align-items:center;gap:12px;
+  padding:.8rem 1.4rem;
+  font-family:'Nunito',sans-serif;font-weight:900;font-size:17px;
+  letter-spacing:.02em;
+  border-bottom:1.5px solid var(--bd);
+}
+.sec-label-icon{font-size:20px;}
+.sec-label-text{flex:1;}
+
+/* Sentences block — Electric Blue theme */
+.sents-block{background:rgba(10,30,90,.55);border:1.5px solid rgba(126,200,255,.22);}
+[data-theme="light"] .sents-block{background:rgba(225,237,255,.88);border:1.5px solid rgba(13,74,144,.22);}
+.blue-strip{background:rgba(126,200,255,.12);color:var(--blue);}
+[data-theme="light"] .blue-strip{background:rgba(13,74,144,.10);color:#0d4a90;}
+.sents-block .sent-card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(126,200,255,.12);
+  border-radius:13px;padding:15px 22px;margin:0 1rem 10px;
+}
+.sents-block .sent-card:first-child{margin-top:1rem;}
+.sents-block .sent-card:last-child{margin-bottom:1rem;}
+[data-theme="light"] .sents-block .sent-card{background:rgba(255,255,255,.94);border-color:rgba(13,74,144,.16);}
+.sent-de{font-size:20px;font-weight:800;color:var(--tx);margin-bottom:5px;font-family:'Nunito',sans-serif;}
+.sent-en{font-size:15px;color:var(--tx2);font-style:italic;font-weight:600;}
+[data-theme="light"] .sent-de{color:#0e0c06;}
+[data-theme="light"] .sent-en{color:#2e2a1e;}
+.shuf-btn{margin-left:auto;padding:5px 16px;border-radius:20px;font-size:15px;font-weight:800;font-family:'Nunito Sans',sans-serif;border:1.5px solid var(--acbd);background:var(--acb);color:var(--ac);cursor:pointer;transition:all .13s;}
+.shuf-btn:hover{background:var(--btnbg);color:#fff;border-color:var(--btnbg);}
+
+/* Story block — Deep Purple theme */
+.story-block{background:rgba(40,10,100,.45);border:1.5px solid rgba(192,160,255,.22);}
+[data-theme="light"] .story-block{background:rgba(238,230,255,.88);border:1.5px solid rgba(74,40,152,.20);}
+.purple-strip{background:rgba(192,160,255,.12);color:var(--purple);}
+[data-theme="light"] .purple-strip{background:rgba(74,40,152,.10);color:#4a2898;}
+.story-card{background:transparent;border:none;padding:1.2rem 1.4rem;}
+.story-cols{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;align-items:start;}
+@media(max-width:620px){.story-cols{grid-template-columns:1fr;gap:1rem;}}
+.story-col-hd{font-family:'Nunito',sans-serif;font-size:12px;font-weight:900;letter-spacing:.10em;text-transform:uppercase;margin-bottom:.7rem;padding-bottom:.4rem;border-bottom:1.5px solid var(--bd);}
+.story-col-de .story-col-hd{color:var(--purple);}
+.story-col-en .story-col-hd{color:var(--tx3);}
+[data-theme="light"] .story-col-de .story-col-hd{color:#4a2898;}
+[data-theme="light"] .story-col-en .story-col-hd{color:#5a5040;}
+.story-txt{font-size:18px;font-weight:700;line-height:2.0;color:var(--tx);font-family:'Nunito Sans',sans-serif;}
+.story-txt .hl{color:var(--purple);border-bottom:2px dotted rgba(192,160,255,.5);font-weight:900;}
+[data-theme="light"] .story-txt{color:#0e0c06;}
+[data-theme="light"] .story-txt .hl{color:#4a2898;}
+.story-en{font-size:16px;color:var(--tx2);font-style:italic;line-height:1.95;font-weight:600;}
+[data-theme="light"] .story-en{color:#2e2a1e;}
+
+/* Word grid block — Amber / Gold theme */
+.word-block{background:rgba(60,35,0,.45);border:1.5px solid rgba(245,200,66,.18);}
+[data-theme="light"] .word-block{background:rgba(255,248,220,.80);border:1.5px solid rgba(140,100,0,.22);}
+.amber-strip{background:rgba(245,200,66,.10);color:var(--amber);}
+[data-theme="light"] .amber-strip{background:rgba(180,130,0,.10);color:#6a4400;}
+[data-theme="light"] .amber-strip .sec-label-text,[data-theme="light"] .amber-strip .sec-label-icon{color:#6a4400;}
+[data-theme="light"] .word-card{background:#ffffff;border-color:rgba(40,30,10,.18);}
+.word-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(172px,1fr));gap:12px;padding:1.2rem 1.2rem 1.4rem;}
+.word-card{
+  background:var(--sf2);border:1.5px solid var(--bd);
+  border-radius:16px;padding:14px 16px;
+  transition:transform .16s,border-color .16s,box-shadow .16s;
+  box-shadow:0 3px 0 rgba(0,0,0,.3),0 6px 16px rgba(0,0,0,.18);
+  position:relative;
+}
+.word-card::before{content:"";position:absolute;inset:0;border-radius:16px;background:linear-gradient(160deg,var(--card-top) 0%,transparent 40%);pointer-events:none;}
+.word-card:hover{transform:translateY(-4px);border-color:var(--bd2);box-shadow:0 6px 0 rgba(0,0,0,.28),0 10px 24px rgba(0,0,0,.22);}
+.type-badge{display:inline-block;font-size:11px;font-weight:800;padding:3px 10px;border-radius:6px;margin-bottom:7px;letter-spacing:.05em;font-family:'Nunito Sans',sans-serif;}
+/* Ensure badge text is always dark enough on its bg */
+[data-theme="light"] .type-badge{filter:saturate(1.3) brightness(.75);}
+
+.word-de{font-family:'Nunito',sans-serif;font-size:21px;font-weight:900;color:var(--tx);margin-bottom:3px;}
+.word-art{font-weight:700;color:var(--tx2);}
+.word-en{font-size:15px;color:var(--tx2);font-style:italic;font-weight:700;}
+.vpills{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;}
+.vp{font-size:12px;font-weight:800;background:var(--acb);border:1.5px solid var(--acbd);color:var(--ac);padding:3px 10px;border-radius:12px;}
+.vp em{color:var(--tx3);font-weight:600;font-style:normal;}
+/* Light mode overrides: enforce dark text on light card bg */
+[data-theme="light"] .word-de{color:#0e0c06;}
+[data-theme="light"] .word-art{color:#2e2a1e;}
+[data-theme="light"] .word-en{color:#2e2a1e;}
+[data-theme="light"] .vp{color:#0d4a90;background:rgba(13,74,144,.10);border-color:rgba(13,74,144,.35);}
+[data-theme="light"] .vp em{color:#5a5040;}
+
+/* ═══════════════════════════════════════════════════════
+   LEDGER — Synonyme & Antonyme
+   Identity: clean dual-column accounting ledger, green/red split
+══════════════════════════════════════════════════════ */
+.ledger-block{
+  background:rgba(10,28,18,.55);
+  border:1.5px solid rgba(62,207,112,.18);
+}
+[data-theme="light"] .ledger-block{background:rgba(220,250,232,.88);border-color:rgba(15,96,48,.20);}
+.ledger-block .sec-label-strip{background:rgba(62,207,112,.10);color:var(--green);}
+[data-theme="light"] .ledger-block .sec-label-strip{background:rgba(15,96,48,.10);color:#0f6030;}
+
+/* Table structure */
+.sa-table{padding:.4rem 1.4rem 1.4rem;display:flex;flex-direction:column;gap:0;}
+.sa-thead{
+  display:grid;grid-template-columns:180px 1fr 1fr;
+  padding:.7rem 0 .7rem;
+  border-bottom:2px solid var(--bd);
+  margin-bottom:.2rem;
+}
+.sa-th{
+  font-family:'Nunito',sans-serif;font-size:13px;font-weight:900;
+  letter-spacing:.07em;text-transform:uppercase;
+}
+.word-th{color:var(--tx3);}
+.syn-th{color:var(--green);padding-left:12px;}
+.ant-th{color:var(--red);padding-left:12px;}
+[data-theme="light"] .word-th{color:#5a5040;}
+[data-theme="light"] .syn-th{color:#0f6030;}
+[data-theme="light"] .ant-th{color:#8c1f1f;}
+.sa-trow{
+  display:grid;grid-template-columns:180px 1fr 1fr;
+  align-items:start;
+  padding:.9rem 0;
+  border-bottom:1px solid var(--bd);
+  gap:0 8px;
+}
+.sa-trow:last-child{border-bottom:none;}
+.sa-trow:hover{background:rgba(255,255,255,.025);}
+[data-theme="light"] .sa-trow:hover{background:rgba(0,0,0,.025);}
+.sa-td{padding:0;}
+.word-td{
+  display:flex;flex-direction:column;gap:4px;
+  padding-right:16px;
+  border-right:1.5px solid var(--bd);
+}
+.sa-word-label{
+  font-family:'Nunito',sans-serif;font-size:19px;font-weight:900;
+  color:var(--tx);line-height:1.1;
+}
+[data-theme="light"] .sa-word-label{color:#0e0c06;}
+.sa-type-lbl{
+  font-size:11px;font-weight:800;letter-spacing:.06em;
+  color:var(--tx3);text-transform:uppercase;
+  font-family:'Nunito Sans',sans-serif;
+}
+[data-theme="light"] .sa-type-lbl{color:#5a5040;}
+.syn-td,.ant-td{
+  display:flex;flex-wrap:wrap;align-items:flex-start;
+  gap:6px;padding-left:12px;
+}
+.ltag-s,.ltag-a{
+  display:inline-flex;flex-direction:column;
+  font-size:13px;font-weight:700;
+  padding:4px 12px 5px;border-radius:10px;
+  font-family:'Nunito Sans',sans-serif;line-height:1.2;
+}
+.ltag-s{background:rgba(62,207,112,.14);border:1.5px solid rgba(62,207,112,.32);color:var(--green);}
+.ltag-a{background:rgba(255,112,112,.14);border:1.5px solid rgba(255,112,112,.32);color:var(--red);}
+[data-theme="light"] .ltag-s{color:#0f6030;background:rgba(15,96,48,.10);border-color:rgba(15,96,48,.32);}
+[data-theme="light"] .ltag-a{color:#8c1f1f;background:rgba(140,31,31,.10);border-color:rgba(140,31,31,.32);}
+.ltag-s em,.ltag-a em{font-size:11px;color:var(--tx3);font-style:normal;font-weight:600;margin-top:2px;}
+[data-theme="light"] .ltag-s em,[data-theme="light"] .ltag-a em{color:#5a5040;}
+@media(max-width:650px){
+  .sa-thead{display:none;}
+  .sa-trow{grid-template-columns:1fr;gap:8px;}
+  .word-td{border-right:none;border-bottom:1px solid var(--bd);padding-bottom:8px;padding-right:0;}
+  .syn-td,.ant-td{padding-left:0;}
+  .syn-td::before{content:"Synonyme";display:block;width:100%;font-size:11px;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px;}
+  .ant-td::before{content:"Antonyme";display:block;width:100%;font-size:11px;font-weight:800;color:var(--red);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px;}
+}
+
+
+.score-pips{display:flex;gap:5px;align-items:center;font-size:18px;color:var(--tx3);}
+.score-pips.done{color:#3ecf70;}
+
+/* ═══════════════════════════════════════════════════════
+   DOJO — Vocabulary Challenge
+   Identity: dark dojo/duel aesthetic, red + gold accents
+══════════════════════════════════════════════════════ */
+.dojo-block{
+  background:rgba(30,8,8,.65);
+  border:1.5px solid rgba(255,112,70,.22);
+}
+[data-theme="light"] .dojo-block{background:rgba(255,240,235,.88);border-color:rgba(160,60,20,.22);}
+.dojo-header{
+  display:flex;align-items:center;gap:14px;
+  padding:1rem 1.5rem 1rem;
+  background:rgba(255,100,60,.10);
+  border-bottom:1.5px solid rgba(255,112,70,.22);
+  flex-wrap:wrap;
+}
+.dojo-icon{font-size:28px;flex-shrink:0;}
+.dojo-title{
+  font-family:'Nunito',sans-serif;font-size:20px;font-weight:900;
+  color:#ff8060;letter-spacing:.01em;
+}
+[data-theme="light"] .dojo-title{color:#c03020;}
+.dojo-tagline{font-size:13px;font-weight:800;color:rgba(255,128,96,.65);letter-spacing:.06em;text-transform:uppercase;margin-top:2px;font-family:'Nunito Sans',sans-serif;}
+.dojo-sub{font-size:14px;color:var(--tx3);font-weight:600;margin-top:4px;}
+.game-score{font-size:18px;font-weight:900;color:#ff8060;margin-left:auto;font-family:'Nunito',sans-serif;}
+.game-board{display:flex;flex-direction:column;gap:13px;padding:1rem 1.4rem 1.4rem;}
+.game-row{display:flex;align-items:center;gap:13px;flex-wrap:wrap;}
+.game-prompt{font-family:'Nunito',sans-serif;font-size:20px;font-weight:900;color:var(--tx);min-width:130px;flex:0 0 auto;}
+[data-theme="light"] .game-prompt{color:#0e0c06;}
+.game-hint{font-size:13px;color:var(--tx3);font-style:italic;display:block;margin-top:2px;font-weight:600;}
+.pool{display:flex;flex-wrap:wrap;gap:10px;margin:0 1.4rem 1rem;padding:1rem;background:rgba(255,255,255,.03);border-radius:14px;border:1px solid rgba(255,112,70,.15);}
+.dz{
+  flex:1;min-width:155px;min-height:56px;
+  border:2px dashed rgba(255,112,70,.4);border-radius:14px;
+  padding:8px 14px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:4px;
+  transition:border-color .15s,background .15s;
+  background:rgba(255,100,60,.06);
+}
+.dz.over{border-color:#ff8060;filter:brightness(1.3);}
+.dz.ok{border-color:#3ecf70;background:rgba(40,150,70,.14);border-style:solid;}
+.dz.bad{border-color:#ff4040;background:rgba(200,40,40,.14);animation:shake .38s;}
+@keyframes shake{0%,100%{transform:translateX(0)}25%,75%{transform:translateX(-7px)}50%{transform:translateX(7px)}}
+@keyframes popIn{from{transform:scale(.7);opacity:0}to{transform:scale(1);opacity:1}}
+.dz-ph{font-size:14px;font-weight:700;color:var(--tx3);pointer-events:none;}
+.dz-meaning{font-size:14px;color:#3ecf70;font-style:italic;margin-top:3px;text-align:center;font-weight:700;}
+.chip-placed{font-size:17px;font-family:'Nunito',sans-serif;color:#5ee080;font-weight:800;}
+.dc{
+  padding:9px 18px;border-radius:11px;font-size:17px;font-weight:800;
+  font-family:'Nunito Sans',sans-serif;
+  background:rgba(255,112,70,.14);
+  border:1.5px solid rgba(255,112,70,.35);
+  color:var(--tx);cursor:grab;user-select:none;
+  transition:transform .15s,opacity .15s;touch-action:none;
+}
+[data-theme="light"] .dc{color:#18140a;background:rgba(200,60,20,.12);border-color:rgba(160,60,20,.38);}
+.dc:hover{transform:scale(1.08);box-shadow:0 4px 12px rgba(255,100,60,.25);}
+.dc.dragging{opacity:.35;cursor:grabbing;}
+.dc.placed{opacity:.28;pointer-events:none;border-style:dashed;}
+
+/* Dojo quote */
+.quote-box{text-align:center;padding:1.2rem 1.6rem;background:rgba(255,100,60,.06);border-bottom:1.5px solid rgba(255,112,70,.15);}
+.quote-de{font-family:'Nunito',sans-serif;font-size:19px;font-weight:800;color:#ff9070;line-height:1.6;}
+[data-theme="light"] .quote-de{color:#c03020;}
+.quote-en{font-size:15px;color:var(--tx3);font-style:italic;margin-top:6px;font-weight:600;}
+
+/* Completion banner */
+.completion-banner{
+  display:flex;align-items:center;gap:18px;
+  padding:1.2rem 1.5rem;margin:1rem 1.4rem;
+  background:rgba(40,160,80,.18);border:1.5px solid rgba(62,207,112,.4);
+  border-radius:16px;flex-wrap:wrap;
+  box-shadow:0 4px 0 rgba(0,0,0,.22);
+}
+.completion-banner span{font-size:34px;}
+.completion-banner div{flex:1;font-size:17px;color:var(--tx);font-weight:700;}
+.completion-banner strong{display:block;font-family:'Nunito',sans-serif;font-size:22px;color:#3ecf70;font-weight:900;}
+
+/* ═══════════════════════════════════════════════════════
+   TERMINAL — Word Explorer
+   Identity: code terminal / hacker aesthetic
+══════════════════════════════════════════════════════ */
+.terminal-block{
+  background:#0a0f0a;
+  border:1.5px solid rgba(62,207,112,.25);
+  font-family:'Courier New',Courier,monospace;
+}
+[data-theme="light"] .terminal-block{background:#1a2a1a;border-color:rgba(62,207,112,.35);}
+.terminal-topbar{
+  display:flex;align-items:center;gap:8px;
+  padding:.7rem 1.2rem;
+  background:rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(62,207,112,.18);
+}
+.tb-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0;}
+.tb-title{
+  margin-left:8px;
+  font-size:13px;font-weight:700;
+  color:rgba(62,207,112,.7);
+  letter-spacing:.04em;font-family:'Courier New',monospace;
+}
+.terminal-body{padding:1rem 1.3rem 1.4rem;}
+.term-prompt{
+  font-size:14px;color:rgba(62,207,112,.6);
+  margin-bottom:1rem;letter-spacing:.03em;
+}
+.term-prompt::before{content:"$ ";color:#3ecf70;font-weight:900;}
+.explorer-pool{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:.6rem;}
+.ex-chip{
+  padding:8px 18px;border-radius:8px;font-size:16px;font-weight:700;
+  font-family:'Courier New',monospace;cursor:pointer;border:1px solid transparent;
+  transition:transform .12s,box-shadow .12s;letter-spacing:.03em;
+}
+.ex-chip:hover{transform:scale(1.07);box-shadow:0 3px 10px rgba(0,0,0,.4);}
+.ex-chip.sel{box-shadow:0 0 0 3px #3ecf70;}
+.wd-panel{
+  padding:22px 24px;border-radius:14px;margin-top:12px;
+  animation:wdIn .22s ease both;
+  border:1.5px solid rgba(62,207,112,.25) !important;
+  font-family:'Nunito Sans',sans-serif;
+}
+@keyframes wdIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+.wd-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px;}
+.wd-word{font-family:'Nunito',sans-serif;font-size:32px;font-weight:900;color:#3ecf70;}
+.wd-art{font-size:22px;color:#7ec8ff;font-weight:800;}
+.wd-en{font-size:20px;color:#7ec8ff;font-weight:800;margin-bottom:12px;}
+.wd-def{font-size:17px;font-weight:700;color:var(--tx);margin-bottom:6px;padding-left:18px;position:relative;}
+.wd-def::before{content:"·";position:absolute;left:0;color:#3ecf70;}
+.wd-ex{font-size:14px;color:var(--tx2);font-style:italic;margin-top:4px;padding-left:18px;font-weight:600;}
+.wd-vt{font-size:12px;font-weight:800;color:var(--tx3);margin:13px 0 8px;letter-spacing:.08em;}
+.wd-vpills{display:flex;flex-wrap:wrap;gap:7px;}
+.wd-vp{font-size:13px;font-weight:700;background:rgba(62,207,112,.12);border:1px solid rgba(62,207,112,.3);color:#3ecf70;padding:4px 12px;border-radius:12px;}
+.wd-vp em{color:var(--tx3);font-weight:500;font-style:normal;}
+
+/* ── State ────────────────────────────────────────── */
+.state{text-align:center;padding:4.5rem 1rem;}
+.state-icon{width:68px;height:68px;margin:0 auto 22px;opacity:.2;}
+.state p{font-size:23px;color:var(--tx3);font-weight:800;}
+.state p small{display:block;font-size:16px;margin-top:9px;font-weight:600;}
+
+/* ── Mobile ───────────────────────────────────────── */
+@media(max-width:620px){
+  .logo{font-size:42px;}
+  .result-title{font-size:28px;}
+  .hero-area{flex-direction:column;gap:1.5rem;}
+  .hero-preview svg{width:220px;height:138px;}
+  .hero-title{font-size:26px;}
+  .topic-grid{grid-template-columns:repeat(auto-fill,minmax(144px,1fr));}
+  .search-row{flex-direction:column;}
+  .sel{max-width:100%;}
+  .theme-btn{position:static;margin-bottom:1rem;}
+  .header{padding:1.6rem 0 1.1rem;}
+  /* sa-table mobile handled inside ledger CSS */
+  .word-grid{grid-template-columns:repeat(auto-fill,minmax(144px,1fr));}
+}
+
+
+/* ── AI Fallback UI ───────────────────────────────── */
+.api-bar{
+  display:flex;gap:10px;align-items:center;flex-wrap:wrap;
+  padding:1rem 1.4rem;
+  margin-bottom:1.3rem;
+  border-radius:18px;
+  border:1.5px solid rgba(126,200,255,.22);
+  background:rgba(10,30,90,.5);
+}
+[data-theme="light"] .api-bar{background:rgba(220,235,255,.75);border-color:rgba(13,74,144,.22);}
+.api-bar-icon{font-size:22px;flex-shrink:0;}
+.api-bar-label{font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;color:var(--ac);flex:1;min-width:180px;}
+.api-bar-label small{display:block;font-size:12px;color:var(--tx3);font-weight:600;margin-top:2px;}
+.api-inp{
+  flex:1;min-width:200px;padding:9px 14px;
+  border:1.5px solid var(--bd2);border-radius:10px;
+  background:var(--sf2);color:var(--tx);
+  font-family:'Nunito Sans',sans-serif;font-size:14px;font-weight:700;
+  outline:none;letter-spacing:.04em;
+}
+.api-inp::placeholder{color:var(--tx3);font-weight:500;letter-spacing:.02em;}
+.api-inp:focus{border-color:var(--ac);box-shadow:0 0 0 3px var(--acb);}
+[data-theme="light"] .api-inp{color:#0e0c06;}
+.api-save-btn{
+  padding:9px 18px;border-radius:10px;border:none;
+  background:var(--btnbg);color:#fff;
+  font-family:'Nunito',sans-serif;font-size:14px;font-weight:800;
+  cursor:pointer;transition:background .15s,transform .1s;white-space:nowrap;
+}
+.api-save-btn:hover{background:var(--btnhv);transform:translateY(-1px);}
+.api-status{font-size:12px;font-weight:700;padding:4px 10px;border-radius:8px;white-space:nowrap;}
+.api-status.set{background:rgba(62,207,112,.15);color:var(--green);border:1px solid rgba(62,207,112,.3);}
+.api-status.unset{background:rgba(255,112,70,.12);color:#ff8060;border:1px solid rgba(255,112,70,.25);}
+
+/* Loading state */
+.ai-loading{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:5rem 2rem;text-align:center;gap:1.2rem;
+}
+.ai-spinner{
+  width:56px;height:56px;border-radius:50%;
+  border:3px solid var(--bd);
+  border-top-color:var(--ac);
+  animation:spin .8s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ai-loading-title{font-family:'Nunito',sans-serif;font-size:22px;font-weight:900;color:var(--tx);}
+.ai-loading-sub{font-size:15px;color:var(--tx3);font-weight:600;max-width:340px;line-height:1.6;}
+.ai-loading-steps{display:flex;flex-direction:column;gap:6px;margin-top:.5rem;}
+.ai-step{
+  display:flex;align-items:center;gap:10px;
+  font-size:14px;font-weight:700;color:var(--tx3);
+  padding:6px 16px;border-radius:10px;
+  border:1px solid var(--bd);background:var(--sf);
+  transition:all .3s;
+}
+.ai-step.active{color:var(--ac);border-color:var(--acbd);background:var(--acb);}
+.ai-step.done{color:var(--green);border-color:rgba(62,207,112,.3);background:rgba(62,207,112,.08);}
+.ai-step-icon{font-size:16px;flex-shrink:0;}
+
+/* AI generated badge on result */
+.ai-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11px;font-weight:800;letter-spacing:.06em;
+  padding:3px 10px;border-radius:20px;
+  background:rgba(126,200,255,.12);border:1px solid rgba(126,200,255,.3);
+  color:var(--ac);text-transform:uppercase;margin-left:8px;
+  vertical-align:middle;
+}
+.cached-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:11px;font-weight:800;letter-spacing:.06em;
+  padding:3px 10px;border-radius:20px;
+  background:rgba(62,207,112,.10);border:1px solid rgba(62,207,112,.25);
+  color:var(--green);text-transform:uppercase;margin-left:8px;
+  vertical-align:middle;
+}
+
+</style>
+</head>
+<body>
+<div id="stars"></div><div id="nebula"></div>
+<div class="container">
+
+  <div class="header">
+    <button class="theme-btn" onclick="toggleTheme()" id="tbtn">&#9728;&#65039; Light</button>
+    <div class="logo">Wort<span>galax</span>ie</div>
+    <div class="logo-sub">German Vocabulary Explorer</div>
+    <div class="tagline">Interactive word webs &middot; A1 to B2 &middot; All topics free</div>
+    <div class="free-badge">&#10022; No account &nbsp;&middot;&nbsp; No API key &nbsp;&middot;&nbsp; Works offline</div>
+  </div>
+
+  <div class="level-row">
+    <button class="lvl-btn" onclick="setLevel('A1')">A1 &middot; Beginner</button>
+    <button class="lvl-btn active" onclick="setLevel('A2')">A2 &middot; Elementary</button>
+    <button class="lvl-btn" onclick="setLevel('B1')">B1 &middot; Intermediate</button>
+    <button class="lvl-btn" onclick="setLevel('B2')">B2 &middot; Upper-Intermediate</button>
+  </div>
+
+  <div class="search-card card">
+    <div class="search-row">
+      <select class="sel" id="catsel" onchange="onCatChange(this.value)"><option value="">&#x2014; Browse chapters &#x2014;</option></select>
+      <input class="inp" id="tinput" type="text" placeholder="or type: Familie, Wetter, Karriere..." autocomplete="off"/>
+      <button class="go-btn" onclick="generate()">Explore &nbsp;&#8599;</button>
+    </div>
+    <div class="cat-sugg" id="csugg"></div>
+    <div class="chips" id="qchips"></div>
+  </div>
+
+
+  <div class="api-bar" id="api-bar">
+    <div class="api-bar-icon">&#129504;</div>
+    <div class="api-bar-label">
+      AI Topic Generator
+      <small>Paste your Anthropic API key to unlock any German topic — saved locally, never sent to our servers</small>
+    </div>
+    <input class="api-inp" id="api-key-inp" type="password" placeholder="sk-ant-api03-..." autocomplete="off"/>
+    <button class="api-save-btn" onclick="saveApiKey()">Save Key</button>
+    <span class="api-status unset" id="api-status">Not set</span>
+  </div>
+
+  <div id="root"></div>
+
+</div>
+<script>
+
+
+
+(()=>{const el=document.getElementById('stars');const s=[];for(let i=0;i<220;i++){const x=Math.floor(Math.random()*3200),y=Math.floor(Math.random()*3200),r=Math.random();const sz=r>.96?2.2:r>.87?1.5:1,op=(0.15+Math.random()*.8).toFixed(2);s.push(x+'px '+y+'px '+(sz>1?sz+'px':'0')+' '+(sz>1.5?'1px':'0')+' rgba(255,255,255,'+op+')');}el.style.boxShadow=s.join(',');})();
+
+const DB=[
+  {id:'begruessing',level:'A1',topic:'Begrüßung',chapter:'A1 · Greetings',keys:['begrüßung','hallo','tschüss','wiedersehen'],
+   words:[{g:'Hallo',e:'hello',t:'phrase',a:null,v:[{d:'Guten Morgen',e:'good morning'},{d:'Guten Tag',e:'good day'},{d:'Guten Abend',e:'good evening'}]},{g:'Tschüss',e:'bye',t:'phrase',a:null,v:[{d:'Auf Wiedersehen',e:'goodbye'},{d:'Bis bald',e:'see you soon'}]},{g:'Name',e:'name',t:'noun',a:'der',v:[{d:'Vorname',e:'first name'},{d:'Nachname',e:'last name'}]},{g:'heißen',e:'to be called',t:'verb',a:null,v:[{d:'ich heiße',e:'my name is'},{d:'Wie heißt du?',e:'What is your name?'}]},{g:'kommen',e:'to come from',t:'verb',a:null,v:[{d:'ich komme aus',e:'I come from'},{d:'Woher kommst du?',e:'Where are you from?'}]},{g:'danke',e:'thank you',t:'phrase',a:null,v:[{d:'danke schön',e:'thank you very much'},{d:'bitte',e:'you\'re welcome'}]},{g:'freundlich',e:'friendly',t:'adjective',a:null,v:[{d:'sehr freundlich',e:'very friendly'},{d:'unfreundlich',e:'unfriendly'}]}],
+   sents:[{g:'Hallo! Ich heiße Anna. Wie heißt du?',e:'Hello! My name is Anna. What is your name?'},{g:'Guten Morgen! Woher kommst du?',e:'Good morning! Where do you come from?'},{g:'Danke schön! Auf Wiedersehen!',e:'Thank you very much! Goodbye!'}],
+   story:'Hallo! Ich heiße Maria und komme aus Deutschland. Mein Nachname ist Müller. Ich wohne in Berlin. Ich spreche Deutsch und Englisch. Auf Wiedersehen und bis bald!',story_en:'Hello! My name is Maria and I come from Germany. My last name is Müller. I live in Berlin. I speak German and English. Goodbye and see you soon!',
+   sa:[{w:'freundlich',t:'adjective',e:'friendly',syn:[{d:'nett',e:'nice'},{d:'liebenswürdig',e:'kind'}],ant:[{d:'unfreundlich',e:'unfriendly'},{d:'unhöflich',e:'rude'}]}]},
+  {id:'familie',level:'A1',topic:'Familie',chapter:'A1 · People & Family',keys:['familie','mutter','vater','kind','geschwister'],
+   words:[{g:'Mutter',e:'mother',t:'noun',a:'die',v:[{d:'Mama',e:'mum'},{d:'Stiefmutter',e:'stepmother'}]},{g:'Vater',e:'father',t:'noun',a:'der',v:[{d:'Papa',e:'dad'},{d:'Stiefvater',e:'stepfather'}]},{g:'Kind',e:'child',t:'noun',a:'das',v:[{d:'Kinder',e:'children'},{d:'Einzelkind',e:'only child'}]},{g:'Geschwister',e:'siblings',t:'noun',a:'die',v:[{d:'Bruder',e:'brother'},{d:'Schwester',e:'sister'}]},{g:'Großeltern',e:'grandparents',t:'noun',a:'die',v:[{d:'Oma',e:'grandma'},{d:'Opa',e:'grandpa'}]},{g:'lieben',e:'to love',t:'verb',a:null,v:[{d:'ich liebe',e:'I love'},{d:'lieb haben',e:'to be fond of'}]},{g:'jung',e:'young',t:'adjective',a:null,v:[{d:'jünger',e:'younger'},{d:'alt',e:'old'}]}],
+   sents:[{g:'Meine Familie ist klein — nur Mutter, Vater und ich.',e:'My family is small — just mother, father and me.'},{g:'Meine Schwester wohnt in München.',e:'My sister lives in Munich.'},{g:'Ich liebe meine Familie sehr.',e:'I love my family very much.'}],
+   story:'Ich habe eine kleine Familie. Meine Mutter heißt Petra und mein Vater heißt Klaus. Ich habe einen Bruder — er ist jünger als ich. Meine Großeltern wohnen in Hamburg. Ich liebe meine Familie sehr.',story_en:'I have a small family. My mother is Petra, my father is Klaus. I have a brother — he is younger than me. My grandparents live in Hamburg. I love my family very much.',
+   sa:[{w:'lieben',t:'verb',e:'to love',syn:[{d:'mögen',e:'to like'},{d:'schätzen',e:'to value'}],ant:[{d:'hassen',e:'to hate'},{d:'ablehnen',e:'to reject'}]},{w:'jung',t:'adjective',e:'young',syn:[{d:'jugendlich',e:'youthful'}],ant:[{d:'alt',e:'old'},{d:'erwachsen',e:'grown-up'}]}]},
+  {id:'essen',level:'A1',topic:'Essen & Trinken',chapter:'A1 · Food & Drink',keys:['essen','trinken','food','brot','obst','kochen'],
+   words:[{g:'Brot',e:'bread',t:'noun',a:'das',v:[{d:'Brötchen',e:'bread roll'},{d:'Toast',e:'toast'},{d:'Vollkornbrot',e:'wholegrain bread'}]},{g:'Obst',e:'fruit',t:'noun',a:'das',v:[{d:'Apfel',e:'apple'},{d:'Banane',e:'banana'},{d:'Erdbeere',e:'strawberry'}]},{g:'Gemüse',e:'vegetables',t:'noun',a:'das',v:[{d:'Tomate',e:'tomato'},{d:'Kartoffel',e:'potato'},{d:'Karotte',e:'carrot'}]},{g:'Getränk',e:'drink',t:'noun',a:'das',v:[{d:'Wasser',e:'water'},{d:'Kaffee',e:'coffee'},{d:'Tee',e:'tea'}]},{g:'kochen',e:'to cook',t:'verb',a:null,v:[{d:'zubereiten',e:'to prepare'},{d:'backen',e:'to bake'}]},{g:'essen',e:'to eat',t:'verb',a:null,v:[{d:'frühstücken',e:'to have breakfast'},{d:'zu Mittag essen',e:'to have lunch'}]},{g:'lecker',e:'delicious',t:'adjective',a:null,v:[{d:'schmackhaft',e:'tasty'},{d:'köstlich',e:'exquisite'}]}],
+   sents:[{g:'Ich esse gern Brot mit Butter zum Frühstück.',e:'I like eating bread with butter for breakfast.'},{g:'Das Essen ist sehr lecker!',e:'The food is very delicious!'},{g:'Was trinkst du gern?',e:'What do you like to drink?'}],
+   story:'Jeden Morgen frühstücke ich zu Hause. Ich esse Brot mit Käse und trinke Kaffee. Zum Mittagessen koche ich Gemüse und Fleisch. Abends esse ich Obst. Das Essen hier ist wirklich lecker.',story_en:'Every morning I have breakfast at home. I eat bread with cheese and drink coffee. For lunch I cook vegetables and meat. In the evenings I eat fruit. The food here is really delicious.',
+   sa:[{w:'kochen',t:'verb',e:'to cook',syn:[{d:'zubereiten',e:'to prepare'},{d:'brutzeln',e:'to fry'}],ant:[{d:'bestellen',e:'to order'},{d:'kaufen',e:'to buy ready-made'}]},{w:'lecker',t:'adjective',e:'delicious',syn:[{d:'schmackhaft',e:'tasty'},{d:'köstlich',e:'exquisite'}],ant:[{d:'eklig',e:'disgusting'},{d:'fade',e:'bland'}]}]},
+  {id:'wohnung',level:'A1',topic:'Wohnung',chapter:'A1 · Home & Living',keys:['wohnung','zimmer','zuhause','apartment','wohnen'],
+   words:[{g:'Zimmer',e:'room',t:'noun',a:'das',v:[{d:'Schlafzimmer',e:'bedroom'},{d:'Wohnzimmer',e:'living room'},{d:'Badezimmer',e:'bathroom'}]},{g:'Küche',e:'kitchen',t:'noun',a:'die',v:[{d:'Einbauküche',e:'fitted kitchen'},{d:'Kochinsel',e:'kitchen island'}]},{g:'Tisch',e:'table',t:'noun',a:'der',v:[{d:'Schreibtisch',e:'desk'},{d:'Esstisch',e:'dining table'}]},{g:'Bett',e:'bed',t:'noun',a:'das',v:[{d:'Einzelbett',e:'single bed'},{d:'Doppelbett',e:'double bed'}]},{g:'wohnen',e:'to live',t:'verb',a:null,v:[{d:'einziehen',e:'to move in'},{d:'ausziehen',e:'to move out'}]},{g:'aufräumen',e:'to tidy up',t:'verb',a:null,v:[{d:'putzen',e:'to clean'},{d:'staubsaugen',e:'to vacuum'}]},{g:'gemütlich',e:'cosy',t:'adjective',a:null,v:[{d:'heimelig',e:'homely'},{d:'ungemütlich',e:'uncomfortable'}]}],
+   sents:[{g:'Meine Wohnung hat drei Zimmer.',e:'My apartment has three rooms.'},{g:'Das Wohnzimmer ist sehr gemütlich.',e:'The living room is very cosy.'},{g:'Ich räume jeden Samstag auf.',e:'I tidy up every Saturday.'}],
+   story:'Ich wohne in einer kleinen Wohnung. Sie hat ein Schlafzimmer, ein Wohnzimmer und eine Küche. Im Wohnzimmer steht ein großer Tisch. Ich räume jeden Samstag auf. Meine Wohnung ist gemütlich und sauber.',story_en:'I live in a small apartment. It has a bedroom, a living room and a kitchen. In the living room there is a large table. I tidy up every Saturday. My apartment is cosy and clean.',
+   sa:[{w:'wohnen',t:'verb',e:'to live',syn:[{d:'leben',e:'to live'},{d:'residieren',e:'to reside'}],ant:[{d:'ausziehen',e:'to move out'}]},{w:'gemütlich',t:'adjective',e:'cosy',syn:[{d:'bequem',e:'comfortable'},{d:'behaglich',e:'homely'}],ant:[{d:'ungemütlich',e:'uncomfortable'},{d:'kalt',e:'unwelcoming'}]}]},
+  {id:'tagesablauf_a1',level:'A1',topic:'Tagesablauf',chapter:'A1 · Daily Routine',keys:['tagesablauf','routine','morgen','abend','alltag'],
+   words:[{g:'aufwachen',e:'to wake up',t:'verb',a:null,v:[{d:'aufstehen',e:'to get up'},{d:'verschlafen',e:'to oversleep'}]},{g:'frühstücken',e:'to have breakfast',t:'verb',a:null,v:[{d:'Frühstück machen',e:'to make breakfast'}]},{g:'duschen',e:'to shower',t:'verb',a:null,v:[{d:'sich waschen',e:'to wash'},{d:'Zähne putzen',e:'to brush teeth'}]},{g:'arbeiten',e:'to work',t:'verb',a:null,v:[{d:'ins Büro gehen',e:'to go to the office'},{d:'zur Arbeit fahren',e:'to commute'}]},{g:'schlafen',e:'to sleep',t:'verb',a:null,v:[{d:'einschlafen',e:'to fall asleep'},{d:'Mittagsschlaf',e:'afternoon nap'}]},{g:'Morgen',e:'morning',t:'noun',a:'der',v:[{d:'am Morgen',e:'in the morning'},{d:'Vormittag',e:'late morning'}]},{g:'müde',e:'tired',t:'adjective',a:null,v:[{d:'erschöpft',e:'exhausted'},{d:'ausgeruht',e:'rested'}]}],
+   sents:[{g:'Ich wache um 7 Uhr auf und frühstücke dann.',e:'I wake up at 7 and then have breakfast.'},{g:'Am Abend bin ich sehr müde.',e:'In the evening I am very tired.'},{g:'Ich dusche jeden Morgen.',e:'I shower every morning.'}],
+   story:'Mein Tag beginnt um 6:30 Uhr. Ich wache auf, stehe auf und dusche. Dann frühstücke ich — Brot und Kaffee. Um 8 Uhr fahre ich zur Arbeit. Am Abend koche ich und schaue fern. Um 22 Uhr schlafe ich. Ich bin dann sehr müde.',story_en:'My day begins at 6:30. I wake up, get up and shower. Then I have breakfast — bread and coffee. At 8 I go to work. In the evening I cook and watch TV. At 10pm I sleep. I am very tired.',
+   sa:[{w:'aufwachen',t:'verb',e:'to wake up',syn:[{d:'erwachen',e:'to awaken'}],ant:[{d:'einschlafen',e:'to fall asleep'}]},{w:'müde',t:'adjective',e:'tired',syn:[{d:'erschöpft',e:'exhausted'},{d:'schläfrig',e:'sleepy'}],ant:[{d:'ausgeruht',e:'rested'},{d:'wach',e:'awake'}]}]},
+  {id:'berufe',level:'A1',topic:'Berufe',chapter:'A1 · Work & Professions',keys:['berufe','beruf','job','arzt','lehrer'],
+   words:[{g:'Arzt',e:'doctor',t:'noun',a:'der',v:[{d:'Ärztin',e:'female doctor'},{d:'Zahnarzt',e:'dentist'}]},{g:'Lehrer',e:'teacher',t:'noun',a:'der',v:[{d:'Lehrerin',e:'female teacher'},{d:'Unterricht',e:'lesson'}]},{g:'Ingenieur',e:'engineer',t:'noun',a:'der',v:[{d:'Ingenieurin',e:'female engineer'}]},{g:'Koch',e:'chef',t:'noun',a:'der',v:[{d:'Köchin',e:'female chef'},{d:'Küchenchef',e:'head chef'}]},{g:'arbeiten',e:'to work',t:'verb',a:null,v:[{d:'Vollzeit',e:'full-time'},{d:'Teilzeit',e:'part-time'}]},{g:'verdienen',e:'to earn',t:'verb',a:null,v:[{d:'Gehalt',e:'salary'},{d:'Lohn',e:'wage'}]},{g:'fleißig',e:'hardworking',t:'adjective',a:null,v:[{d:'emsig',e:'diligent'},{d:'faul',e:'lazy'}]}],
+   sents:[{g:'Mein Vater ist Arzt. Er arbeitet im Krankenhaus.',e:'My father is a doctor. He works in the hospital.'},{g:'Ich möchte Lehrerin werden.',e:'I would like to become a teacher.'},{g:'Der Koch kocht sehr lecker.',e:'The chef cooks very deliciously.'}],
+   story:'Meine Mutter ist Lehrerin. Sie arbeitet in einer Schule in Berlin. Mein Vater ist Ingenieur und verdient gut. Mein Bruder möchte Koch werden. Ich möchte Ärztin werden. Fleißig arbeiten ist wichtig.',story_en:'My mother is a teacher in Berlin. My father is an engineer. My brother wants to be a chef. I want to be a doctor. Working hard is important.',
+   sa:[{w:'arbeiten',t:'verb',e:'to work',syn:[{d:'tätig sein',e:'to be active'}],ant:[{d:'faulenzen',e:'to laze'}]},{w:'fleißig',t:'adjective',e:'hardworking',syn:[{d:'emsig',e:'diligent'},{d:'engagiert',e:'dedicated'}],ant:[{d:'faul',e:'lazy'},{d:'träge',e:'sluggish'}]}]},
+  {id:'schule',level:'A2',topic:'Schule',chapter:'A2 · School & Learning',keys:['schule','lernen','unterricht','prüfung','hausaufgaben'],
+   words:[{g:'Unterricht',e:'lesson',t:'noun',a:'der',v:[{d:'Schulstunde',e:'school period'},{d:'Doppelstunde',e:'double period'}]},{g:'Prüfung',e:'exam',t:'noun',a:'die',v:[{d:'Klausur',e:'written test'},{d:'Abitur',e:'A-levels'},{d:'mündliche Prüfung',e:'oral exam'}]},{g:'Hausaufgaben',e:'homework',t:'noun',a:'die',v:[{d:'Aufgaben machen',e:'to do exercises'},{d:'Referat',e:'presentation'}]},{g:'Fach',e:'subject',t:'noun',a:'das',v:[{d:'Mathematik',e:'maths'},{d:'Deutsch',e:'German'},{d:'Geschichte',e:'history'}]},{g:'lernen',e:'to learn',t:'verb',a:null,v:[{d:'auswendig lernen',e:'to memorise'},{d:'üben',e:'to practise'},{d:'studieren',e:'to study'}]},{g:'bestehen',e:'to pass (an exam)',t:'verb',a:null,v:[{d:'die Prüfung bestehen',e:'to pass the exam'},{d:'durchfallen',e:'to fail'}]},{g:'schwierig',e:'difficult',t:'adjective',a:null,v:[{d:'kompliziert',e:'complicated'},{d:'einfach',e:'easy'},{d:'anspruchsvoll',e:'demanding'}]}],
+   sents:[{g:'Heute haben wir Mathe — das Fach ist schwierig, aber interessant.',e:'Today we have maths — the subject is difficult but interesting.'},{g:'Ich lerne für die Prüfung und mache meine Hausaufgaben.',e:'I am studying for the exam and doing my homework.'},{g:'Wenn ich fleißig lerne, bestehe ich die Prüfung.',e:'If I study hard, I will pass the exam.'}],
+   story:'In meiner Schule gibt es viele interessante Fächer. Ich lerne gern Deutsch und Englisch, aber Mathematik ist schwierig. Diese Woche haben wir eine große Prüfung. Ich mache jeden Abend Hausaufgaben. Wenn ich fleißig lerne, kann ich die Prüfung bestehen.',story_en:'In my school there are many interesting subjects. I like German and English, but maths is difficult. This week we have a big exam. I do homework every evening. If I study hard I can pass.',
+   sa:[{w:'lernen',t:'verb',e:'to learn',syn:[{d:'studieren',e:'to study'},{d:'üben',e:'to practise'},{d:'pauken',e:'to cram'}],ant:[{d:'vergessen',e:'to forget'},{d:'vernachlässigen',e:'to neglect'}]},{w:'bestehen',t:'verb',e:'to pass',syn:[{d:'schaffen',e:'to manage'},{d:'erfolgreich sein',e:'to succeed'}],ant:[{d:'durchfallen',e:'to fail'},{d:'scheitern',e:'to flunk'}]},{w:'schwierig',t:'adjective',e:'difficult',syn:[{d:'kompliziert',e:'complicated'},{d:'knifflig',e:'tricky'}],ant:[{d:'einfach',e:'easy'},{d:'leicht',e:'light/easy'}]}]},
+  {id:'arbeit',level:'A2',topic:'Arbeit',chapter:'A2 · Work & Office',keys:['arbeit','büro','kollege','gehalt','bewerbung'],
+   words:[{g:'Büro',e:'office',t:'noun',a:'das',v:[{d:'Homeoffice',e:'home office'},{d:'Großraumbüro',e:'open-plan office'}]},{g:'Kollege',e:'colleague',t:'noun',a:'der',v:[{d:'Kollegin',e:'female colleague'},{d:'Team',e:'team'},{d:'Abteilung',e:'department'}]},{g:'Gehalt',e:'salary',t:'noun',a:'das',v:[{d:'Lohn',e:'wage'},{d:'Gehaltserhöhung',e:'pay rise'},{d:'Bonus',e:'bonus'}]},{g:'Bewerbung',e:'job application',t:'noun',a:'die',v:[{d:'Lebenslauf',e:'CV'},{d:'Vorstellungsgespräch',e:'interview'}]},{g:'Urlaub',e:'holiday',t:'noun',a:'der',v:[{d:'Urlaubstag',e:'day off'},{d:'Überstunden',e:'overtime'},{d:'Feierabend',e:'end of working day'}]},{g:'bewerben',e:'to apply for a job',t:'verb',a:null,v:[{d:'eingestellt werden',e:'to be hired'},{d:'kündigen',e:'to resign'}]},{g:'stressig',e:'stressful',t:'adjective',a:null,v:[{d:'anstrengend',e:'exhausting'},{d:'entspannt',e:'relaxed'}]}],
+   sents:[{g:'Ich arbeite im Büro mit netten Kollegen.',e:'I work in the office with nice colleagues.'},{g:'Die Stelle ist stressig, aber das Gehalt ist gut.',e:'The job is stressful, but the salary is good.'},{g:'Ich bewerbe mich auf eine neue Stelle.',e:'I am applying for a new position.'}],
+   story:'Ich arbeite seit zwei Jahren in einem Büro in München. Meine Kollegen sind freundlich. Das Gehalt ist gut, aber die Arbeit ist manchmal stressig. Letzte Woche hatte ich viele Überstunden. Nächsten Monat habe ich endlich Urlaub.',story_en:'I have been working in an office in Munich for two years. My colleagues are friendly. The salary is good but work is sometimes stressful. Last week I had a lot of overtime. Next month I finally have a holiday.',
+   sa:[{w:'bewerben',t:'verb',e:'to apply',syn:[{d:'kandidieren',e:'to apply'},{d:'einreichen',e:'to submit'}],ant:[{d:'ablehnen',e:'to decline'},{d:'kündigen',e:'to resign'}]},{w:'stressig',t:'adjective',e:'stressful',syn:[{d:'anstrengend',e:'exhausting'},{d:'belastend',e:'burdensome'}],ant:[{d:'entspannend',e:'relaxing'},{d:'ruhig',e:'calm'}]}]},
+  {id:'wetter',level:'A2',topic:'Wetter',chapter:'A2 · Weather & Seasons',keys:['wetter','regen','sonne','temperatur','jahreszeit'],
+   words:[{g:'Regen',e:'rain',t:'noun',a:'der',v:[{d:'Regenschauer',e:'rain shower'},{d:'Gewitter',e:'thunderstorm'},{d:'Regenbogen',e:'rainbow'}]},{g:'Sonne',e:'sun',t:'noun',a:'die',v:[{d:'Sonnenschein',e:'sunshine'},{d:'Sonnenstrahlen',e:'sunrays'}]},{g:'Temperatur',e:'temperature',t:'noun',a:'die',v:[{d:'Hitze',e:'heat'},{d:'Kälte',e:'cold'},{d:'Grad Celsius',e:'degrees Celsius'}]},{g:'Jahreszeit',e:'season',t:'noun',a:'die',v:[{d:'Frühling',e:'spring'},{d:'Sommer',e:'summer'},{d:'Herbst',e:'autumn'},{d:'Winter',e:'winter'}]},{g:'schneien',e:'to snow',t:'verb',a:null,v:[{d:'es schneit',e:'it is snowing'},{d:'Schnee',e:'snow'},{d:'Frost',e:'frost'}]},{g:'regnen',e:'to rain',t:'verb',a:null,v:[{d:'es regnet',e:'it is raining'},{d:'Schirm',e:'umbrella'}]},{g:'warm',e:'warm',t:'adjective',a:null,v:[{d:'heiß',e:'hot'},{d:'kalt',e:'cold'},{d:'mild',e:'mild'}]}],
+   sents:[{g:'Heute regnet es, also nehme ich einen Schirm mit.',e:'Today it is raining, so I will take an umbrella.'},{g:'Im Sommer ist es warm und die Sonne scheint oft.',e:'In summer it is warm and the sun often shines.'},{g:'Meine Lieblingszeit ist der Frühling.',e:'My favourite season is spring.'}],
+   story:'Das Wetter in Deutschland ist sehr wechselhaft. Im Sommer scheint die Sonne und es ist warm. Im Winter schneit es oft und die Temperaturen fallen unter null. Im Herbst gibt es viel Regen und Wind. Ich mag warmes Wetter am liebsten.',story_en:'The weather in Germany is very changeable. In summer the sun shines and it is warm. In winter it often snows and temperatures fall below zero. In autumn there is a lot of rain and wind. I like warm weather best.',
+   sa:[{w:'regnen',t:'verb',e:'to rain',syn:[{d:'schütten',e:'to pour'},{d:'nieseln',e:'to drizzle'}],ant:[{d:'scheinen',e:'to shine'}]},{w:'warm',t:'adjective',e:'warm',syn:[{d:'mild',e:'mild'},{d:'sonnig',e:'sunny'}],ant:[{d:'kalt',e:'cold'},{d:'frostig',e:'frosty'}]}]},
+  {id:'tagesablauf_a2',level:'A2',topic:'Tagesablauf',chapter:'A2 · Daily Routine',keys:['tagesablauf','routine','pendeln','alltag'],
+   words:[{g:'aufwachen',e:'to wake up',t:'verb',a:null,v:[{d:'aufstehen',e:'to get up'},{d:'Wecker stellen',e:'to set alarm'},{d:'verschlafen',e:'to oversleep'}]},{g:'sich duschen',e:'to shower',t:'verb',a:null,v:[{d:'Zähne putzen',e:'to brush teeth'},{d:'sich anziehen',e:'to get dressed'}]},{g:'pendeln',e:'to commute',t:'verb',a:null,v:[{d:'mit dem Zug',e:'by train'},{d:'mit dem Auto',e:'by car'},{d:'mit dem Fahrrad',e:'by bike'}]},{g:'Mittagspause',e:'lunch break',t:'noun',a:'die',v:[{d:'Pause machen',e:'to take a break'},{d:'Kaffeepause',e:'coffee break'}]},{g:'Feierabend',e:'end of working day',t:'noun',a:'der',v:[{d:'Freizeit',e:'free time'},{d:'Abendessen',e:'evening meal'}]},{g:'schlafen gehen',e:'to go to bed',t:'phrase',a:null,v:[{d:'einschlafen',e:'to fall asleep'},{d:'Nachtruhe',e:"night's rest"}]},{g:'regelmäßig',e:'regularly',t:'adjective',a:null,v:[{d:'täglich',e:'daily'},{d:'wöchentlich',e:'weekly'},{d:'unregelmäßig',e:'irregular'}]}],
+   sents:[{g:'Jeden Morgen wache ich um sechs Uhr auf und dusche mich.',e:'Every morning I wake up at six and shower.'},{g:'Nach der Mittagspause arbeite ich noch drei Stunden.',e:'After the lunch break I work for three more hours.'},{g:'Ich mache regelmäßig Sport nach dem Feierabend.',e:'I regularly exercise after finishing work.'}],
+   story:'Mein Tagesablauf ist sehr regelmäßig. Ich wache um sechs Uhr auf und dusche mich. Dann frühstücke ich schnell. Ich pendle mit dem Zug zur Arbeit. Um zwölf Uhr mache ich Mittagspause. Um 17 Uhr ist Feierabend. Abends gehe ich um 22 Uhr schlafen.',story_en:'My daily routine is very regular. I wake up at six, shower and have a quick breakfast. I commute by train to work. At twelve I take my lunch break. At 5pm work is over. In the evenings I go to bed at 10pm.',
+   sa:[{w:'pendeln',t:'verb',e:'to commute',syn:[{d:'fahren',e:'to travel'}],ant:[{d:'zu Hause bleiben',e:'to stay home'}]},{w:'regelmäßig',t:'adjective',e:'regular',syn:[{d:'gleichmäßig',e:'even'},{d:'täglich',e:'daily'}],ant:[{d:'unregelmäßig',e:'irregular'},{d:'sporadisch',e:'sporadic'}]}]},
+  {id:'urlaub',level:'A2',topic:'Urlaub',chapter:'A2 · Travel & Holidays',keys:['urlaub','reisen','strand','hotel','flughafen'],
+   words:[{g:'Flughafen',e:'airport',t:'noun',a:'der',v:[{d:'Abflug',e:'departure'},{d:'Ankunft',e:'arrival'},{d:'Terminal',e:'terminal'}]},{g:'Hotel',e:'hotel',t:'noun',a:'das',v:[{d:'Zimmer buchen',e:'to book a room'},{d:'Rezeption',e:'reception'}]},{g:'Koffer',e:'suitcase',t:'noun',a:'der',v:[{d:'Handgepäck',e:'hand luggage'},{d:'einpacken',e:'to pack'}]},{g:'Strand',e:'beach',t:'noun',a:'der',v:[{d:'Meer',e:'sea'},{d:'Sand',e:'sand'},{d:'Sonnencreme',e:'sunscreen'}]},{g:'Sehenswürdigkeit',e:'tourist sight',t:'noun',a:'die',v:[{d:'Museum',e:'museum'},{d:'Denkmal',e:'monument'}]},{g:'buchen',e:'to book',t:'verb',a:null,v:[{d:'reservieren',e:'to reserve'},{d:'stornieren',e:'to cancel'}]},{g:'entspannt',e:'relaxed',t:'adjective',a:null,v:[{d:'erholt',e:'refreshed'},{d:'gestresst',e:'stressed'}]}],
+   sents:[{g:'Wir buchen das Hotel online und fliegen nächsten Samstag.',e:'We are booking the hotel online and flying next Saturday.'},{g:'Am Strand liegen und die Sonne genießen ist entspannt.',e:'Lying on the beach and enjoying the sun is relaxing.'},{g:'Ich besuche gern Sehenswürdigkeiten.',e:'I like visiting tourist attractions.'}],
+   story:'Diesen Sommer fahre ich nach Spanien. Ich habe das Hotel schon online gebucht. Am Flughafen muss ich früh sein. Ich packe meinen Koffer mit Kleidung und Sonnencreme. Am Strand möchte ich entspannt liegen. Urlaub macht mich immer erholt und glücklich.',story_en:'This summer I am going to Spain. I have already booked the hotel online. I have to be at the airport early. I pack my suitcase with clothes and sunscreen. On the beach I just want to relax. Holidays always make me feel refreshed and happy.',
+   sa:[{w:'buchen',t:'verb',e:'to book',syn:[{d:'reservieren',e:'to reserve'},{d:'vorbestellen',e:'to pre-order'}],ant:[{d:'stornieren',e:'to cancel'},{d:'absagen',e:'to call off'}]},{w:'entspannt',t:'adjective',e:'relaxed',syn:[{d:'ruhig',e:'calm'},{d:'gelassen',e:'composed'}],ant:[{d:'gestresst',e:'stressed'},{d:'angespannt',e:'tense'}]}]},
+  {id:'sport',level:'A2',topic:'Sport',chapter:'A2 · Sport & Fitness',keys:['sport','fußball','laufen','schwimmen','training'],
+   words:[{g:'Fußball',e:'football',t:'noun',a:'der',v:[{d:'Tor',e:'goal'},{d:'Mannschaft',e:'team'},{d:'Fußballplatz',e:'pitch'}]},{g:'Fitnessstudio',e:'gym',t:'noun',a:'das',v:[{d:'Mitgliedschaft',e:'membership'},{d:'Laufband',e:'treadmill'}]},{g:'Mannschaft',e:'team',t:'noun',a:'die',v:[{d:'Spieler',e:'player'},{d:'Trainer',e:'coach'},{d:'Kapitän',e:'captain'}]},{g:'trainieren',e:'to train',t:'verb',a:null,v:[{d:'täglich trainieren',e:'to train daily'},{d:'Ausdauer trainieren',e:'endurance training'}]},{g:'laufen',e:'to run',t:'verb',a:null,v:[{d:'joggen',e:'to jog'},{d:'sprinten',e:'to sprint'},{d:'Marathon laufen',e:'to run a marathon'}]},{g:'schwimmen',e:'to swim',t:'verb',a:null,v:[{d:'im Freibad',e:'outdoor pool'},{d:'tauchen',e:'to dive'}]},{g:'fit',e:'fit',t:'adjective',a:null,v:[{d:'sportlich',e:'sporty'},{d:'in Form',e:'in shape'},{d:'unfit',e:'unfit'}]}],
+   sents:[{g:'Ich trainiere dreimal pro Woche im Fitnessstudio.',e:'I train three times a week at the gym.'},{g:'Fußball ist in Deutschland sehr beliebt.',e:'Football is very popular in Germany.'},{g:'Regelmäßig laufen hält mich fit und gesund.',e:'Running regularly keeps me fit and healthy.'}],
+   story:'Ich mache sehr gern Sport. Jeden Morgen laufe ich eine halbe Stunde durch den Park. Am Dienstag und Donnerstag trainiere ich im Fitnessstudio. Am Wochenende schwimme ich im Hallenbad. Mein Lieblingssport ist Fußball — meine Mannschaft ist die beste! Durch Sport bleibe ich fit und glücklich.',story_en:'I love sport. Every morning I run for half an hour through the park. On Tuesday and Thursday I train at the gym. At the weekend I swim. My favourite sport is football — my team is the best! Through sport I stay fit and happy.',
+   sa:[{w:'trainieren',t:'verb',e:'to train',syn:[{d:'üben',e:'to practise'},{d:'sport treiben',e:'to do sport'}],ant:[{d:'faulenzen',e:'to laze'},{d:'ausruhen',e:'to rest'}]},{w:'fit',t:'adjective',e:'fit',syn:[{d:'gesund',e:'healthy'},{d:'sportlich',e:'sporty'}],ant:[{d:'unfit',e:'unfit'},{d:'faul',e:'lazy'}]}]},
+  {id:'gefuehle',level:'B1',topic:'Gefühle',chapter:'B1 · Emotions & Feelings',keys:['gefühle','emotions','angst','freude','liebe'],
+   words:[{g:'Freude',e:'joy',t:'noun',a:'die',v:[{d:'sich freuen',e:'to be happy'},{d:'Begeisterung',e:'enthusiasm'}]},{g:'Angst',e:'fear',t:'noun',a:'die',v:[{d:'Angst haben',e:'to be afraid'},{d:'Panik',e:'panic'},{d:'Nervosität',e:'nervousness'}]},{g:'Trauer',e:'sadness',t:'noun',a:'die',v:[{d:'traurig sein',e:'to be sad'},{d:'weinen',e:'to cry'}]},{g:'Wut',e:'anger',t:'noun',a:'die',v:[{d:'wütend sein',e:'to be angry'},{d:'Ärger',e:'annoyance'}]},{g:'sich freuen',e:'to be happy about',t:'verb',a:null,v:[{d:'jubeln',e:'to cheer'},{d:'genießen',e:'to enjoy'}]},{g:'fürchten',e:'to fear',t:'verb',a:null,v:[{d:'Angst haben',e:'to be afraid'},{d:'vermeiden',e:'to avoid'}]},{g:'glücklich',e:'happy',t:'adjective',a:null,v:[{d:'zufrieden',e:'content'},{d:'fröhlich',e:'cheerful'},{d:'unglücklich',e:'unhappy'}]}],
+   sents:[{g:'Ich fühle große Freude, wenn ich meine Familie sehe.',e:'I feel great joy when I see my family.'},{g:'Sie hat Angst vor dem Vorstellungsgespräch.',e:'She is afraid of the job interview.'},{g:'Wir sind sehr glücklich über die guten Neuigkeiten.',e:'We are very happy about the good news.'}],
+   story:'Emotionen sind ein wichtiger Teil des Lebens. Manchmal fühle ich große Freude — zum Beispiel wenn ich Freunde treffe. Manchmal habe ich auch Angst, besonders vor wichtigen Prüfungen. Wut kommt, wenn etwas unfair ist. Aber meistens bin ich glücklich und zufrieden.',story_en:'Emotions are an important part of life. Sometimes I feel great joy — for example when I meet friends. Sometimes I also feel fear, especially before important exams. Anger comes when something is unfair. But mostly I am happy and content.',
+   sa:[{w:'sich freuen',t:'verb',e:'to be happy',syn:[{d:'jubeln',e:'to cheer'},{d:'genießen',e:'to enjoy'}],ant:[{d:'trauern',e:'to grieve'},{d:'weinen',e:'to cry'}]},{w:'glücklich',t:'adjective',e:'happy',syn:[{d:'zufrieden',e:'content'},{d:'fröhlich',e:'cheerful'}],ant:[{d:'unglücklich',e:'unhappy'},{d:'traurig',e:'sad'}]}]},
+  {id:'gesundheit',level:'B1',topic:'Gesundheit',chapter:'B1 · Health & Body',keys:['gesundheit','health','ernährung','krank','medikament'],
+   words:[{g:'Symptom',e:'symptom',t:'noun',a:'das',v:[{d:'Fieber',e:'fever'},{d:'Husten',e:'cough'},{d:'Schmerzen',e:'pain'}]},{g:'Medikament',e:'medication',t:'noun',a:'das',v:[{d:'Tablette',e:'tablet'},{d:'Rezept',e:'prescription'},{d:'Apotheke',e:'pharmacy'}]},{g:'Ernährung',e:'diet / nutrition',t:'noun',a:'die',v:[{d:'ausgewogene Ernährung',e:'balanced diet'},{d:'vegetarisch',e:'vegetarian'},{d:'vegan',e:'vegan'}]},{g:'Lebensweise',e:'lifestyle',t:'noun',a:'die',v:[{d:'gesunde Lebensweise',e:'healthy lifestyle'},{d:'Schlafgewohnheiten',e:'sleep habits'}]},{g:'erkranken',e:'to fall ill',t:'verb',a:null,v:[{d:'krank werden',e:'to get sick'},{d:'sich erholen',e:'to recover'}]},{g:'vorsorgen',e:'to take precautions',t:'verb',a:null,v:[{d:'impfen lassen',e:'to get vaccinated'},{d:'vorbeugen',e:'to prevent'}]},{g:'gesund',e:'healthy',t:'adjective',a:null,v:[{d:'kerngesund',e:'perfectly healthy'},{d:'krank',e:'sick'}]}],
+   sents:[{g:'Eine ausgewogene Ernährung ist wichtig für die Gesundheit.',e:'A balanced diet is important for health.'},{g:'Der Arzt hat mir ein Medikament verschrieben.',e:'The doctor has prescribed me a medication.'},{g:'Um gesund zu bleiben, ist regelmäßiger Sport wichtig.',e:'Regular exercise is important to stay healthy.'}],
+   story:'Gesundheit ist das Wichtigste im Leben. Ich versuche, mich gesund zu ernähren — viel Obst, Gemüse und wenig Fleisch. Wenn ich Symptome wie Fieber bekomme, gehe ich sofort zum Arzt. Durch Sport und eine gute Lebensweise kann man viele Krankheiten verhindern.',story_en:'Health is the most important thing in life. I try to eat healthily — lots of fruit, vegetables and little meat. When I get symptoms like fever, I go to the doctor immediately. Through sport and a good lifestyle you can prevent many illnesses.',
+   sa:[{w:'erkranken',t:'verb',e:'to fall ill',syn:[{d:'krank werden',e:'to get sick'},{d:'leiden',e:'to suffer'}],ant:[{d:'genesen',e:'to recover'},{d:'gesund werden',e:'to get better'}]},{w:'gesund',t:'adjective',e:'healthy',syn:[{d:'fit',e:'fit'},{d:'wohlauf',e:'well'}],ant:[{d:'krank',e:'sick'},{d:'unwohl',e:'unwell'}]}]},
+  {id:'umwelt',level:'B1',topic:'Umwelt',chapter:'B1 · Environment & Climate',keys:['umwelt','klima','recycling','nachhaltig','energie'],
+   words:[{g:'Klimawandel',e:'climate change',t:'noun',a:'der',v:[{d:'Erderwärmung',e:'global warming'},{d:'Treibhauseffekt',e:'greenhouse effect'}]},{g:'Nachhaltigkeit',e:'sustainability',t:'noun',a:'die',v:[{d:'nachhaltig',e:'sustainable'},{d:'umweltfreundlich',e:'eco-friendly'}]},{g:'Recycling',e:'recycling',t:'noun',a:'das',v:[{d:'Mülltrennung',e:'waste separation'},{d:'Pfand',e:'deposit'}]},{g:'erneuerbare Energie',e:'renewable energy',t:'noun',a:'die',v:[{d:'Solarenergie',e:'solar energy'},{d:'Windkraft',e:'wind power'}]},{g:'schützen',e:'to protect',t:'verb',a:null,v:[{d:'bewahren',e:'to preserve'},{d:'erhalten',e:'to conserve'},{d:'retten',e:'to save'}]},{g:'verbrauchen',e:'to consume',t:'verb',a:null,v:[{d:'Energie sparen',e:'to save energy'},{d:'verschwenden',e:'to waste'}]},{g:'nachhaltig',e:'sustainable',t:'adjective',a:null,v:[{d:'umweltbewusst',e:'environmentally conscious'},{d:'ökologisch',e:'ecological'}]}],
+   sents:[{g:'Der Klimawandel ist eine der größten Herausforderungen unserer Zeit.',e:'Climate change is one of the greatest challenges of our time.'},{g:'Durch Recycling können wir die Umwelt schützen.',e:'Through recycling we can protect the environment.'},{g:'Erneuerbare Energien sind wichtig für eine nachhaltige Zukunft.',e:'Renewable energies are important for a sustainable future.'}],
+   story:'Die Umwelt zu schützen ist eine der wichtigsten Aufgaben unserer Generation. Der Klimawandel bedroht viele Tierarten. Durch Nachhaltigkeit und Recycling können wir etwas verändern. Erneuerbare Energien wie Solar- und Windkraft ersetzen langsam fossile Brennstoffe.',story_en:'Protecting the environment is one of the most important tasks of our generation. Climate change threatens many animal species. Through sustainability and recycling we can change things. Renewable energies are slowly replacing fossil fuels.',
+   sa:[{w:'schützen',t:'verb',e:'to protect',syn:[{d:'bewahren',e:'to preserve'},{d:'erhalten',e:'to conserve'}],ant:[{d:'zerstören',e:'to destroy'},{d:'gefährden',e:'to endanger'}]},{w:'nachhaltig',t:'adjective',e:'sustainable',syn:[{d:'umweltfreundlich',e:'eco-friendly'},{d:'ökologisch',e:'ecological'}],ant:[{d:'verschwenderisch',e:'wasteful'},{d:'schädlich',e:'harmful'}]}]},
+  {id:'karriere',level:'B1',topic:'Karriere',chapter:'B1 · Career & Work',keys:['karriere','bewerbung','lebenslauf','beförderung','weiterbildung'],
+   words:[{g:'Lebenslauf',e:'CV',t:'noun',a:'der',v:[{d:'Lichtbild',e:'photo'},{d:'Referenz',e:'reference'},{d:'Qualifikation',e:'qualification'}]},{g:'Vorstellungsgespräch',e:'job interview',t:'noun',a:'das',v:[{d:'Bewerbungsgespräch',e:'application interview'},{d:'Probezeit',e:'probationary period'}]},{g:'Beförderung',e:'promotion',t:'noun',a:'die',v:[{d:'Aufstieg',e:'career advancement'},{d:'Führungsposition',e:'leadership position'}]},{g:'Weiterbildung',e:'further training',t:'noun',a:'die',v:[{d:'Fortbildung',e:'training'},{d:'Kurs',e:'course'},{d:'Zertifikat',e:'certificate'}]},{g:'kündigen',e:'to resign',t:'verb',a:null,v:[{d:'den Job aufgeben',e:'to quit'},{d:'entlassen werden',e:'to be laid off'}]},{g:'verhandeln',e:'to negotiate',t:'verb',a:null,v:[{d:'Gehaltsverhandlung',e:'salary negotiation'},{d:'diskutieren',e:'to discuss'}]},{g:'ambitioniert',e:'ambitious',t:'adjective',a:null,v:[{d:'ehrgeizig',e:'ambitious'},{d:'zielstrebig',e:'goal-oriented'},{d:'motiviert',e:'motivated'}]}],
+   sents:[{g:'Ich habe meinen Lebenslauf aktualisiert und mich beworben.',e:'I have updated my CV and applied.'},{g:'Das Vorstellungsgespräch war schwierig, aber ich war gut vorbereitet.',e:'The interview was difficult, but I was well prepared.'},{g:'Weiterbildung ist wichtig, um in der Karriere voranzukommen.',e:'Further training is important to advance in one\'s career.'}],
+   story:'Ich arbeite seit fünf Jahren in meiner Firma und möchte Karriere machen. Ich habe mich auf eine Führungsposition beworben. Ich habe meinen Lebenslauf überarbeitet und mich gut auf das Vorstellungsgespräch vorbereitet. Der Chef sagt, ich bin ambitioniert und zielstrebig. Jetzt muss ich über das Gehalt verhandeln.',story_en:'I have been working in my company for five years and want to advance my career. I applied for a management position. I revised my CV and prepared well for the interview. The boss says I am ambitious and goal-oriented. Now I have to negotiate the salary.',
+   sa:[{w:'kündigen',t:'verb',e:'to resign',syn:[{d:'aufgeben',e:'to give up'}],ant:[{d:'anfangen',e:'to start'},{d:'eingestellt werden',e:'to be hired'}]},{w:'ambitioniert',t:'adjective',e:'ambitious',syn:[{d:'ehrgeizig',e:'ambitious'},{d:'zielstrebig',e:'goal-oriented'}],ant:[{d:'gleichgültig',e:'indifferent'},{d:'faul',e:'lazy'}]}]},
+  {id:'sprache',level:'B1',topic:'Sprache lernen',chapter:'B1 · Language & Learning',keys:['sprache','vokabeln','grammatik','aussprache','fremdsprache'],
+   words:[{g:'Vokabeln',e:'vocabulary',t:'noun',a:'die',v:[{d:'Wortschatz',e:'lexicon'},{d:'Wort',e:'word'},{d:'Ausdruck',e:'expression'}]},{g:'Grammatik',e:'grammar',t:'noun',a:'die',v:[{d:'Satzbau',e:'sentence structure'},{d:'Konjugation',e:'conjugation'}]},{g:'Aussprache',e:'pronunciation',t:'noun',a:'die',v:[{d:'Akzent',e:'accent'},{d:'Betonung',e:'stress'},{d:'Intonation',e:'intonation'}]},{g:'Sprachkurs',e:'language course',t:'noun',a:'der',v:[{d:'Intensivkurs',e:'intensive course'},{d:'Tandem',e:'language tandem'}]},{g:'übersetzen',e:'to translate',t:'verb',a:null,v:[{d:'dolmetschen',e:'to interpret'},{d:'übertragen',e:'to render'}]},{g:'beherrschen',e:'to master',t:'verb',a:null,v:[{d:'fließend sprechen',e:'to speak fluently'},{d:'meistern',e:'to master'}]},{g:'fließend',e:'fluent',t:'adjective',a:null,v:[{d:'flüssig',e:'smooth/flowing'},{d:'gebrochen',e:'broken/halting'},{d:'mühelos',e:'effortless'}]}],
+   sents:[{g:'Um eine Sprache zu beherrschen, muss man regelmäßig Vokabeln lernen.',e:'To master a language, one must regularly learn vocabulary.'},{g:'Meine Aussprache verbessert sich durch viel Hören und Sprechen.',e:'My pronunciation improves through a lot of listening and speaking.'},{g:'Ich möchte Deutsch fließend sprechen können.',e:'I would like to be able to speak German fluently.'}],
+   story:'Ich lerne Deutsch seit einem Jahr. Am Anfang war die Grammatik sehr schwierig. Jeden Tag lerne ich neue Vokabeln und übe die Aussprache. In meinem Sprachkurs helfen mir meine Lehrerin und meine Mitschüler. Mein Ziel ist es, Deutsch fließend zu beherrschen.',story_en:'I have been learning German for one year. At the beginning the grammar was very difficult. Every day I learn new vocabulary and practise pronunciation. In my language course my teacher and classmates help me. My goal is to master German fluently.',
+   sa:[{w:'übersetzen',t:'verb',e:'to translate',syn:[{d:'dolmetschen',e:'to interpret'},{d:'übertragen',e:'to render'}],ant:[{d:'missverstehen',e:'to misunderstand'}]},{w:'fließend',t:'adjective',e:'fluent',syn:[{d:'flüssig',e:'smooth'},{d:'mühelos',e:'effortless'}],ant:[{d:'gebrochen',e:'broken'},{d:'stockend',e:'halting'}]}]},
+  {id:'politik',level:'B2',topic:'Politik',chapter:'B2 · Politics & Society',keys:['politik','demokratie','wahl','parlament','partei'],
+   words:[{g:'Demokratie',e:'democracy',t:'noun',a:'die',v:[{d:'Volksvertretung',e:"people's representation"},{d:'Rechtsstaat',e:'constitutional state'}]},{g:'Wahl',e:'election',t:'noun',a:'die',v:[{d:'Bundestagswahl',e:'federal election'},{d:'Wahlrecht',e:'right to vote'}]},{g:'Partei',e:'political party',t:'noun',a:'die',v:[{d:'Koalition',e:'coalition'},{d:'Opposition',e:'opposition'},{d:'Fraktion',e:'parliamentary group'}]},{g:'Parlament',e:'parliament',t:'noun',a:'das',v:[{d:'Bundestag',e:'German federal parliament'},{d:'Abgeordneter',e:'MP'}]},{g:'Gesetz',e:'law',t:'noun',a:'das',v:[{d:'Grundgesetz',e:'Basic Law'},{d:'Reform',e:'reform'},{d:'Gesetzentwurf',e:'bill'}]},{g:'wählen',e:'to vote / elect',t:'verb',a:null,v:[{d:'abstimmen',e:'to vote'},{d:'regieren',e:'to govern'}]},{g:'demokratisch',e:'democratic',t:'adjective',a:null,v:[{d:'liberal',e:'liberal'},{d:'konservativ',e:'conservative'},{d:'autoritär',e:'authoritarian'}]}],
+   sents:[{g:'In einer Demokratie haben alle Bürger das Recht zu wählen.',e:'In a democracy all citizens have the right to vote.'},{g:'Das Parlament debattiert über neue Gesetze und Reformen.',e:'The parliament debates new laws and reforms.'},{g:'Die Opposition kritisiert die Regierungspolitik scharf.',e:'The opposition sharply criticises government policy.'}],
+   story:'Die Bundesrepublik Deutschland ist eine parlamentarische Demokratie. Das Grundgesetz garantiert die Grundrechte aller Bürger. Alle vier Jahre wählen die Deutschen den Bundestag. Die stärkste Partei führt dann die Koalitionsverhandlungen. Das Parlament debattiert und verabschiedet Gesetze.',story_en:'The Federal Republic of Germany is a parliamentary democracy. The Basic Law guarantees the fundamental rights of all citizens. Every four years Germans elect the Bundestag. The strongest party then leads coalition negotiations. Parliament debates and passes laws.',
+   sa:[{w:'wählen',t:'verb',e:'to vote',syn:[{d:'abstimmen',e:'to ballot'},{d:'bestimmen',e:'to determine'}],ant:[{d:'boykottieren',e:'to boycott'},{d:'ablehnen',e:'to reject'}]},{w:'demokratisch',t:'adjective',e:'democratic',syn:[{d:'freiheitlich',e:'free/liberal'},{d:'pluralistisch',e:'pluralistic'}],ant:[{d:'autoritär',e:'authoritarian'},{d:'totalitär',e:'totalitarian'}]}]},
+  {id:'wirtschaft',level:'B2',topic:'Wirtschaft',chapter:'B2 · Economy & Finance',keys:['wirtschaft','inflation','steuern','unternehmen','börse'],
+   words:[{g:'Inflation',e:'inflation',t:'noun',a:'die',v:[{d:'Preissteigerung',e:'price rise'},{d:'Kaufkraft',e:'purchasing power'},{d:'Deflation',e:'deflation'}]},{g:'Unternehmen',e:'company',t:'noun',a:'das',v:[{d:'Startup',e:'startup'},{d:'Konzern',e:'corporation'},{d:'Mittelstand',e:'SMEs'}]},{g:'Steuern',e:'taxes',t:'noun',a:'die',v:[{d:'Einkommensteuer',e:'income tax'},{d:'Mehrwertsteuer',e:'VAT'}]},{g:'Börse',e:'stock exchange',t:'noun',a:'die',v:[{d:'Aktie',e:'share/stock'},{d:'Kurs',e:'price/rate'},{d:'Investment',e:'investment'}]},{g:'investieren',e:'to invest',t:'verb',a:null,v:[{d:'anlegen',e:'to place funds'},{d:'finanzieren',e:'to finance'}]},{g:'konkurrieren',e:'to compete',t:'verb',a:null,v:[{d:'Wettbewerb',e:'competition'},{d:'übertreffen',e:'to surpass'}]},{g:'wirtschaftlich',e:'economic',t:'adjective',a:null,v:[{d:'finanziell',e:'financial'},{d:'rentabel',e:'profitable'}]}],
+   sents:[{g:'Die Inflation hat die Kaufkraft der Verbraucher stark verringert.',e:"Inflation has greatly reduced consumers' purchasing power."},{g:'Viele Unternehmen investieren in neue Technologien.',e:'Many companies are investing in new technologies.'},{g:'Die Börse reagiert empfindlich auf wirtschaftliche Nachrichten.',e:'The stock exchange reacts sensitively to economic news.'}],
+   story:'Die deutsche Wirtschaft gehört zu den stärksten der Welt. Aber hohe Inflation und steigende Energiekosten belasten Unternehmen und Verbraucher. Viele Firmen investieren trotzdem in neue Technologien. An der Börse reagieren Aktienkurse sofort auf wirtschaftliche Nachrichten.',story_en:'The German economy is one of the strongest in the world. But high inflation and rising energy costs are burdening companies and consumers. Nevertheless, many firms are investing in new technologies. On the stock exchange, share prices immediately react to economic news.',
+   sa:[{w:'investieren',t:'verb',e:'to invest',syn:[{d:'anlegen',e:'to invest'},{d:'finanzieren',e:'to finance'}],ant:[{d:'verlieren',e:'to lose'},{d:'verschwenden',e:'to waste'}]},{w:'wirtschaftlich',t:'adjective',e:'economic',syn:[{d:'finanziell',e:'financial'},{d:'rentabel',e:'profitable'}],ant:[{d:'unwirtschaftlich',e:'uneconomical'},{d:'defizitär',e:'loss-making'}]}]},
+  {id:'kommunikation',level:'B2',topic:'Kommunikation',chapter:'B2 · Communication',keys:['kommunikation','dialog','missverständnis','ausdrücken'],
+   words:[{g:'Missverständnis',e:'misunderstanding',t:'noun',a:'das',v:[{d:'Kommunikationsfehler',e:'communication error'},{d:'Fehlinterpretation',e:'misinterpretation'}]},{g:'Dialog',e:'dialogue',t:'noun',a:'der',v:[{d:'Gespräch',e:'conversation'},{d:'Austausch',e:'exchange'}]},{g:'Körpersprache',e:'body language',t:'noun',a:'die',v:[{d:'Gestik',e:'gestures'},{d:'Mimik',e:'facial expression'},{d:'Blickkontakt',e:'eye contact'}]},{g:'Botschaft',e:'message',t:'noun',a:'die',v:[{d:'Inhalt',e:'content'},{d:'Subtext',e:'subtext'}]},{g:'sich ausdrücken',e:'to express oneself',t:'verb',a:null,v:[{d:'formulieren',e:'to formulate'},{d:'artikulieren',e:'to articulate'}]},{g:'interpretieren',e:'to interpret',t:'verb',a:null,v:[{d:'deuten',e:'to interpret'},{d:'verstehen',e:'to understand'}]},{g:'eindeutig',e:'unambiguous',t:'adjective',a:null,v:[{d:'klar',e:'clear'},{d:'präzise',e:'precise'},{d:'mehrdeutig',e:'ambiguous'}]}],
+   sents:[{g:'Ein Missverständnis entsteht oft durch fehlende Körpersprache.',e:'A misunderstanding often arises from the lack of body language.'},{g:'Es ist wichtig, sich klar und eindeutig auszudrücken.',e:'It is important to express oneself clearly and unambiguously.'},{g:'Gute Kommunikation erfordert echtes Zuhören.',e:'Good communication requires genuine listening.'}],
+   story:'Gute Kommunikation ist eine Schlüsselkompetenz. Häufig entstehen Missverständnisse, weil Menschen eine Botschaft unterschiedlich interpretieren. In einem offenen Dialog können Missverständnisse geklärt werden. Körpersprache spielt dabei eine ebenso wichtige Rolle wie die Worte selbst.',story_en:'Good communication is a key competence. Misunderstandings often arise because people interpret a message differently. In an open dialogue misunderstandings can be clarified. Body language plays just as important a role as the words themselves.',
+   sa:[{w:'sich ausdrücken',t:'verb',e:'to express oneself',syn:[{d:'formulieren',e:'to formulate'},{d:'artikulieren',e:'to articulate'}],ant:[{d:'schweigen',e:'to be silent'},{d:'verbergen',e:'to hide'}]},{w:'eindeutig',t:'adjective',e:'unambiguous',syn:[{d:'klar',e:'clear'},{d:'präzise',e:'precise'}],ant:[{d:'mehrdeutig',e:'ambiguous'},{d:'vage',e:'vague'}]}]},
+  {id:'klimawandel',level:'B2',topic:'Klimawandel',chapter:'B2 · Climate Change',keys:['klimawandel','emissionen','erneuerbar','co2','energiewende'],
+   words:[{g:'Emissionen',e:'emissions',t:'noun',a:'die',v:[{d:'CO2-Ausstoß',e:'CO2 output'},{d:'Treibhausgas',e:'greenhouse gas'},{d:'Schadstoff',e:'pollutant'}]},{g:'Extremwetter',e:'extreme weather',t:'noun',a:'das',v:[{d:'Überschwemmung',e:'flood'},{d:'Dürre',e:'drought'},{d:'Hitzewelle',e:'heatwave'}]},{g:'Energiewende',e:'energy transition',t:'noun',a:'die',v:[{d:'Solarausbau',e:'solar expansion'},{d:'Windpark',e:'wind farm'}]},{g:'Ressource',e:'resource',t:'noun',a:'die',v:[{d:'fossile Brennstoffe',e:'fossil fuels'},{d:'Rohstoff',e:'raw material'}]},{g:'reduzieren',e:'to reduce',t:'verb',a:null,v:[{d:'verringern',e:'to decrease'},{d:'senken',e:'to lower'},{d:'begrenzen',e:'to limit'}]},{g:'anpassen',e:'to adapt',t:'verb',a:null,v:[{d:'reagieren auf',e:'to react to'},{d:'transformieren',e:'to transform'}]},{g:'katastrophal',e:'catastrophic',t:'adjective',a:null,v:[{d:'verheerend',e:'devastating'},{d:'bedrohlich',e:'threatening'}]}],
+   sents:[{g:'Die Emissionen müssen dringend reduziert werden.',e:'Emissions must be urgently reduced.'},{g:'Extremwetterereignisse wie Überschwemmungen nehmen zu.',e:'Extreme weather events like floods are increasing.'},{g:'Wir müssen uns an die neuen Klimabedingungen anpassen.',e:'We must adapt to the new climate conditions.'}],
+   story:'Der Klimawandel ist die größte Herausforderung des 21. Jahrhunderts. Steigende CO2-Emissionen führen zu katastrophalen Extremwetterereignissen. Die Energiewende ist ein Schlüssel zur Lösung. Durch das Pariser Abkommen haben viele Länder versprochen, ihre Emissionen zu senken. Jede Gesellschaft muss sich anpassen — und schnell.',story_en:'Climate change is the greatest challenge of the 21st century. Rising CO2 emissions lead to catastrophic extreme weather events. The energy transition is a key solution. Through the Paris Agreement many countries have promised to reduce their emissions. Every society must adapt — and quickly.',
+   sa:[{w:'reduzieren',t:'verb',e:'to reduce',syn:[{d:'verringern',e:'to decrease'},{d:'senken',e:'to lower'}],ant:[{d:'erhöhen',e:'to increase'},{d:'steigern',e:'to raise'}]},{w:'katastrophal',t:'adjective',e:'catastrophic',syn:[{d:'verheerend',e:'devastating'},{d:'schwerwiegend',e:'serious'}],ant:[{d:'harmlos',e:'harmless'},{d:'positiv',e:'positive'}]}]},
+];
+
+const COLS={noun:{fd:'rgba(18,55,18,.9)',fl:'rgba(30,90,20,.12)',s:'#48aa20',td:'#b0f080',tl:'#1a5a08',bb:'rgba(50,120,30,.25)',btd:'#78d848',btl:'#1a5a08',lbl:'Nomen'},verb:{fd:'rgba(8,38,78,.9)',fl:'rgba(10,50,110,.1)',s:'#3888da',td:'#a0ccff',tl:'#0a3878',bb:'rgba(35,85,175,.25)',btd:'#68b0ff',btl:'#0a3878',lbl:'Verb'},adjective:{fd:'rgba(68,32,4,.9)',fl:'rgba(110,60,4,.1)',s:'#c88008',td:'#ffd068',tl:'#6a4004',bb:'rgba(150,90,8,.25)',btd:'#f8c030',btl:'#6a4004',lbl:'Adjektiv'},phrase:{fd:'rgba(38,28,88,.9)',fl:'rgba(60,40,150,.1)',s:'#8068d8',td:'#c8c0ff',tl:'#3c2888',bb:'rgba(75,55,175,.25)',btd:'#a898ff',btl:'#3c2888',lbl:'Phrase'},other:{fd:'rgba(28,28,26,.9)',fl:'rgba(80,80,70,.1)',s:'#708080',td:'#b8c0c0',tl:'#404040',bb:'rgba(75,85,85,.25)',btd:'#a0b0b0',btl:'#404040',lbl:'Andere'}};
+const QUOTES=[{d:'"Eine Sprache zu lernen bedeutet, ein neues Fenster zur Welt zu öffnen."',e:'"To learn a language is to open a new window to the world."'},{d:'"Wer eine Fremdsprache nicht kennt, weiß nichts von seiner eigenen."',e:'"Those who know no foreign language know nothing of their own." — Goethe'},{d:'"Übung macht den Meister."',e:'"Practice makes perfect."'},{d:'"Jedes Wort, das du lernst, öffnet eine neue Tür."',e:'"Every word you learn opens a new door."'}];
+
+let CL='A2',_data=null,_did=null,_tc=null,_activeChip=null;
+let _z=1,_px=0,_py=0,_dr=false,_lx=0,_ly=0,_pd=0;
+const isDark=()=>document.documentElement.getAttribute('data-theme')!=='light';
+const cF=c=>isDark()?c.fd:c.fl,cT=c=>isDark()?c.td:c.tl,cBT=c=>isDark()?c.btd:c.btl;
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+function strH(s){let h=0;for(let i=0;i<s.length;i++)h=(Math.imul(31,h)+s.charCodeAt(i))|0;return Math.abs(h);}
+function mkRng(seed){let s=Math.abs(seed)||42;return()=>{s=(s*16807)%2147483647;return(s-1)/2147483646;};}
+
+function toggleTheme(){
+  const html=document.documentElement,dark=html.getAttribute('data-theme')==='dark';
+  html.setAttribute('data-theme',dark?'light':'dark');
+  document.getElementById('tbtn').innerHTML=dark?'&#127769; Dark':'&#9728;&#65039; Light';
+  if(_data)rebuildSVG();else renderHome();
+}
+function rebuildSVG(){
+  const wc=document.getElementById('wc-el');if(!wc||!_data)return;
+  const{id,svgHtml}=buildSVG(_data);wc.innerHTML=svgHtml;setTimeout(()=>initZoom(id),60);
+}
+
+const chOf=l=>DB.filter(t=>t.level===l);
+function populateCats(level){
+  const sel=document.getElementById('catsel');
+  sel.innerHTML='<option value="">— Browse '+level+' topics —</option>';
+  chOf(level).forEach((t,i)=>{const o=document.createElement('option');o.value=i;o.textContent=t.chapter;sel.appendChild(o);});
+}
+function populateChips(level){
+  document.getElementById('qchips').innerHTML=chOf(level).map(t=>'<button class="chip" onclick="loadTopic(\''+t.id+'\')">' +t.topic+'</button>').join('');
+}
+function renderHome(){
+  const topics=chOf(CL);
+  const topicCards=topics.map(t=>{
+    const wordCount=t.words.length;
+    const badge='<span class="tc-level">'+t.level+'</span>';
+    const chap='<span class="tc-chap">'+t.chapter.replace(/^[AB][12] · /,'')+'</span>';
+    return '<div class="topic-card" onclick="loadTopic(\''+t.id+'\')" tabindex="0" onkeydown="if(event.key===\'Enter\')loadTopic(\''+t.id+'\')">'
+      +badge+chap
+      +'<div class="tc-name">'+esc(t.topic)+'</div>'
+      +'<div class="tc-words">'+wordCount+' words</div>'
+      +'</div>';
+  }).join('');
+  document.getElementById('root').innerHTML=
+    '<div class="hero-area">'
+      +'<div class="hero-preview">'
+        +'<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'
+          +'<circle cx="160" cy="100" r="32" fill="none" stroke="var(--ac)" stroke-width="1" opacity="0.18"/>'
+          +'<circle cx="160" cy="100" r="60" fill="none" stroke="var(--ac)" stroke-width="0.5" opacity="0.1" stroke-dasharray="4,6"/>'
+          +'<circle cx="160" cy="100" r="90" fill="none" stroke="var(--ac)" stroke-width="0.4" opacity="0.07" stroke-dasharray="3,8"/>'
+          // center node
+          +'<ellipse cx="160" cy="100" rx="30" ry="18" fill="var(--btnbg)" opacity="0.9"/>'
+          +'<text x="160" y="104" text-anchor="middle" font-family="Patrick Hand SC,cursive" font-size="12" fill="#fff">Familie</text>'
+          // orbit nodes
+          +'<rect x="56" y="40" width="52" height="22" rx="6" fill="rgba(72,170,32,.22)" stroke="#48aa20" stroke-width="1"/>'
+          +'<text x="82" y="55" text-anchor="middle" font-family="Patrick Hand,cursive" font-size="10" fill="var(--tx)">Mutter</text>'
+          +'<line x1="131" y1="90" x2="108" y2="54" stroke="#48aa20" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>'
+          +'<rect x="200" y="32" width="52" height="22" rx="6" fill="rgba(56,136,218,.22)" stroke="#3888da" stroke-width="1"/>'
+          +'<text x="226" y="47" text-anchor="middle" font-family="Patrick Hand,cursive" font-size="10" fill="var(--tx)">lieben</text>'
+          +'<line x1="189" y1="90" x2="215" y2="46" stroke="#3888da" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>'
+          +'<rect x="214" y="120" width="60" height="22" rx="6" fill="rgba(200,128,8,.22)" stroke="#c88008" stroke-width="1"/>'
+          +'<text x="244" y="135" text-anchor="middle" font-family="Patrick Hand,cursive" font-size="10" fill="var(--tx)">jung</text>'
+          +'<line x1="190" y1="108" x2="216" y2="124" stroke="#c88008" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>'
+          +'<rect x="50" y="120" width="66" height="22" rx="6" fill="rgba(128,104,216,.22)" stroke="#8068d8" stroke-width="1"/>'
+          +'<text x="83" y="135" text-anchor="middle" font-family="Patrick Hand,cursive" font-size="10" fill="var(--tx)">Auf Wiedersehen</text>'
+          +'<line x1="130" y1="108" x2="100" y2="124" stroke="#8068d8" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>'
+          +'<rect x="70" y="78" width="52" height="22" rx="6" fill="rgba(56,136,218,.22)" stroke="#3888da" stroke-width="1"/>'
+          +'<text x="96" y="93" text-anchor="middle" font-family="Patrick Hand,cursive" font-size="10" fill="var(--tx)">wohnen</text>'
+          +'<line x1="131" y1="98" x2="122" y2="93" stroke="#3888da" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>'
+          +'<rect x="202" y="78" width="58" height="22" rx="6" fill="rgba(72,170,32,.22)" stroke="#48aa20" stroke-width="1"/>'
+          +'<text x="231" y="93" text-anchor="middle" font-family="Patrick Hand,cursive" font-size="10" fill="var(--tx)">Vater</text>'
+          +'<line x1="190" y1="98" x2="204" y2="93" stroke="#48aa20" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5"/>'
+          // small star dots
+          +'<circle cx="30" cy="25" r="1" fill="white" opacity="0.4"/>'
+          +'<circle cx="290" cy="15" r="1.2" fill="white" opacity="0.5"/>'
+          +'<circle cx="15" cy="160" r="0.8" fill="white" opacity="0.35"/>'
+          +'<circle cx="305" cy="170" r="1" fill="white" opacity="0.4"/>'
+          +'<circle cx="140" cy="12" r="0.7" fill="white" opacity="0.3"/>'
+          +'<circle cx="270" cy="185" r="1" fill="white" opacity="0.35"/>'
+        +'</svg>'
+      +'</div>'
+      +'<div class="hero-text">'
+        +'<div class="hero-title">Explore German like a galaxy</div>'
+        +'<div class="hero-desc">Click any topic below to generate an interactive word web — orbit bubbles, vocab cards, example stories, and a drag-and-drop challenge. All offline. All free.</div>'
+        +'<div class="hero-stats">'
+          +'<div class="hstat"><span class="hstat-n">'+DB.length+'</span><span class="hstat-l">Topics</span></div>'
+          +'<div class="hstat"><span class="hstat-n">'+DB.reduce((a,t)=>a+t.words.length,0)+'</span><span class="hstat-l">Words</span></div>'
+          +'<div class="hstat"><span class="hstat-n">4</span><span class="hstat-l">Levels</span></div>'
+          +'<div class="hstat"><span class="hstat-n">0</span><span class="hstat-l">Cost</span></div>'
+        +'</div>'
+      +'</div>'
+    +'</div>'
+    +'<div class="topic-index">'
+      +'<div class="ti-header"><span class="ti-title">&#10022; '+CL+' Topics</span><span class="ti-count">'+topics.length+' chapters available</span></div>'
+      +'<div class="topic-grid">'+topicCards+'</div>'
+    +'</div>';
+}
+function setLevel(l){
+  CL=l;
+  document.querySelectorAll('.lvl-btn').forEach(b=>b.classList.toggle('active',b.textContent.startsWith(l)));
+  populateCats(l);populateChips(l);closeSugg();
+  if(!_data)renderHome();
+}
+function onCatChange(val){
+  if(!val){closeSugg();return;}
+  const t=chOf(CL)[parseInt(val)];if(!t){closeSugg();return;}
+  const chips=t.words.slice(0,5).map((w,i)=>'<button class="sug-chip" style="animation-delay:'+(i*.04)+'s" onclick="searchWord(\''+w.g+'\')">'+w.g+'</button>').join('');
+  const sugg=document.getElementById('csugg');
+  sugg.innerHTML='<div class="sug-intro">Key words from this chapter:</div><div class="sug-chips">'+chips+'<button class="sug-chip" onclick="loadTopic(\''+t.id+'\')">&#8594; Full topic: '+t.topic+'</button></div>';
+  sugg.classList.add('open');
+}
+function closeSugg(){const s=document.getElementById('csugg');s.classList.remove('open');setTimeout(()=>s.innerHTML='',380);}
+populateCats('A2');populateChips('A2');renderHome();
+
+function findTopic(q){
+  q=q.toLowerCase().trim();
+  const local=DB.filter(t=>t.level===CL);
+  return local.find(t=>t.id===q)||local.find(t=>t.topic.toLowerCase()===q)||local.find(t=>t.keys.some(k=>k===q||q.includes(k)||k.includes(q)))||local.find(t=>t.topic.toLowerCase().includes(q)||q.includes(t.topic.toLowerCase()))||DB.find(t=>t.topic.toLowerCase()===q||t.keys.some(k=>k===q))||null;
+}
+function searchWord(w){document.getElementById('tinput').value=w;generate();}
+function loadTopic(id){const t=DB.find(t=>t.id===id);if(t){document.getElementById('tinput').value=t.topic;document.getElementById('catsel').value='';closeSugg();renderTopic(t);}}
+document.getElementById('tinput').addEventListener('keydown',e=>{if(e.key==='Enter')generate();});
+function generate(){
+  const q=document.getElementById('tinput').value.trim();if(!q){document.getElementById('tinput').focus();return;}
+  document.getElementById('catsel').value='';closeSugg();
+  const t=findTopic(q);if(t){renderTopic(t);}else{generateWithAI(q);}
+}
+function showNotFound(q){
+  const cards=chOf(CL).slice(0,8).map(t=>'<div class="nf-card" onclick="loadTopic(\''+t.id+'\')"><div class="nf-lv">'+t.chapter+'</div><div class="nf-t">'+t.topic+'</div></div>').join('');
+  document.getElementById('root').innerHTML='<div class="state"><svg class="state-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="24" r="10"/><line x1="24" y1="14" x2="24" y2="26"/><circle cx="24" cy="30" r="1.5" fill="currentColor"/></svg><p>"'+esc(q)+'" not in the '+CL+' database yet<small>Try one of these topics below, or switch level</small></p><div class="nf-grid">'+cards+'</div></div>';
+}
+function resetHome(){document.getElementById('tinput').value='';renderHome();}
+
+function resolveAll(nodes,cx,cy,iters){
+  const pad=15;
+  for(let it=0;it<iters;it++){
+    for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){
+      const a=nodes[i],b=nodes[j];
+      const ox=(a.w+b.w)/2+pad-Math.abs(a.x-b.x),oy=(a.h+b.h)/2+pad-Math.abs(a.y-b.y);
+      if(ox>0&&oy>0){
+        const dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy)||.001;
+        const push=(Math.min(ox,oy)*.6)+1.5,nx=dx/d,ny=dy/d;
+        const wa=a.isV?.45:1,wb=b.isV?.45:1;
+        a.x+=nx*push*wa;a.y+=ny*push*wa;b.x-=nx*push*wb;b.y-=ny*push*wb;
+        if(!a.isV){const dr=Math.sqrt((a.x-cx)**2+(a.y-cy)**2);if(dr<108){const sc=108/dr;a.x=cx+(a.x-cx)*sc;a.y=cy+(a.y-cy)*sc;}}
+        if(!b.isV){const dr=Math.sqrt((b.x-cx)**2+(b.y-cy)**2);if(dr<108){const sc=108/dr;b.x=cx+(b.x-cx)*sc;b.y=cy+(b.y-cy)*sc;}}
+      }
+    }
+  }
+}
+
+function buildSVG(data){
+  const dark=isDark(),words=data.words.slice(0,14),n=words.length;
+  const rng=mkRng(strH(data.topic)),cx=400,cy=285,MH=48,VH=32;
+  const mSz=words.map(w=>{const lbl=w.a?w.a+' '+w.g:w.g;return{w:Math.min(Math.max(lbl.length*9.5+28,88),168),h:MH};});
+  const mPos=words.map((w,i)=>{const ang=-Math.PI/2+(i/n)*2*Math.PI+(rng()-.5)*.22,r=168+mSz[i].w*.26+rng()*46;return{x:cx+r*Math.cos(ang),y:cy+r*Math.sin(ang),w:mSz[i].w,h:MH,isV:false,wi:i};});
+  resolveAll(mPos,cx,cy,100);
+  const all=[...mPos];
+  words.forEach((w,i)=>{
+    const mp=mPos[i],oa=Math.atan2(mp.y-cy,mp.x-cx);
+    (w.v||[]).slice(0,4).forEach((vt,vi)=>{
+      const vtd=typeof vt==='object'?(vt.d||''):String(vt),vte=typeof vt==='object'?(vt.e||''):'';
+      const vbw=Math.min(Math.max(vtd.length*7.2+16,52),128);
+      const spread=w.v.length>1?((vi-(w.v.length-1)/2)/w.v.length)*0.85:0;
+      const va=oa+spread,vr=MH/2+VH/2+22+vi*3;
+      all.push({x:mp.x+vr*Math.cos(va),y:mp.y+vr*Math.sin(va),w:vbw,h:VH,isV:true,wi:i,td:vtd,te:vte});
+    });
+  });
+  resolveAll(all,cx,cy,80);
+  let mnX=cx-130,mnY=cy-100,mxX=cx+130,mxY=cy+100;
+  all.forEach(nd=>{mnX=Math.min(mnX,nd.x-nd.w/2-8);mnY=Math.min(mnY,nd.y-nd.h/2-8);mxX=Math.max(mxX,nd.x+nd.w/2+8);mxY=Math.max(mxY,nd.y+nd.h/2+8);});
+  const pd=28,vx=mnX-pd,vy=mnY-pd,vw=mxX-mnX+pd*2,vh=mxY-mnY+pd*2;
+  const bgF=dark?'rgba(4,6,18,.7)':'rgba(240,236,224,.6)';
+  const sr=mkRng(strH(data.topic+'s'));let stars='';
+  if(dark)for(let i=0;i<80;i++){const sx=vx+sr()*vw,sy=vy+sr()*vh,r=sr()>.9?1.3:.6,op=(0.1+sr()*.4).toFixed(2);stars+='<circle cx="'+sx.toFixed(1)+'" cy="'+sy.toFixed(1)+'" r="'+r+'" fill="white" opacity="'+op+'"/>';}
+  let lines='',nodes='',varN='';
+  mPos.forEach((p,i)=>{
+    const w=words[i],c=COLS[w.t]||COLS.other;
+    const mx=(cx+p.x)/2+(rng()-.5)*36,my=(cy+p.y)/2+(rng()-.5)*24;
+    lines+='<path d="M'+cx+','+cy+' Q'+mx.toFixed(1)+','+my.toFixed(1)+' '+p.x.toFixed(1)+','+p.y.toFixed(1)+'" fill="none" stroke="'+c.s+'" stroke-width="1.3" stroke-dasharray="5,6" opacity="0.35"/>';
+    lines+='<circle cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" r="2.8" fill="'+c.s+'" opacity="0.45"/>';
+  });
+  mPos.forEach((p,i)=>{
+    const w=words[i],c=COLS[w.t]||COLS.other,lbl=w.a?w.a+' '+w.g:w.g,bw=mSz[i].w;
+    nodes+='<g class="wn"><rect x="'+(p.x-bw/2).toFixed(1)+'" y="'+(p.y-MH/2).toFixed(1)+'" width="'+bw+'" height="'+MH+'" rx="10" fill="'+cF(c)+'" stroke="'+c.s+'" stroke-width="1.5"/><text x="'+p.x.toFixed(1)+'" y="'+(p.y-5).toFixed(1)+'" text-anchor="middle" font-family="\'Patrick Hand\',cursive" font-size="17" font-weight="700" fill="'+cT(c)+'">'+esc(lbl)+'</text><text x="'+p.x.toFixed(1)+'" y="'+(p.y+12).toFixed(1)+'" text-anchor="middle" font-family="\'Patrick Hand\',cursive" font-size="12" fill="'+cT(c)+'" opacity="0.6">'+esc(w.e)+'</text></g>';
+  });
+  all.filter(nd=>nd.isV).forEach(nd=>{
+    const pp=mPos[nd.wi],w=words[nd.wi],c=COLS[w.t]||COLS.other,hasE=!!nd.te;
+    lines+='<line x1="'+pp.x.toFixed(1)+'" y1="'+pp.y.toFixed(1)+'" x2="'+nd.x.toFixed(1)+'" y2="'+nd.y.toFixed(1)+'" stroke="'+c.s+'" stroke-width="0.7" stroke-dasharray="3,4" opacity="0.22"/>';
+    varN+='<g class="vn"><rect x="'+(nd.x-nd.w/2).toFixed(1)+'" y="'+(nd.y-nd.h/2).toFixed(1)+'" width="'+nd.w+'" height="'+nd.h+'" rx="7" fill="'+cF(c)+'" stroke="'+c.s+'" stroke-width="0.9" opacity="0.8"/><text x="'+nd.x.toFixed(1)+'" y="'+(nd.y+(hasE?-4:2)).toFixed(1)+'" text-anchor="middle" font-family="\'Patrick Hand\',cursive" font-size="12" font-weight="700" fill="'+cT(c)+'">'+esc(nd.td)+'</text>'+(hasE?'<text x="'+nd.x.toFixed(1)+'" y="'+(nd.y+10).toFixed(1)+'" text-anchor="middle" font-family="\'Patrick Hand\',cursive" font-size="10" fill="'+cT(c)+'" opacity="0.6">'+esc(nd.te)+'</text>':'')+'</g>';
+  });
+  const tg=esc(data.topic),cbw=Math.max(tg.length*13+40,115);
+  const cF2=dark?'rgba(7,9,26,.93)':'rgba(240,236,220,.95)',cBrd=dark?'#6eb5ff':'#1a5a9a',cTx2=dark?'#e4e0d4':'#1e1a10',cTs=dark?'#4a5070':'#9a8e78';
+  const svgId='sv'+Date.now();
+  const centre='<ellipse cx="'+cx+'" cy="'+cy+'" rx="'+(cbw/2+8)+'" ry="43" fill="'+(dark?'rgba(110,181,255,.03)':'rgba(26,90,154,.05)')+'" stroke="'+(dark?'rgba(110,181,255,.12)':'rgba(26,90,154,.2)')+'" stroke-width=".8"/><ellipse cx="'+cx+'" cy="'+cy+'" rx="'+(cbw/2)+'" ry="34" fill="'+cF2+'" stroke="'+cBrd+'" stroke-width="1.8"/><text x="'+cx+'" y="'+(cy+3)+'" text-anchor="middle" font-family="\'Patrick Hand SC\',cursive" font-size="21" fill="'+cTx2+'">'+tg+'</text><text x="'+cx+'" y="'+(cy+21)+'" text-anchor="middle" font-family="\'Patrick Hand\',cursive" font-size="13" fill="'+cTs+'">'+esc(data.level)+'</text>';
+  return{id:svgId,svgHtml:'<svg id="'+svgId+'" viewBox="'+vx.toFixed(0)+' '+vy.toFixed(0)+' '+vw.toFixed(0)+' '+vh.toFixed(0)+'" style="display:block;width:100%;overflow:visible"><rect x="'+vx.toFixed(0)+'" y="'+vy.toFixed(0)+'" width="'+vw.toFixed(0)+'" height="'+vh.toFixed(0)+'" rx="14" fill="'+bgF+'"/>'+stars+lines+nodes+varN+centre+'</svg>'};
+}
+
+function initZoom(svgId){
+  const card=document.getElementById('wc-el'),svg=document.getElementById(svgId);if(!card||!svg)return;
+  _z=1;_px=0;_py=0;
+  const applyTx=()=>{svg.style.transform='translate('+_px+'px,'+_py+'px) scale('+_z+')';svg.style.transformOrigin='50% 50%';};
+  card.addEventListener('wheel',e=>{e.preventDefault();_z=Math.min(4,Math.max(.35,_z+(e.deltaY>0?-.12:.12)));applyTx();},{passive:false});
+  card.addEventListener('mousedown',e=>{_dr=true;_lx=e.clientX;_ly=e.clientY;});
+  window.addEventListener('mousemove',e=>{if(!_dr)return;_px+=e.clientX-_lx;_py+=e.clientY-_ly;_lx=e.clientX;_ly=e.clientY;applyTx();});
+  window.addEventListener('mouseup',()=>_dr=false);
+  card.addEventListener('touchstart',e=>{if(e.touches.length===2)_pd=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);else{_lx=e.touches[0].clientX;_ly=e.touches[0].clientY;_dr=true;}},{passive:true});
+  card.addEventListener('touchmove',e=>{if(e.touches.length===2){const nd=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);_z=Math.min(4,Math.max(.35,_z*(nd/_pd)));_pd=nd;applyTx();}else if(_dr){_px+=e.touches[0].clientX-_lx;_py+=e.touches[0].clientY-_ly;_lx=e.touches[0].clientX;_ly=e.touches[0].clientY;applyTx();}},{passive:true});
+  card.addEventListener('touchend',()=>_dr=false);
+  window.resetZoom=()=>{_z=1;_px=0;_py=0;applyTx();};
+  window.zoomIn=()=>{_z=Math.min(4,_z+.2);applyTx();};
+  window.zoomOut=()=>{_z=Math.max(.35,_z-.2);applyTx();};
+}
+
+function shuffleSents(){
+  if(!_data)return;
+  const arr=[..._data.sents];for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}
+  document.getElementById('sent-list').innerHTML=arr.map(s=>'<div class="sent-card"><div class="sent-de">'+esc(s.g)+'</div><div class="sent-en">'+esc(s.e)+'</div></div>').join('');
+}
+function hlStory(txt,words){
+  let r=esc(txt);const terms=[];words.forEach(w=>{terms.push(w.g);if(w.a)terms.push(w.a+' '+w.g);});
+  terms.sort((a,b)=>b.length-a.length);
+  terms.forEach(w=>{const re=new RegExp('(?<![\\wäöüÄÖÜß])('+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')(?![\\wäöüÄÖÜß])','gi');r=r.replace(re,'<span class="hl">$1</span>');});
+  return r;
+}
+
+let gs={correct:0,total:0};
+function initGame(sa){
+  if(!sa||!sa.length)return'';
+  gs={correct:0,total:0};
+  const chips=[];
+  sa.forEach((e,ei)=>{
+    (e.syn||[]).forEach((s,si)=>{chips.push({id:'s_'+ei+'_'+si,text:s.d,own:s.e||'',ei,tt:'syn'});gs.total++;});
+    (e.ant||[]).forEach((s,si)=>{chips.push({id:'a_'+ei+'_'+si,text:s.d,own:s.e||'',ei,tt:'ant'});gs.total++;});
+  });
+  for(let i=chips.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[chips[i],chips[j]]=[chips[j],chips[i]];}
+  const pool=chips.map(c=>'<div class="dc" id="chip_'+c.id+'" draggable="true" data-id="'+c.id+'" data-ei="'+c.ei+'" data-tt="'+c.tt+'" data-own="'+esc(c.own)+'" ondragstart="onDS(event)" ontouchstart="onTS(event)" ontouchmove="onTM(event)" ontouchend="onTE(event)">'+esc(c.text)+'</div>').join('');
+  const rows=sa.map((e,ei)=>'<div class="game-row"><div class="game-prompt">'+esc(e.w)+'<span class="game-hint">'+esc(e.e||'')+'</span></div><div style="display:flex;gap:9px;flex:1;flex-wrap:wrap;"><div class="dz" id="dz_syn_'+ei+'" data-ei="'+ei+'" data-type="syn" ondragover="oDO(event)" ondragleave="oDL(event)" ondrop="oDrop(event,'+ei+',\'syn\')"><span class="dz-ph">&#8776; synonym</span></div><div class="dz" id="dz_ant_'+ei+'" data-ei="'+ei+'" data-type="ant" ondragover="oDO(event)" ondragleave="oDL(event)" ondrop="oDrop(event,'+ei+',\'ant\')"><span class="dz-ph">&#8596; antonym</span></div></div></div>').join('');
+  const q=QUOTES[Math.floor(Math.random()*QUOTES.length)];
+  return'<div class="quote-box card"><div class="quote-de">'+q.d+'</div><div class="quote-en">'+q.e+'</div></div><div class="game-sec"><div class="sec-row"><div class="sec-title">&#127919; Vocabulary Challenge</div><div class="game-score" id="gscore">0 / '+gs.total+'</div></div><p style="font-size:15px;font-weight:700;color:var(--tx3);margin-bottom:12px">Drag each chip to the correct Synonym (&#8776;) or Antonym (&#8596;) box.</p><div class="pool">'+pool+'</div><div class="game-board">'+rows+'</div><div style="margin-top:13px"><button class="btn-ghost" onclick="resetGame()">&#8634; Reset</button></div></div>';
+}
+function onDS(e){_did=e.currentTarget.dataset.id;e.currentTarget.classList.add('dragging');e.dataTransfer.effectAllowed='move';}
+document.addEventListener('dragend',()=>document.querySelectorAll('.dc').forEach(c=>c.classList.remove('dragging')));
+function oDO(e){e.preventDefault();e.currentTarget.classList.add('over');}
+function oDL(e){e.currentTarget.classList.remove('over');}
+function oDrop(e,ei,type){e.preventDefault();e.currentTarget.classList.remove('over');if(!_did)return;handleDrop(_did,ei,type,e.currentTarget);_did=null;}
+function onTS(e){_did=e.currentTarget.dataset.id;_tc=e.currentTarget.cloneNode(true);_tc.style.cssText='position:fixed;opacity:.75;pointer-events:none;z-index:9999;transform:scale(1.1);';document.body.appendChild(_tc);const t=e.touches[0];_tc.style.left=(t.clientX-50)+'px';_tc.style.top=(t.clientY-20)+'px';}
+function onTM(e){e.preventDefault();if(!_tc)return;const t=e.touches[0];_tc.style.left=(t.clientX-50)+'px';_tc.style.top=(t.clientY-20)+'px';}
+function onTE(e){if(_tc){_tc.remove();_tc=null;}if(!_did)return;const t=e.changedTouches[0];const el=document.elementFromPoint(t.clientX,t.clientY);const dz=el&&el.closest('.dz');if(dz)handleDrop(_did,parseInt(dz.dataset.ei),dz.dataset.type,dz);_did=null;}
+function handleDrop(chipId,ei,type,dz){
+  const chip=document.getElementById('chip_'+chipId);if(!chip||chip.classList.contains('placed'))return;
+  const ok=(parseInt(chip.dataset.ei)===ei&&chip.dataset.tt===type);
+  if(ok){chip.classList.add('placed');dz.innerHTML='';const lbl=document.createElement('div');lbl.className='chip-placed';lbl.textContent=chip.textContent;dz.appendChild(lbl);const own=chip.dataset.own||'';if(own){const m=document.createElement('div');m.className='dz-meaning';m.textContent='✓ '+own;dz.appendChild(m);}dz.classList.add('ok');gs.correct++;const sc=document.getElementById('gscore');if(sc){
+    const pip=sc.querySelector('.score-pips');if(pip)pip.innerHTML=Array(gs.total).fill('').map((_,i)=>i<gs.correct?'&#9679;':'&#9711;').join('');
+    if(gs.correct>=gs.total){
+      if(pip){pip.classList.add('done');}
+      sc.style.animation='popIn .4s cubic-bezier(.34,1.56,.64,1)';
+      const ga=document.getElementById('game-area');
+      if(ga&&!ga.querySelector('.completion-banner')){
+        launchConfetti();
+        const b=document.createElement('div');
+        b.className='completion-banner';
+        b.innerHTML='<span>&#127881;</span><div><strong>Ausgezeichnet!</strong> All words placed correctly.</div><button class="go-btn" onclick="if(_data){const ts=chOf(CL);const ci=ts.findIndex(t=>t.id===_data.id);const nx=ts[ci+1];if(nx)loadTopic(nx.id);else resetHome();}" style="font-size:15px;padding:8px 18px">Next Topic &#8594;</button>';
+        ga.appendChild(b);
+      }
+    }else{
+      sc.textContent=gs.correct+' / '+gs.total;
+    }
+  }}
+  else{dz.classList.add('bad');setTimeout(()=>dz.classList.remove('bad'),400);}
+}
+function resetGame(){if(_data&&_data.sa)document.getElementById('game-area').innerHTML=initGame(_data.sa);}
+
+function openWordDetail(idx,chipEl){
+  if(!_data)return;
+  const w=_data.words[idx];if(!w)return;
+  if(_activeChip===chipEl){
+    chipEl.classList.remove('sel');
+    const old=document.getElementById('wd-panel');if(old)old.remove();
+    _activeChip=null;return;
+  }
+  document.querySelectorAll('.ex-chip').forEach(c=>c.classList.remove('sel'));
+  chipEl.classList.add('sel');_activeChip=chipEl;
+  const c=COLS[w.t]||COLS.other;
+  const artHtml=w.a?'<span class="wd-art">'+esc(w.a)+'</span>':'';
+  const vp=(w.v||[]).slice(0,6).map(function(v){const vd=typeof v==='object'?v.d:v,ve=typeof v==='object'?v.e:'';return'<span class="wd-vp">'+esc(vd)+(ve?' <em>· '+esc(ve)+'</em>':'')+'</span>';}).join('');
+  const panelBg=isDark()?c.fd.replace('.9)','.15)'):c.fl.replace('.12)','.35)');
+  const panelBorder=c.s+'55';
+  const panel=document.createElement('div');
+  panel.className='wd-panel card';panel.id='wd-panel';
+  panel.style.cssText='background:'+panelBg+';border-color:'+panelBorder+';';
+  panel.innerHTML='<span class="type-badge" style="background:'+c.bb+';color:'+cBT(c)+'">'+c.lbl+'</span>'+'<div class="wd-head">'+artHtml+'<span class="wd-word">'+esc(w.g)+'</span></div>'+'<div class="wd-en">= '+esc(w.e)+'</div>'+(vp?'<div class="wd-vt">RELATED FORMS</div><div class="wd-vpills">'+vp+'</div>':'');
+  const old=document.getElementById('wd-panel');if(old)old.remove();
+  const pool=document.getElementById('ex-pool');
+  pool.insertAdjacentElement('afterend',panel);
+}
+
+function renderTopic(data){
+  _data=data;_activeChip=null;
+  const{id,svgHtml}=buildSVG(data);
+  const legH=Object.entries(COLS).filter(([k])=>k!=='other').map(([,v])=>'<div class="legend-item"><div class="ldot" style="background:'+v.s+'"></div><span>'+v.lbl+'</span></div>').join('');
+  const sentH=data.sents.map(s=>'<div class="sent-card"><div class="sent-de">'+esc(s.g)+'</div><div class="sent-en">'+esc(s.e)+'</div></div>').join('');
+  const wordH=data.words.map(function(w){
+    const c=COLS[w.t]||COLS.other;
+    const art=w.a?'<span class="word-art">'+esc(w.a)+' </span>':'';
+    const vp=(w.v||[]).slice(0,4).map(function(v){const vd=typeof v==='object'?v.d:v,ve=typeof v==='object'?v.e:'';return'<span class="vp">'+esc(vd)+(ve?' <em>· '+esc(ve)+'</em>':'')+'</span>';}).join('');
+    return'<div class="word-card"><span class="type-badge" style="background:'+c.bb+';color:'+cBT(c)+'">'+c.lbl+'</span><div class="word-de">'+art+esc(w.g)+'</div><div class="word-en">'+esc(w.e)+'</div>'+(vp?'<div class="vpills">'+vp+'</div>':'')+'</div>';
+  }).join('');
+  const saH=data.sa&&data.sa.length?data.sa.map(function(e){
+    const st=(e.syn||[]).map(s=>'<span class="tag-s" title="'+esc(s.e)+'">'+esc(s.d)+'</span>').join('');
+    const at=(e.ant||[]).map(s=>'<span class="tag-a" title="'+esc(s.e)+'">'+esc(s.d)+'</span>').join('');
+    return'<div class="sa-row"><span class="sa-word">'+esc(e.w)+'</span><span class="sa-lbl">'+(e.t==='verb'?'&#128309; Verb':'&#128993; Adj.')+'</span>'+(st?'<span class="sa-lbl">&#8776;</span><div class="sa-tags">'+st+'</div>':'')+(at?'<span class="sa-lbl">&#8596;</span><div class="sa-tags">'+at+'</div>':'')+'</div>';
+  }).join(''):'';
+  const exChips=data.words.map(function(w,i){
+    const c=COLS[w.t]||COLS.other;
+    const bg=isDark()?c.fd:c.fl,col=isDark()?c.td:c.tl,bdr=c.s+'66';
+    return'<button class="ex-chip" onclick="openWordDetail('+i+',this)" style="background:'+bg+';color:'+col+';border-color:'+bdr+'">'+(w.a?w.a+' ':'')+'<strong>'+esc(w.g)+'</strong></button>';
+  }).join('');
+
+  // ── Floating word marquee from same chapter ──
+  const floatWords=data.words.map(w=>(w.a?w.a+' ':'')+w.g+' · '+w.e).join('   ✦   ');
+  const wordStrip='<div class="word-ticker" aria-hidden="true"><div class="word-ticker-inner">'+esc(floatWords)+'   ✦   '+esc(floatWords)+'</div></div>';
+
+  // ── Vocabulary Challenge: distinct DOJO theme ──
+  const gameSection=data.sa&&data.sa.length
+    ?'<div class="section-block dojo-block"><div class="dojo-header"><div class="dojo-icon">&#9876;</div><div><div class="dojo-title">Wortdojo &#xb7; Vocabulary Challenge</div><div class="dojo-sub">Drag each chip to its correct column. No hints — trust your memory.</div></div><div class="game-score" id="gscore">0 / '+gs.total+'</div></div>'+initGame(data.sa).replace('<div class="quote-box card">','<div class="quote-box card" style="display:none">')+'</div>'
+    :'';
+
+  // ── Synonyme: distinct LEDGER theme ──
+  const saSection=saH
+    ?'<div class="section-block ledger-block">'
+      +'<div class="sec-label-strip"><span class="sec-label-icon">&#8644;</span><span class="sec-label-text">Wortschatz &middot; Synonyme &amp; Antonyme</span></div>'
+      +'<div class="sa-table">'
+        +'<div class="sa-thead">'
+          +'<div class="sa-th word-th">Wort</div>'
+          +'<div class="sa-th syn-th">&#8776;&nbsp; Synonyme</div>'
+          +'<div class="sa-th ant-th">&#8596;&nbsp; Antonyme</div>'
+        +'</div>'
+        +data.sa.map(function(e){
+          const typeLbl=e.t==='verb'?'Verb':'Adj.';
+          const synTags=(e.syn||[]).map(s=>'<span class="ltag-s">'+esc(s.d)+'<em>'+esc(s.e)+'</em></span>').join('');
+          const antTags=(e.ant||[]).map(s=>'<span class="ltag-a">'+esc(s.d)+'<em>'+esc(s.e)+'</em></span>').join('');
+          return '<div class="sa-trow">'
+            +'<div class="sa-td word-td"><span class="sa-word-label">'+esc(e.w)+'</span><span class="sa-type-lbl">'+typeLbl+'</span></div>'
+            +'<div class="sa-td syn-td">'+synTags+'</div>'
+            +'<div class="sa-td ant-td">'+antTags+'</div>'
+          +'</div>';
+        }).join('')
+      +'</div>'
+    +'</div>'
+    :'';
+
+  // ── Word Explorer: distinct TERMINAL theme ──
+  const explorerSection='<div class="section-block terminal-block"><div class="terminal-topbar"><span class="tb-dot" style="background:#ff5f57"></span><span class="tb-dot" style="background:#febc2e"></span><span class="tb-dot" style="background:#28c840"></span><span class="tb-title">word-explorer — '+esc(data.topic)+'</span></div><div class="terminal-body"><div class="term-prompt">&#62; Click any word to inspect it below</div><div class="explorer-pool" id="ex-pool">'+exChips+'</div></div></div>';
+
+  document.getElementById('root').innerHTML=
+    '<div class="result-header"><div><div class="result-title">'+esc(data.topic)+'</div><div class="result-sub">'+data.words.length+' words &middot; '+data.level+' &middot; '+data.chapter+'</div></div><button class="btn-ghost" onclick="resetHome()">&#8592; All Topics</button></div>'
+    +wordStrip
+    +'<div class="legend">'+legH+'</div>'
+    +'<div class="learn-banner"><div class="learn-steps">'
+    +'<div class="learn-step"><div class="step-icon">&#127760;</div><div><div class="step-num">Step 01</div><div class="step-title">Explore the Galaxy</div><div class="step-desc">Pan &amp; zoom the word web. Orbit bubbles reveal related forms and verb conjugations.</div></div></div>'
+    +'<div class="learn-step"><div class="step-icon">&#128218;</div><div><div class="step-num">Step 02</div><div class="step-title">Read the Story</div><div class="step-desc">Highlighted words in the Mini-Geschichte show vocabulary in real, natural context.</div></div></div>'
+    +'<div class="learn-step"><div class="step-icon">&#9876;</div><div><div class="step-num">Step 03</div><div class="step-title">Enter the Wortdojo</div><div class="step-desc">Drag synonym and antonym chips to their correct columns — no hints allowed.</div></div></div>'
+    +'</div></div>'
+    +'<div class="web-outer"><div class="web-controls"><span class="web-hint">&#128433; scroll to zoom &middot; drag to pan &middot; pinch on mobile</span><button class="wc-btn" onclick="zoomIn()">&#65291;</button><button class="wc-btn" onclick="zoomOut()">&#65293;</button><button class="wc-btn" onclick="resetZoom()">&#8859;</button></div><div class="web-card card" id="wc-el">'+svgHtml+'</div></div>'
+    +'<div class="section-block sents-block"><div class="sec-label-strip blue-strip"><span class="sec-label-icon">&#128172;</span><span class="sec-label-text">&#220;bungss&#228;tze &middot; Example Sentences</span><button class="shuf-btn" onclick="shuffleSents()">&#8644; Shuffle</button></div><div id="sent-list">'+sentH+'</div></div>'
+    +'<div class="section-block story-block">'
+    +'<div class="sec-label-strip purple-strip"><span class="sec-label-icon">&#10022;</span><span class="sec-label-text">Mini-Geschichte &middot; Read the Story</span></div>'
+    +'<div class="story-card">'
+      +'<div class="story-cols">'
+        +'<div class="story-col story-col-de">'
+          +'<div class="story-col-hd">&#127465;&#127466; Deutsch</div>'
+          +'<div class="story-txt">'+hlStory(data.story,data.words)+'</div>'
+        +'</div>'
+        +'<div class="story-col story-col-en">'
+          +'<div class="story-col-hd">&#127468;&#127463; English</div>'
+          +'<div class="story-en">'+esc(data.story_en)+'</div>'
+        +'</div>'
+      +'</div>'
+    +'</div>'
+  +'</div>'
+    +'<div class="section-block word-block"><div class="sec-label-strip amber-strip"><span class="sec-label-icon">&#128218;</span><span class="sec-label-text">Wortliste &middot; Vocabulary Cards</span></div><div class="word-grid">'+wordH+'</div></div>'
+    +saSection
+    +'<div id="game-area">'+gameSection+'</div>'
+    +explorerSection;
+
+  setTimeout(()=>initZoom(id),80);
+}
+
+
+function launchConfetti(){
+  const canvas=document.createElement('canvas');
+  canvas.id='confetti-canvas';
+  canvas.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;';
+  document.body.appendChild(canvas);
+  const ctx=canvas.getContext('2d');
+  canvas.width=window.innerWidth;canvas.height=window.innerHeight;
+  const cols=['#7ec8ff','#3ecf70','#f5c842','#ff8060','#c0a0ff','#ff7070','#ffffff'];
+  const particles=Array.from({length:160},(_,i)=>({
+    x:Math.random()*canvas.width,y:-10-Math.random()*40,
+    r:4+Math.random()*6,
+    col:cols[Math.floor(Math.random()*cols.length)],
+    rot:Math.random()*360,
+    vx:(Math.random()-0.5)*4,
+    vy:2+Math.random()*4,
+    vr:(Math.random()-0.5)*8,
+    shape:Math.random()<0.5?'rect':'circle',
+    w:8+Math.random()*10,h:5+Math.random()*5
+  }));
+  let frame=0;
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(p=>{
+      ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot*Math.PI/180);
+      ctx.fillStyle=p.col;ctx.globalAlpha=Math.max(0,1-frame/200);
+      if(p.shape==='rect'){ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);}
+      else{ctx.beginPath();ctx.arc(0,0,p.r,0,Math.PI*2);ctx.fill();}
+      ctx.restore();
+      p.x+=p.vx;p.y+=p.vy;p.rot+=p.vr;p.vy+=0.04;
+    });
+    frame++;
+    if(frame<220)requestAnimationFrame(draw);
+    else{canvas.remove();}
+  }
+  draw();
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   AI TOPIC GENERATOR — Claude API fallback
+   Flow: user searches unknown topic → generateWithAI() called
+   → shows loading UI → calls Claude API → parses JSON response
+   → caches in localStorage → renders with renderTopic()
+────────────────────────────────────────────────────────────── */
+
+const CACHE_PREFIX = 'wg_topic_v1_';
+const SYSTEM_PROMPT = `You are a German language curriculum expert. Generate a complete German vocabulary topic package in strict JSON format.
+The JSON must exactly match this schema — no extra keys, no markdown, no explanation, ONLY the JSON object:
+{
+  "id": "string (lowercase_underscore, topic_level format)",
+  "level": "A1|A2|B1|B2",
+  "topic": "string (German topic name, Title Case)",
+  "chapter": "string (level · Topic Category, e.g. 'A2 · Food & Culture')",
+  "keys": ["array", "of", "5-8", "search", "keywords", "lowercase"],
+  "words": [
+    {
+      "g": "German word (with Umlaut if needed)",
+      "e": "English translation",
+      "t": "noun|verb|adjective|phrase",
+      "a": "der|die|das|null (null for verbs/adjectives)",
+      "v": [{"d": "related German form", "e": "English"}]
+    }
+  ],
+  "sents": [
+    {"g": "German example sentence", "e": "English translation"}
+  ],
+  "story": "A short German paragraph (4-6 sentences) using the vocabulary words naturally",
+  "story_en": "English translation of the story paragraph",
+  "sa": [
+    {
+      "w": "German word",
+      "t": "verb|adjective",
+      "syn": [{"d": "German synonym", "e": "English"}],
+      "ant": [{"d": "German antonym", "e": "English"}]
+    }
+  ]
+}
+Rules:
+- words: exactly 15-20 entries mixing nouns, verbs, adjectives
+- Each word must have 3-5 related forms in "v" array
+- sents: exactly 6 natural example sentences using the words
+- story: 4-6 sentences, use at least 8 of the vocabulary words naturally
+- sa: 4-6 entries (verbs and adjectives only, not nouns) with synonyms AND antonyms
+- All content must match the specified CEFR level
+- Return ONLY the JSON. No markdown. No backticks. No explanation.`;
+
+function getApiKey(){
+  return localStorage.getItem('wg_api_key')||'';
+}
+
+function saveApiKey(){
+  const inp = document.getElementById('api-key-inp');
+  const key = (inp.value||'').trim();
+  if(!key){alert('Please paste your Anthropic API key first.');return;}
+  if(!key.startsWith('sk-ant')){alert('That does not look like an Anthropic API key (should start with sk-ant...)');return;}
+  localStorage.setItem('wg_api_key', key);
+  inp.value = '';
+  updateApiBar();
+}
+
+function updateApiBar(){
+  const key = getApiKey();
+  const status = document.getElementById('api-status');
+  const inp = document.getElementById('api-key-inp');
+  if(!status) return;
+  if(key){
+    status.textContent = '✓ Key saved';
+    status.className = 'api-status set';
+    if(inp) inp.placeholder = 'Key saved — click Save Key to change';
+  } else {
+    status.textContent = 'Not set';
+    status.className = 'api-status unset';
+    if(inp) inp.placeholder = 'sk-ant-api03-...';
+  }
+}
+
+function showAiLoading(topic){
+  const steps = [
+    {icon:'🧠', label:'Reading your topic request'},
+    {icon:'📖', label:'Selecting vocabulary for '+CL+' level'},
+    {icon:'✍️', label:'Writing example sentences & story'},
+    {icon:'🔗', label:'Building synonyms & antonym pairs'},
+    {icon:'✨', label:'Formatting the word galaxy data'},
+  ];
+  const stepsHtml = steps.map((s,i)=>
+    `<div class="ai-step" id="ai-step-${i}"><span class="ai-step-icon">${s.icon}</span>${s.label}</div>`
+  ).join('');
+  document.getElementById('root').innerHTML =
+    `<div class="ai-loading">
+      <div class="ai-spinner"></div>
+      <div class="ai-loading-title">Generating "${topic}"</div>
+      <div class="ai-loading-sub">Claude is building a complete ${CL} vocabulary set — words, sentences, a story, synonyms and antonyms.</div>
+      <div class="ai-loading-steps">${stepsHtml}</div>
+    </div>`;
+  // Animate steps sequentially
+  let i = 0;
+  function tick(){
+    if(i>0) document.getElementById('ai-step-'+(i-1))?.classList.replace('active','done');
+    const el = document.getElementById('ai-step-'+i);
+    if(el){ el.classList.add('active'); i++; setTimeout(tick, 1800); }
+  }
+  tick();
+}
+
+async function generateWithAI(rawQuery){
+  const key = getApiKey();
+  if(!key){
+    showNoKeyMessage(rawQuery);
+    return;
+  }
+
+  // Check localStorage cache first
+  const cacheKey = CACHE_PREFIX + CL + '_' + rawQuery.toLowerCase().replace(/\s+/g,'_');
+  const cached = localStorage.getItem(cacheKey);
+  if(cached){
+    try{
+      const data = JSON.parse(cached);
+      data._cached = true;
+      renderTopic(data);
+      return;
+    }catch(e){ localStorage.removeItem(cacheKey); }
+  }
+
+  showAiLoading(rawQuery);
+
+  const userPrompt = `Generate a complete German vocabulary topic package for CEFR level ${CL}.
+Topic: "${rawQuery}"
+The topic should be suitable for ${CL} learners. Make the vocabulary, sentences, and story match ${CL} difficulty.
+Return ONLY the JSON object — no markdown, no backticks, no explanation.`;
+
+  try{
+    const res = await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json',
+        'x-api-key': key,
+        'anthropic-version':'2023-06-01',
+        'anthropic-dangerous-direct-browser-access':'true'
+      },
+      body: JSON.stringify({
+        model:'claude-sonnet-4-20250514',
+        max_tokens:4000,
+        system: SYSTEM_PROMPT,
+        messages:[{role:'user', content: userPrompt}]
+      })
+    });
+
+    if(!res.ok){
+      const err = await res.json().catch(()=>({error:{message:res.statusText}}));
+      throw new Error(err?.error?.message || 'API error '+res.status);
+    }
+
+    const data = await res.json();
+    const raw = data.content?.[0]?.text || '';
+
+    // Parse JSON — strip any accidental markdown fences
+    const cleaned = raw.replace(/^```json?\s*/,'').replace(/\s*```$/,'').trim();
+    const topic = JSON.parse(cleaned);
+
+    // Validate required fields
+    if(!topic.words || !topic.sents || !topic.story){
+      throw new Error('Response missing required fields');
+    }
+
+    // Tag as AI generated
+    topic._aiGenerated = true;
+
+    // Cache in localStorage
+    try{ localStorage.setItem(cacheKey, JSON.stringify(topic)); }
+    catch(e){ /* storage full — skip cache */ }
+
+    // Add to live DB so findTopic works for the session
+    if(!DB.find(t=>t.id===topic.id)) DB.push(topic);
+
+    renderTopic(topic);
+
+  } catch(err){
+    showAiError(rawQuery, err.message);
+  }
+}
+
+function showNoKeyMessage(query){
+  document.getElementById('root').innerHTML =
+    `<div class="state">
+      <svg class="state-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M36 20h-4v-4a8 8 0 0 0-16 0v4H12a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V22a2 2 0 0 0-2-2zm-10 10v4h-4v-4a2 2 0 1 1 4 0zm-6-10v-4a4 4 0 0 1 8 0v4H20z"/>
+      </svg>
+      <p>"${esc(query)}" is not in the built-in database yet
+        <small>Add your Anthropic API key above to generate any topic instantly.<br>
+        Your key stays in your browser — never sent to our servers.</small>
+      </p>
+      <div class="nf-grid">
+        ${chOf(CL).slice(0,8).map(t=>`<div class="nf-card" onclick="loadTopic('${t.id}')"><div class="nf-lv">${t.level}</div><div class="nf-t">${t.topic}</div></div>`).join('')}
+      </div>
+    </div>`;
+}
+
+function showAiError(query, errMsg){
+  document.getElementById('root').innerHTML =
+    `<div class="state">
+      <svg class="state-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="24" cy="24" r="20"/><line x1="24" y1="14" x2="24" y2="26"/><circle cx="24" cy="32" r="1.5" fill="currentColor"/>
+      </svg>
+      <p>Couldn't generate "${esc(query)}"
+        <small>${esc(errMsg)}<br>Check your API key or try again.</small>
+      </p>
+      <div style="margin-top:1rem">
+        <button class="go-btn" onclick="generateWithAI('${esc(query)}')" style="font-size:15px;padding:9px 22px">&#8634; Try Again</button>
+      </div>
+    </div>`;
+}
+
+/* Patch renderTopic to show AI/cached badge */
+const _origRenderTopic = renderTopic;
+renderTopic = function(data){
+  _origRenderTopic(data);
+  // Add badge after render
+  const sub = document.querySelector('.result-sub');
+  if(sub && data._aiGenerated && !sub.querySelector('.ai-badge')){
+    const badge = document.createElement('span');
+    badge.className = data._cached ? 'cached-badge' : 'ai-badge';
+    badge.innerHTML = data._cached ? '&#9889; Cached' : '&#10024; AI Generated';
+    sub.appendChild(badge);
+  }
+};
+
+// Boot: load saved key status + show cached topic count
+updateApiBar();
+const cachedCount = Object.keys(localStorage).filter(k=>k.startsWith(CACHE_PREFIX)).length;
+if(cachedCount > 0){
+  const statusEl = document.getElementById('api-status');
+  if(statusEl && getApiKey()){
+    statusEl.textContent = `✓ Key saved · ${cachedCount} topic${cachedCount>1?'s':''} cached`;
+  }
+}
+
+</script>
+</body>
+</html>

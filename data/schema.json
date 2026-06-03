@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WortGalaxie Topic Schema v1.0.0",
+  "description": "Schema for a single German vocabulary topic file in the WortGalaxie open vocabulary repository",
+  "type": "object",
+  "required": ["id", "level", "topic", "chapter", "keys", "words", "sents", "story", "story_en"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$",
+      "description": "Unique identifier — lowercase, underscores only. Format: topic_level (e.g. schule_a2)",
+      "examples": ["schule", "tagesablauf_a2", "klimawandel"]
+    },
+    "level": {
+      "type": "string",
+      "enum": ["A1", "A2", "B1", "B2"],
+      "description": "CEFR level this topic is designed for"
+    },
+    "topic": {
+      "type": "string",
+      "description": "Display name of the topic in German, Title Case",
+      "examples": ["Schule", "Essen & Trinken", "Klimawandel"]
+    },
+    "chapter": {
+      "type": "string",
+      "pattern": "^[AB][12] · .+$",
+      "description": "Level prefix + topic category. Format: 'A2 · School & Learning'",
+      "examples": ["A2 · School & Learning", "B1 · Health & Body"]
+    },
+    "keys": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 10,
+      "items": { "type": "string" },
+      "description": "Lowercase search keywords that map to this topic"
+    },
+    "words": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 30,
+      "description": "Vocabulary word entries",
+      "items": {
+        "type": "object",
+        "required": ["g", "e", "t"],
+        "properties": {
+          "g": { "type": "string", "description": "German word (with correct Umlaut)" },
+          "e": { "type": "string", "description": "English translation" },
+          "t": { "type": "string", "enum": ["noun", "verb", "adjective", "phrase"] },
+          "a": { "type": ["string", "null"], "enum": ["der", "die", "das", null], "description": "Article — null for verbs/adjectives" },
+          "v": {
+            "type": "array",
+            "maxItems": 6,
+            "description": "Related forms — conjugations, compounds, collocations",
+            "items": {
+              "type": "object",
+              "required": ["d", "e"],
+              "properties": {
+                "d": { "type": "string", "description": "German related form" },
+                "e": { "type": "string", "description": "English translation of related form" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "sents": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 10,
+      "description": "Example sentences using vocabulary words",
+      "items": {
+        "type": "object",
+        "required": ["g", "e"],
+        "properties": {
+          "g": { "type": "string", "description": "German sentence" },
+          "e": { "type": "string", "description": "English translation" }
+        }
+      }
+    },
+    "story": {
+      "type": "string",
+      "description": "Short German paragraph (4-6 sentences) using vocabulary words naturally in context"
+    },
+    "story_en": {
+      "type": "string",
+      "description": "English translation of the story paragraph"
+    },
+    "sa": {
+      "type": "array",
+      "description": "Optional synonym and antonym pairs (verbs and adjectives only)",
+      "items": {
+        "type": "object",
+        "required": ["w", "t"],
+        "properties": {
+          "w": { "type": "string", "description": "The German word" },
+          "t": { "type": "string", "enum": ["verb", "adjective"] },
+          "syn": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "d": { "type": "string", "description": "German synonym" },
+                "e": { "type": "string", "description": "English" }
+              }
+            }
+          },
+          "ant": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "d": { "type": "string", "description": "German antonym" },
+                "e": { "type": "string", "description": "English" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

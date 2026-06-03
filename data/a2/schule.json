@@ -1,0 +1,240 @@
+{
+  "id": "schule",
+  "level": "A2",
+  "topic": "Schule",
+  "chapter": "A2 · School & Learning",
+  "keys": [
+    "schule",
+    "lernen",
+    "unterricht",
+    "prüfung",
+    "hausaufgaben"
+  ],
+  "words": [
+    {
+      "g": "Unterricht",
+      "e": "lesson",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Schulstunde",
+          "e": "school period"
+        },
+        {
+          "d": "Doppelstunde",
+          "e": "double period"
+        }
+      ]
+    },
+    {
+      "g": "Prüfung",
+      "e": "exam",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Klausur",
+          "e": "written test"
+        },
+        {
+          "d": "Abitur",
+          "e": "A-levels"
+        },
+        {
+          "d": "mündliche Prüfung",
+          "e": "oral exam"
+        }
+      ]
+    },
+    {
+      "g": "Hausaufgaben",
+      "e": "homework",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Aufgaben machen",
+          "e": "to do exercises"
+        },
+        {
+          "d": "Referat",
+          "e": "presentation"
+        }
+      ]
+    },
+    {
+      "g": "Fach",
+      "e": "subject",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Mathematik",
+          "e": "maths"
+        },
+        {
+          "d": "Deutsch",
+          "e": "German"
+        },
+        {
+          "d": "Geschichte",
+          "e": "history"
+        }
+      ]
+    },
+    {
+      "g": "lernen",
+      "e": "to learn",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "auswendig lernen",
+          "e": "to memorise"
+        },
+        {
+          "d": "üben",
+          "e": "to practise"
+        },
+        {
+          "d": "studieren",
+          "e": "to study"
+        }
+      ]
+    },
+    {
+      "g": "bestehen",
+      "e": "to pass (an exam)",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "die Prüfung bestehen",
+          "e": "to pass the exam"
+        },
+        {
+          "d": "durchfallen",
+          "e": "to fail"
+        }
+      ]
+    },
+    {
+      "g": "schwierig",
+      "e": "difficult",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "kompliziert",
+          "e": "complicated"
+        },
+        {
+          "d": "einfach",
+          "e": "easy"
+        },
+        {
+          "d": "anspruchsvoll",
+          "e": "demanding"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Heute haben wir Mathe — das Fach ist schwierig, aber interessant.",
+      "e": "Today we have maths — the subject is difficult but interesting."
+    },
+    {
+      "g": "Ich lerne für die Prüfung und mache meine Hausaufgaben.",
+      "e": "I am studying for the exam and doing my homework."
+    },
+    {
+      "g": "Wenn ich fleißig lerne, bestehe ich die Prüfung.",
+      "e": "If I study hard, I will pass the exam."
+    }
+  ],
+  "story": "In meiner Schule gibt es viele interessante Fächer. Ich lerne gern Deutsch und Englisch, aber Mathematik ist schwierig. Diese Woche haben wir eine große Prüfung. Ich mache jeden Abend Hausaufgaben. Wenn ich fleißig lerne, kann ich die Prüfung bestehen.",
+  "story_en": "In my school there are many interesting subjects. I like German and English, but maths is difficult. This week we have a big exam. I do homework every evening. If I study hard I can pass.",
+  "sa": [
+    {
+      "w": "lernen",
+      "t": "verb",
+      "e": "to learn",
+      "syn": [
+        {
+          "d": "studieren",
+          "e": "to study"
+        },
+        {
+          "d": "üben",
+          "e": "to practise"
+        },
+        {
+          "d": "pauken",
+          "e": "to cram"
+        }
+      ],
+      "ant": [
+        {
+          "d": "vergessen",
+          "e": "to forget"
+        },
+        {
+          "d": "vernachlässigen",
+          "e": "to neglect"
+        }
+      ]
+    },
+    {
+      "w": "bestehen",
+      "t": "verb",
+      "e": "to pass",
+      "syn": [
+        {
+          "d": "schaffen",
+          "e": "to manage"
+        },
+        {
+          "d": "erfolgreich sein",
+          "e": "to succeed"
+        }
+      ],
+      "ant": [
+        {
+          "d": "durchfallen",
+          "e": "to fail"
+        },
+        {
+          "d": "scheitern",
+          "e": "to flunk"
+        }
+      ]
+    },
+    {
+      "w": "schwierig",
+      "t": "adjective",
+      "e": "difficult",
+      "syn": [
+        {
+          "d": "kompliziert",
+          "e": "complicated"
+        },
+        {
+          "d": "knifflig",
+          "e": "tricky"
+        }
+      ],
+      "ant": [
+        {
+          "d": "einfach",
+          "e": "easy"
+        },
+        {
+          "d": "leicht",
+          "e": "light/easy"
+        }
+      ]
+    }
+  ]
+}

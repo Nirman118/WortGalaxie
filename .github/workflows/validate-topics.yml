@@ -1,0 +1,46 @@
+name: Validate Topic Files
+
+on:
+  pull_request:
+    paths:
+      - 'data/**/*.json'
+      - 'scripts/validate.js'
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/**/*.json'
+
+jobs:
+  validate:
+    name: Validate vocabulary JSON
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate all topic files
+        run: node scripts/validate.js --all
+
+      - name: Regenerate index (dry run check)
+        run: |
+          node scripts/generate-index.js
+          git diff --exit-code data/index.json || {
+            echo ""
+            echo "❌ data/index.json is out of date."
+            echo "   Run: node scripts/generate-index.js"
+            echo "   Then commit the updated index.json"
+            exit 1
+          }
+
+      - name: Post validation summary
+        if: always()
+        run: |
+          echo "### Validation Results" >> $GITHUB_STEP_SUMMARY
+          node scripts/validate.js --all >> $GITHUB_STEP_SUMMARY 2>&1 || true

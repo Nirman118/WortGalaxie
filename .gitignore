@@ -1,0 +1,41 @@
+# ── Secrets — NEVER commit these ─────────────────────
+.env
+.env.local
+.env.*.local
+*.secret
+secrets.json
+api_keys.txt
+config.local.*
+
+# ── OS files ──────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# ── Editor & IDE ──────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Node (if scripts grow) ────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# ── Build artefacts ───────────────────────────────────
+dist/
+build/
+*.min.js
+*.min.css
+
+# ── Temp & local test files ───────────────────────────
+*.local.html
+test_*.html
+_draft_*
+TODO_private.md
