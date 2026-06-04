@@ -1,0 +1,504 @@
+{
+  "id": "karriere",
+  "level": "B1",
+  "topic": "Karriere",
+  "chapter": "B1 · Career & Work",
+  "keys": [
+    "karriere",
+    "bewerbung",
+    "beruf",
+    "job",
+    "gehalt",
+    "arbeit",
+    "stelle",
+    "lebenslauf"
+  ],
+  "words": [
+    {
+      "g": "Bewerbung",
+      "e": "job application",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Bewerbungsschreiben",
+          "e": "cover letter"
+        },
+        {
+          "d": "Lebenslauf",
+          "e": "CV/résumé"
+        },
+        {
+          "d": "Vorstellungsgespräch",
+          "e": "job interview"
+        }
+      ]
+    },
+    {
+      "g": "Stelle",
+      "e": "position / post",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Vollzeitstelle",
+          "e": "full-time position"
+        },
+        {
+          "d": "Teilzeitstelle",
+          "e": "part-time position"
+        },
+        {
+          "d": "offene Stelle",
+          "e": "vacancy"
+        }
+      ]
+    },
+    {
+      "g": "Gehalt",
+      "e": "salary",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Mindestlohn",
+          "e": "minimum wage"
+        },
+        {
+          "d": "Gehaltserhöhung",
+          "e": "pay rise"
+        },
+        {
+          "d": "Jahresgehalt",
+          "e": "annual salary"
+        }
+      ]
+    },
+    {
+      "g": "Arbeitgeber",
+      "e": "employer",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Arbeitnehmer",
+          "e": "employee"
+        },
+        {
+          "d": "Chef",
+          "e": "boss"
+        },
+        {
+          "d": "Personalleiter",
+          "e": "HR manager"
+        }
+      ]
+    },
+    {
+      "g": "Qualifikation",
+      "e": "qualification",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Abschluss",
+          "e": "degree/qualification"
+        },
+        {
+          "d": "Zertifikat",
+          "e": "certificate"
+        },
+        {
+          "d": "Berufserfahrung",
+          "e": "work experience"
+        }
+      ]
+    },
+    {
+      "g": "Weiterbildung",
+      "e": "further training",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Fortbildung",
+          "e": "professional development"
+        },
+        {
+          "d": "Umschulung",
+          "e": "retraining"
+        },
+        {
+          "d": "Kurs",
+          "e": "course"
+        }
+      ]
+    },
+    {
+      "g": "Kündigung",
+      "e": "dismissal / resignation",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "fristlos entlassen",
+          "e": "dismissed without notice"
+        },
+        {
+          "d": "selbst kündigen",
+          "e": "to resign"
+        },
+        {
+          "d": "Abfindung",
+          "e": "severance pay"
+        }
+      ]
+    },
+    {
+      "g": "Netzwerk",
+      "e": "professional network",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Kontakte pflegen",
+          "e": "to maintain contacts"
+        },
+        {
+          "d": "Networking-Event",
+          "e": "networking event"
+        },
+        {
+          "d": "LinkedIn",
+          "e": "LinkedIn"
+        }
+      ]
+    },
+    {
+      "g": "Aufstieg",
+      "e": "promotion / career advancement",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "befördert werden",
+          "e": "to be promoted"
+        },
+        {
+          "d": "Karriereleiter",
+          "e": "career ladder"
+        },
+        {
+          "d": "Aufstiegschancen",
+          "e": "promotion prospects"
+        }
+      ]
+    },
+    {
+      "g": "Verantwortung",
+      "e": "responsibility",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Pflicht",
+          "e": "duty"
+        },
+        {
+          "d": "Zuständigkeit",
+          "e": "accountability"
+        },
+        {
+          "d": "verantwortlich sein",
+          "e": "to be responsible"
+        }
+      ]
+    },
+    {
+      "g": "sich bewerben",
+      "e": "to apply (for a job)",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "eine Bewerbung einreichen",
+          "e": "to submit an application"
+        },
+        {
+          "d": "auf eine Stelle bewerben",
+          "e": "to apply for a position"
+        },
+        {
+          "d": "beworben werden",
+          "e": "to be applied for"
+        }
+      ]
+    },
+    {
+      "g": "einstellen",
+      "e": "to hire",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "jdn. anstellen",
+          "e": "to employ someone"
+        },
+        {
+          "d": "einen Vertrag anbieten",
+          "e": "to offer a contract"
+        },
+        {
+          "d": "Probezeit beginnen",
+          "e": "to start a probation period"
+        }
+      ]
+    },
+    {
+      "g": "kündigen",
+      "e": "to resign / to dismiss",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "den Job aufgeben",
+          "e": "to quit the job"
+        },
+        {
+          "d": "entlassen werden",
+          "e": "to be made redundant"
+        },
+        {
+          "d": "Kündigung einreichen",
+          "e": "to hand in one's notice"
+        }
+      ]
+    },
+    {
+      "g": "verhandeln",
+      "e": "to negotiate",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "Gehalt verhandeln",
+          "e": "to negotiate salary"
+        },
+        {
+          "d": "kompromissbereit sein",
+          "e": "to be willing to compromise"
+        },
+        {
+          "d": "eine Einigung erzielen",
+          "e": "to reach an agreement"
+        }
+      ]
+    },
+    {
+      "g": "ambitioniert",
+      "e": "ambitious",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "ehrgeizig",
+          "e": "driven/goal-oriented"
+        },
+        {
+          "d": "zielstrebig",
+          "e": "determined"
+        },
+        {
+          "d": "karriereorientiert",
+          "e": "career-focused"
+        }
+      ]
+    },
+    {
+      "g": "qualifiziert",
+      "e": "qualified",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "kompetent",
+          "e": "competent"
+        },
+        {
+          "d": "erfahren",
+          "e": "experienced"
+        },
+        {
+          "d": "ausgebildet",
+          "e": "trained"
+        }
+      ]
+    },
+    {
+      "g": "flexibel",
+      "e": "flexible",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "anpassungsfähig",
+          "e": "adaptable"
+        },
+        {
+          "d": "mobil",
+          "e": "mobile/willing to travel"
+        },
+        {
+          "d": "offen für Neues",
+          "e": "open to new things"
+        }
+      ]
+    },
+    {
+      "g": "motiviert",
+      "e": "motivated",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "engagiert",
+          "e": "committed"
+        },
+        {
+          "d": "enthusiastisch",
+          "e": "enthusiastic"
+        },
+        {
+          "d": "leistungsbereit",
+          "e": "ready to perform"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Sie hat sich auf drei Stellen beworben und wurde zu zwei Vorstellungsgesprächen eingeladen.",
+      "e": "She applied for three positions and was invited to two job interviews."
+    },
+    {
+      "g": "Sein Lebenslauf zeigt viele relevante Qualifikationen und fünf Jahre Berufserfahrung.",
+      "e": "His CV shows many relevant qualifications and five years of work experience."
+    },
+    {
+      "g": "Nach der Weiterbildung wurde er befördert und bekommt ein höheres Gehalt.",
+      "e": "After the further training he was promoted and receives a higher salary."
+    },
+    {
+      "g": "Sie verhandelt gerade mit dem Arbeitgeber über eine Gehaltserhöhung.",
+      "e": "She is currently negotiating with the employer about a pay rise."
+    },
+    {
+      "g": "Ein gutes Netzwerk kann bei der Jobsuche sehr hilfreich sein.",
+      "e": "A good network can be very helpful when looking for a job."
+    },
+    {
+      "g": "Er hat seinen Job gekündigt, weil er eine bessere Stelle in Berlin gefunden hat.",
+      "e": "He resigned from his job because he found a better position in Berlin."
+    }
+  ],
+  "story": "Laura ist ambitioniert und sucht seit drei Monaten eine neue Stelle. Sie schreibt täglich Bewerbungen und schickt ihren Lebenslauf an verschiedene Unternehmen. Endlich bekommt sie eine Einladung zu einem Vorstellungsgespräch bei einer großen Firma in Frankfurt. Sie bereitet sich gut vor, verhandelt selbstbewusst über das Gehalt und überzeugt den Personalleiter. Eine Woche später erhält sie das Angebot — qualifiziert, flexibel und motiviert hat sie es geschafft.",
+  "story_en": "Laura is ambitious and has been looking for a new position for three months. She writes applications daily and sends her CV to various companies. Finally she gets an invitation to a job interview at a large company in Frankfurt. She prepares well, negotiates confidently about the salary and convinces the HR manager. A week later she receives the offer — qualified, flexible and motivated, she has made it.",
+  "sa": [
+    {
+      "w": "sich bewerben",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "kandidieren",
+          "e": "to stand as a candidate"
+        },
+        {
+          "d": "eine Bewerbung einreichen",
+          "e": "to submit an application"
+        }
+      ],
+      "ant": [
+        {
+          "d": "ablehnen",
+          "e": "to decline"
+        },
+        {
+          "d": "zurückziehen",
+          "e": "to withdraw"
+        }
+      ]
+    },
+    {
+      "w": "einstellen",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "anstellen",
+          "e": "to employ"
+        },
+        {
+          "d": "engagieren",
+          "e": "to engage"
+        }
+      ],
+      "ant": [
+        {
+          "d": "entlassen",
+          "e": "to dismiss"
+        },
+        {
+          "d": "kündigen",
+          "e": "to terminate"
+        }
+      ]
+    },
+    {
+      "w": "ambitioniert",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "ehrgeizig",
+          "e": "driven"
+        },
+        {
+          "d": "zielstrebig",
+          "e": "determined"
+        }
+      ],
+      "ant": [
+        {
+          "d": "gleichgültig",
+          "e": "indifferent"
+        },
+        {
+          "d": "unmotiviert",
+          "e": "unmotivated"
+        }
+      ]
+    },
+    {
+      "w": "flexibel",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "anpassungsfähig",
+          "e": "adaptable"
+        },
+        {
+          "d": "variabel",
+          "e": "variable"
+        }
+      ],
+      "ant": [
+        {
+          "d": "starr",
+          "e": "rigid"
+        },
+        {
+          "d": "unbeweglich",
+          "e": "inflexible"
+        }
+      ]
+    }
+  ]
+}

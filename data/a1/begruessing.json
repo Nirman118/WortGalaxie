@@ -1,0 +1,173 @@
+{
+  "id": "begruessing",
+  "level": "A1",
+  "topic": "Begrüßung",
+  "chapter": "A1 · Greetings",
+  "keys": [
+    "begrüßung",
+    "hallo",
+    "tschüss",
+    "wiedersehen"
+  ],
+  "words": [
+    {
+      "g": "Hallo",
+      "e": "hello",
+      "t": "phrase",
+      "a": null,
+      "v": [
+        {
+          "d": "Guten Morgen",
+          "e": "good morning"
+        },
+        {
+          "d": "Guten Tag",
+          "e": "good day"
+        },
+        {
+          "d": "Guten Abend",
+          "e": "good evening"
+        }
+      ]
+    },
+    {
+      "g": "Tschüss",
+      "e": "bye",
+      "t": "phrase",
+      "a": null,
+      "v": [
+        {
+          "d": "Auf Wiedersehen",
+          "e": "goodbye"
+        },
+        {
+          "d": "Bis bald",
+          "e": "see you soon"
+        }
+      ]
+    },
+    {
+      "g": "Name",
+      "e": "name",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Vorname",
+          "e": "first name"
+        },
+        {
+          "d": "Nachname",
+          "e": "last name"
+        }
+      ]
+    },
+    {
+      "g": "heißen",
+      "e": "to be called",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "ich heiße",
+          "e": "my name is"
+        },
+        {
+          "d": "Wie heißt du?",
+          "e": "What is your name?"
+        }
+      ]
+    },
+    {
+      "g": "kommen",
+      "e": "to come from",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "ich komme aus",
+          "e": "I come from"
+        },
+        {
+          "d": "Woher kommst du?",
+          "e": "Where are you from?"
+        }
+      ]
+    },
+    {
+      "g": "danke",
+      "e": "thank you",
+      "t": "phrase",
+      "a": null,
+      "v": [
+        {
+          "d": "danke schön",
+          "e": "thank you very much"
+        },
+        {
+          "d": "bitte",
+          "e": "you're welcome"
+        }
+      ]
+    },
+    {
+      "g": "freundlich",
+      "e": "friendly",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "sehr freundlich",
+          "e": "very friendly"
+        },
+        {
+          "d": "unfreundlich",
+          "e": "unfriendly"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Hallo! Ich heiße Anna. Wie heißt du?",
+      "e": "Hello! My name is Anna. What is your name?"
+    },
+    {
+      "g": "Guten Morgen! Woher kommst du?",
+      "e": "Good morning! Where do you come from?"
+    },
+    {
+      "g": "Danke schön! Auf Wiedersehen!",
+      "e": "Thank you very much! Goodbye!"
+    }
+  ],
+  "story": "Hallo! Ich heiße Maria und komme aus Deutschland. Mein Nachname ist Müller. Ich wohne in Berlin. Ich spreche Deutsch und Englisch. Auf Wiedersehen und bis bald!",
+  "story_en": "Hello! My name is Maria and I come from Germany. My last name is Müller. I live in Berlin. I speak German and English. Goodbye and see you soon!",
+  "sa": [
+    {
+      "w": "freundlich",
+      "t": "adjective",
+      "e": "friendly",
+      "syn": [
+        {
+          "d": "nett",
+          "e": "nice"
+        },
+        {
+          "d": "liebenswürdig",
+          "e": "kind"
+        }
+      ],
+      "ant": [
+        {
+          "d": "unfreundlich",
+          "e": "unfriendly"
+        },
+        {
+          "d": "unhöflich",
+          "e": "rude"
+        }
+      ]
+    }
+  ]
+}

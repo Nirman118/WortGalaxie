@@ -1,0 +1,195 @@
+{
+  "id": "wohnung",
+  "level": "A1",
+  "topic": "Wohnung",
+  "chapter": "A1 · Home & Living",
+  "keys": [
+    "wohnung",
+    "zimmer",
+    "zuhause",
+    "apartment",
+    "wohnen"
+  ],
+  "words": [
+    {
+      "g": "Zimmer",
+      "e": "room",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Schlafzimmer",
+          "e": "bedroom"
+        },
+        {
+          "d": "Wohnzimmer",
+          "e": "living room"
+        },
+        {
+          "d": "Badezimmer",
+          "e": "bathroom"
+        }
+      ]
+    },
+    {
+      "g": "Küche",
+      "e": "kitchen",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Einbauküche",
+          "e": "fitted kitchen"
+        },
+        {
+          "d": "Kochinsel",
+          "e": "kitchen island"
+        }
+      ]
+    },
+    {
+      "g": "Tisch",
+      "e": "table",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Schreibtisch",
+          "e": "desk"
+        },
+        {
+          "d": "Esstisch",
+          "e": "dining table"
+        }
+      ]
+    },
+    {
+      "g": "Bett",
+      "e": "bed",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Einzelbett",
+          "e": "single bed"
+        },
+        {
+          "d": "Doppelbett",
+          "e": "double bed"
+        }
+      ]
+    },
+    {
+      "g": "wohnen",
+      "e": "to live",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "einziehen",
+          "e": "to move in"
+        },
+        {
+          "d": "ausziehen",
+          "e": "to move out"
+        }
+      ]
+    },
+    {
+      "g": "aufräumen",
+      "e": "to tidy up",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "putzen",
+          "e": "to clean"
+        },
+        {
+          "d": "staubsaugen",
+          "e": "to vacuum"
+        }
+      ]
+    },
+    {
+      "g": "gemütlich",
+      "e": "cosy",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "heimelig",
+          "e": "homely"
+        },
+        {
+          "d": "ungemütlich",
+          "e": "uncomfortable"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Meine Wohnung hat drei Zimmer.",
+      "e": "My apartment has three rooms."
+    },
+    {
+      "g": "Das Wohnzimmer ist sehr gemütlich.",
+      "e": "The living room is very cosy."
+    },
+    {
+      "g": "Ich räume jeden Samstag auf.",
+      "e": "I tidy up every Saturday."
+    }
+  ],
+  "story": "Ich wohne in einer kleinen Wohnung. Sie hat ein Schlafzimmer, ein Wohnzimmer und eine Küche. Im Wohnzimmer steht ein großer Tisch. Ich räume jeden Samstag auf. Meine Wohnung ist gemütlich und sauber.",
+  "story_en": "I live in a small apartment. It has a bedroom, a living room and a kitchen. In the living room there is a large table. I tidy up every Saturday. My apartment is cosy and clean.",
+  "sa": [
+    {
+      "w": "wohnen",
+      "t": "verb",
+      "e": "to live",
+      "syn": [
+        {
+          "d": "leben",
+          "e": "to live"
+        },
+        {
+          "d": "residieren",
+          "e": "to reside"
+        }
+      ],
+      "ant": [
+        {
+          "d": "ausziehen",
+          "e": "to move out"
+        }
+      ]
+    },
+    {
+      "w": "gemütlich",
+      "t": "adjective",
+      "e": "cosy",
+      "syn": [
+        {
+          "d": "bequem",
+          "e": "comfortable"
+        },
+        {
+          "d": "behaglich",
+          "e": "homely"
+        }
+      ],
+      "ant": [
+        {
+          "d": "ungemütlich",
+          "e": "uncomfortable"
+        },
+        {
+          "d": "kalt",
+          "e": "unwelcoming"
+        }
+      ]
+    }
+  ]
+}

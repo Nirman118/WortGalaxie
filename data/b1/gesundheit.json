@@ -1,0 +1,504 @@
+{
+  "id": "gesundheit",
+  "level": "B1",
+  "topic": "Gesundheit",
+  "chapter": "B1 · Health & Body",
+  "keys": [
+    "gesundheit",
+    "arzt",
+    "krank",
+    "medikament",
+    "schmerz",
+    "krankenhaus",
+    "körper",
+    "krankheit"
+  ],
+  "words": [
+    {
+      "g": "Arzt",
+      "e": "doctor",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Hausarzt",
+          "e": "GP / family doctor"
+        },
+        {
+          "d": "Facharzt",
+          "e": "specialist"
+        },
+        {
+          "d": "Kinderarzt",
+          "e": "paediatrician"
+        }
+      ]
+    },
+    {
+      "g": "Krankenhaus",
+      "e": "hospital",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Notaufnahme",
+          "e": "A&E / emergency room"
+        },
+        {
+          "d": "Krankenzimmer",
+          "e": "hospital room"
+        },
+        {
+          "d": "Intensivstation",
+          "e": "intensive care unit"
+        }
+      ]
+    },
+    {
+      "g": "Medikament",
+      "e": "medication",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Tablette",
+          "e": "tablet/pill"
+        },
+        {
+          "d": "Rezept",
+          "e": "prescription"
+        },
+        {
+          "d": "Nebenwirkung",
+          "e": "side effect"
+        }
+      ]
+    },
+    {
+      "g": "Schmerz",
+      "e": "pain",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Kopfschmerzen",
+          "e": "headache"
+        },
+        {
+          "d": "Bauchschmerzen",
+          "e": "stomach ache"
+        },
+        {
+          "d": "Rückenschmerzen",
+          "e": "back pain"
+        }
+      ]
+    },
+    {
+      "g": "Krankheit",
+      "e": "illness",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Erkältung",
+          "e": "cold"
+        },
+        {
+          "d": "Grippe",
+          "e": "flu"
+        },
+        {
+          "d": "chronische Krankheit",
+          "e": "chronic illness"
+        }
+      ]
+    },
+    {
+      "g": "Impfung",
+      "e": "vaccination",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Impfstoff",
+          "e": "vaccine"
+        },
+        {
+          "d": "Impfpass",
+          "e": "vaccination card"
+        },
+        {
+          "d": "Schutzimpfung",
+          "e": "protective vaccination"
+        }
+      ]
+    },
+    {
+      "g": "Symptom",
+      "e": "symptom",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Fieber",
+          "e": "fever"
+        },
+        {
+          "d": "Husten",
+          "e": "cough"
+        },
+        {
+          "d": "Schwindel",
+          "e": "dizziness"
+        }
+      ]
+    },
+    {
+      "g": "Ernährung",
+      "e": "nutrition / diet",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "ausgewogene Ernährung",
+          "e": "balanced diet"
+        },
+        {
+          "d": "Diät",
+          "e": "diet"
+        },
+        {
+          "d": "Vitamine",
+          "e": "vitamins"
+        }
+      ]
+    },
+    {
+      "g": "Bewegung",
+      "e": "exercise / movement",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Sport treiben",
+          "e": "to do sport"
+        },
+        {
+          "d": "spazieren gehen",
+          "e": "to go for a walk"
+        },
+        {
+          "d": "körperlich aktiv sein",
+          "e": "to be physically active"
+        }
+      ]
+    },
+    {
+      "g": "Termin",
+      "e": "appointment",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Arzttermin",
+          "e": "doctor's appointment"
+        },
+        {
+          "d": "einen Termin machen",
+          "e": "to make an appointment"
+        },
+        {
+          "d": "Wartezeit",
+          "e": "waiting time"
+        }
+      ]
+    },
+    {
+      "g": "sich erholen",
+      "e": "to recover / to rest",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "gesunden",
+          "e": "to regain health"
+        },
+        {
+          "d": "ausruhen",
+          "e": "to rest"
+        },
+        {
+          "d": "Kraft tanken",
+          "e": "to recharge energy"
+        }
+      ]
+    },
+    {
+      "g": "untersuchen",
+      "e": "to examine",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "abtasten",
+          "e": "to palpate"
+        },
+        {
+          "d": "Blut abnehmen",
+          "e": "to take blood"
+        },
+        {
+          "d": "röntgen",
+          "e": "to X-ray"
+        }
+      ]
+    },
+    {
+      "g": "verschreiben",
+      "e": "to prescribe",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "ein Rezept ausstellen",
+          "e": "to write a prescription"
+        },
+        {
+          "d": "empfehlen",
+          "e": "to recommend"
+        },
+        {
+          "d": "verordnen",
+          "e": "to order/prescribe"
+        }
+      ]
+    },
+    {
+      "g": "vorbeugen",
+      "e": "to prevent",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "schützen",
+          "e": "to protect"
+        },
+        {
+          "d": "Prävention betreiben",
+          "e": "to practise prevention"
+        },
+        {
+          "d": "Risiken minimieren",
+          "e": "to minimise risks"
+        }
+      ]
+    },
+    {
+      "g": "krank",
+      "e": "ill / sick",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "erkrankt",
+          "e": "taken ill"
+        },
+        {
+          "d": "schwach",
+          "e": "weak"
+        },
+        {
+          "d": "bettlägerig",
+          "e": "bedridden"
+        }
+      ]
+    },
+    {
+      "g": "gesund",
+      "e": "healthy",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "fit",
+          "e": "fit"
+        },
+        {
+          "d": "wohlbefindlich",
+          "e": "in good health"
+        },
+        {
+          "d": "robust",
+          "e": "robust"
+        }
+      ]
+    },
+    {
+      "g": "chronisch",
+      "e": "chronic",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "dauerhaft",
+          "e": "permanent"
+        },
+        {
+          "d": "langanhaltend",
+          "e": "long-lasting"
+        },
+        {
+          "d": "nicht heilbar",
+          "e": "incurable"
+        }
+      ]
+    },
+    {
+      "g": "allergisch",
+      "e": "allergic",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "überempfindlich",
+          "e": "hypersensitive"
+        },
+        {
+          "d": "Allergie haben",
+          "e": "to have an allergy"
+        },
+        {
+          "d": "unverträglich",
+          "e": "intolerant"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Ich habe seit drei Tagen starke Kopfschmerzen und muss zum Arzt.",
+      "e": "I have had a severe headache for three days and need to see the doctor."
+    },
+    {
+      "g": "Der Arzt hat mir ein Medikament verschrieben und mir geraten, mich zu erholen.",
+      "e": "The doctor prescribed me medication and advised me to rest."
+    },
+    {
+      "g": "Eine ausgewogene Ernährung und regelmäßige Bewegung sind wichtig für die Gesundheit.",
+      "e": "A balanced diet and regular exercise are important for health."
+    },
+    {
+      "g": "Sie wurde ins Krankenhaus eingeliefert, weil sie hohes Fieber hatte.",
+      "e": "She was admitted to hospital because she had a high fever."
+    },
+    {
+      "g": "Durch regelmäßige Impfungen kann man vielen Krankheiten vorbeugen.",
+      "e": "Through regular vaccinations you can prevent many illnesses."
+    },
+    {
+      "g": "Ich habe einen Termin beim Facharzt für nächsten Dienstag gemacht.",
+      "e": "I have made an appointment with the specialist for next Tuesday."
+    }
+  ],
+  "story": "Martin fühlt sich seit Tagen nicht gut. Er hat Husten, Fieber und starke Halsschmerzen — typische Symptome einer Grippe. Er ruft beim Arzt an und macht einen Termin. Der Hausarzt untersucht ihn gründlich und verschreibt ihm ein Medikament. Er empfiehlt Martin außerdem, sich zu erholen und viel Wasser zu trinken. Nach einer Woche Ruhe fühlt sich Martin wieder gesund und fit.",
+  "story_en": "Martin has not been feeling well for days. He has a cough, fever and a severe sore throat — typical symptoms of flu. He calls the doctor and makes an appointment. The GP examines him thoroughly and prescribes him medication. He also recommends Martin to rest and drink plenty of water. After a week of rest, Martin feels healthy and fit again.",
+  "sa": [
+    {
+      "w": "sich erholen",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "ausruhen",
+          "e": "to rest"
+        },
+        {
+          "d": "gesunden",
+          "e": "to get well"
+        }
+      ],
+      "ant": [
+        {
+          "d": "erkranken",
+          "e": "to fall ill"
+        },
+        {
+          "d": "sich verschlechtern",
+          "e": "to deteriorate"
+        }
+      ]
+    },
+    {
+      "w": "vorbeugen",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "schützen",
+          "e": "to protect"
+        },
+        {
+          "d": "verhindern",
+          "e": "to prevent"
+        }
+      ],
+      "ant": [
+        {
+          "d": "riskieren",
+          "e": "to risk"
+        },
+        {
+          "d": "vernachlässigen",
+          "e": "to neglect"
+        }
+      ]
+    },
+    {
+      "w": "krank",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "leidend",
+          "e": "suffering"
+        },
+        {
+          "d": "schwach",
+          "e": "weak"
+        }
+      ],
+      "ant": [
+        {
+          "d": "gesund",
+          "e": "healthy"
+        },
+        {
+          "d": "fit",
+          "e": "fit"
+        }
+      ]
+    },
+    {
+      "w": "chronisch",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "dauerhaft",
+          "e": "permanent"
+        },
+        {
+          "d": "anhaltend",
+          "e": "persistent"
+        }
+      ],
+      "ant": [
+        {
+          "d": "akut",
+          "e": "acute"
+        },
+        {
+          "d": "vorübergehend",
+          "e": "temporary"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,504 @@
+{
+  "id": "wirtschaft",
+  "level": "B2",
+  "topic": "Wirtschaft",
+  "chapter": "B2 · Economy & Finance",
+  "keys": [
+    "wirtschaft",
+    "inflation",
+    "steuern",
+    "unternehmen",
+    "börse",
+    "wachstum",
+    "investition",
+    "markt"
+  ],
+  "words": [
+    {
+      "g": "Inflation",
+      "e": "inflation",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Kaufkraftverlust",
+          "e": "loss of purchasing power"
+        },
+        {
+          "d": "Preissteigerung",
+          "e": "price increase"
+        },
+        {
+          "d": "Inflationsrate",
+          "e": "inflation rate"
+        }
+      ]
+    },
+    {
+      "g": "Bruttoinlandsprodukt",
+      "e": "gross domestic product",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "BIP",
+          "e": "GDP (abbreviation)"
+        },
+        {
+          "d": "Wirtschaftswachstum",
+          "e": "economic growth"
+        },
+        {
+          "d": "Wirtschaftsleistung",
+          "e": "economic output"
+        }
+      ]
+    },
+    {
+      "g": "Investition",
+      "e": "investment",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Kapitalanlage",
+          "e": "capital investment"
+        },
+        {
+          "d": "Rendite",
+          "e": "return on investment"
+        },
+        {
+          "d": "Aktie",
+          "e": "share/stock"
+        }
+      ]
+    },
+    {
+      "g": "Steuern",
+      "e": "taxes",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Einkommenssteuer",
+          "e": "income tax"
+        },
+        {
+          "d": "Mehrwertsteuer",
+          "e": "VAT"
+        },
+        {
+          "d": "Steuererklärung",
+          "e": "tax return"
+        }
+      ]
+    },
+    {
+      "g": "Unternehmen",
+      "e": "company / enterprise",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Konzern",
+          "e": "corporation"
+        },
+        {
+          "d": "Start-up",
+          "e": "start-up"
+        },
+        {
+          "d": "Mittelstand",
+          "e": "SME sector"
+        }
+      ]
+    },
+    {
+      "g": "Markt",
+      "e": "market",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Arbeitsmarkt",
+          "e": "labour market"
+        },
+        {
+          "d": "Aktienmarkt",
+          "e": "stock market"
+        },
+        {
+          "d": "Binnenmarkt",
+          "e": "single/internal market"
+        }
+      ]
+    },
+    {
+      "g": "Rezession",
+      "e": "recession",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Wirtschaftskrise",
+          "e": "economic crisis"
+        },
+        {
+          "d": "Abschwung",
+          "e": "downturn"
+        },
+        {
+          "d": "Konjunkturflaute",
+          "e": "economic slump"
+        }
+      ]
+    },
+    {
+      "g": "Schulden",
+      "e": "debt",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Staatsverschuldung",
+          "e": "national debt"
+        },
+        {
+          "d": "Kredit",
+          "e": "loan/credit"
+        },
+        {
+          "d": "Zinsen",
+          "e": "interest"
+        }
+      ]
+    },
+    {
+      "g": "Wettbewerb",
+      "e": "competition",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Monopol",
+          "e": "monopoly"
+        },
+        {
+          "d": "Oligopol",
+          "e": "oligopoly"
+        },
+        {
+          "d": "Marktanteil",
+          "e": "market share"
+        }
+      ]
+    },
+    {
+      "g": "Globalisierung",
+      "e": "globalisation",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "internationaler Handel",
+          "e": "international trade"
+        },
+        {
+          "d": "Freihandel",
+          "e": "free trade"
+        },
+        {
+          "d": "Lieferkette",
+          "e": "supply chain"
+        }
+      ]
+    },
+    {
+      "g": "investieren",
+      "e": "to invest",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "Kapital anlegen",
+          "e": "to invest capital"
+        },
+        {
+          "d": "riskieren",
+          "e": "to take a risk"
+        },
+        {
+          "d": "diversifizieren",
+          "e": "to diversify"
+        }
+      ]
+    },
+    {
+      "g": "wachsen",
+      "e": "to grow",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "expandieren",
+          "e": "to expand"
+        },
+        {
+          "d": "skalieren",
+          "e": "to scale"
+        },
+        {
+          "d": "florieren",
+          "e": "to flourish"
+        }
+      ]
+    },
+    {
+      "g": "regulieren",
+      "e": "to regulate",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "kontrollieren",
+          "e": "to control"
+        },
+        {
+          "d": "überwachen",
+          "e": "to monitor"
+        },
+        {
+          "d": "einschränken",
+          "e": "to restrict"
+        }
+      ]
+    },
+    {
+      "g": "subventionieren",
+      "e": "to subsidise",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "staatlich fördern",
+          "e": "to support with state funds"
+        },
+        {
+          "d": "Beihilfe gewähren",
+          "e": "to grant aid"
+        },
+        {
+          "d": "finanzieren",
+          "e": "to finance"
+        }
+      ]
+    },
+    {
+      "g": "wirtschaftlich",
+      "e": "economic / economical",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "ökonomisch",
+          "e": "economic"
+        },
+        {
+          "d": "finanziell",
+          "e": "financial"
+        },
+        {
+          "d": "kommerziell",
+          "e": "commercial"
+        }
+      ]
+    },
+    {
+      "g": "nachhaltig",
+      "e": "sustainable",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "langfristig",
+          "e": "long-term"
+        },
+        {
+          "d": "zukunftsfähig",
+          "e": "future-proof"
+        },
+        {
+          "d": "verantwortungsvoll",
+          "e": "responsible"
+        }
+      ]
+    },
+    {
+      "g": "konjunkturell",
+      "e": "cyclical / relating to economic cycle",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "zyklisch",
+          "e": "cyclical"
+        },
+        {
+          "d": "saisonal",
+          "e": "seasonal"
+        },
+        {
+          "d": "periodisch",
+          "e": "periodic"
+        }
+      ]
+    },
+    {
+      "g": "transparent",
+      "e": "transparent",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "offen",
+          "e": "open"
+        },
+        {
+          "d": "nachvollziehbar",
+          "e": "comprehensible"
+        },
+        {
+          "d": "rechenschaftspflichtig",
+          "e": "accountable"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Die Inflationsrate ist in den letzten Monaten stark gestiegen, was die Kaufkraft der Bevölkerung verringert.",
+      "e": "The inflation rate has risen sharply in recent months, which reduces the purchasing power of the population."
+    },
+    {
+      "g": "Investitionen in erneuerbare Energien können langfristig das Wirtschaftswachstum ankurbeln.",
+      "e": "Investments in renewable energies can stimulate economic growth in the long term."
+    },
+    {
+      "g": "Während einer Rezession steigt die Arbeitslosigkeit und das BIP sinkt.",
+      "e": "During a recession unemployment rises and GDP falls."
+    },
+    {
+      "g": "Der internationale Wettbewerb zwingt Unternehmen dazu, effizienter und innovativer zu werden.",
+      "e": "International competition forces companies to become more efficient and innovative."
+    },
+    {
+      "g": "Die Regierung plant, kleine Unternehmen durch Steuersenkungen zu subventionieren.",
+      "e": "The government plans to subsidise small businesses through tax cuts."
+    },
+    {
+      "g": "Globalisierung ermöglicht internationalen Handel, bringt aber auch wirtschaftliche Abhängigkeiten mit sich.",
+      "e": "Globalisation enables international trade but also brings economic dependencies."
+    }
+  ],
+  "story": "Deutschland ist eine der größten Volkswirtschaften der Welt. Doch in den letzten Jahren hat die hohe Inflationsrate die Kaufkraft vieler Bürger reduziert. Die Regierung versucht, durch gezielte Investitionen in Infrastruktur und erneuerbare Energien das Wirtschaftswachstum anzukurbeln. Gleichzeitig müssen Unternehmen im globalen Wettbewerb bestehen und ihre Lieferketten transparenter gestalten. Ökonomen sind sich einig: nachhaltiges und wirtschaftliches Wachstum ist die größte Herausforderung der kommenden Jahrzehnte.",
+  "story_en": "Germany is one of the largest economies in the world. However, in recent years the high inflation rate has reduced the purchasing power of many citizens. The government is trying to stimulate economic growth through targeted investments in infrastructure and renewable energies. At the same time, companies must compete in global markets and make their supply chains more transparent. Economists agree: sustainable and economic growth is the greatest challenge of the coming decades.",
+  "sa": [
+    {
+      "w": "investieren",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "anlegen",
+          "e": "to invest/place"
+        },
+        {
+          "d": "finanzieren",
+          "e": "to finance"
+        }
+      ],
+      "ant": [
+        {
+          "d": "abziehen",
+          "e": "to withdraw"
+        },
+        {
+          "d": "verschwenden",
+          "e": "to waste"
+        }
+      ]
+    },
+    {
+      "w": "wachsen",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "expandieren",
+          "e": "to expand"
+        },
+        {
+          "d": "florieren",
+          "e": "to flourish"
+        }
+      ],
+      "ant": [
+        {
+          "d": "schrumpfen",
+          "e": "to shrink"
+        },
+        {
+          "d": "stagnieren",
+          "e": "to stagnate"
+        }
+      ]
+    },
+    {
+      "w": "wirtschaftlich",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "ökonomisch",
+          "e": "economic"
+        },
+        {
+          "d": "rentabel",
+          "e": "profitable"
+        }
+      ],
+      "ant": [
+        {
+          "d": "unwirtschaftlich",
+          "e": "uneconomical"
+        },
+        {
+          "d": "defizitär",
+          "e": "running at a loss"
+        }
+      ]
+    },
+    {
+      "w": "transparent",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "offen",
+          "e": "open"
+        },
+        {
+          "d": "nachvollziehbar",
+          "e": "comprehensible"
+        }
+      ],
+      "ant": [
+        {
+          "d": "intransparent",
+          "e": "non-transparent"
+        },
+        {
+          "d": "undurchsichtig",
+          "e": "opaque"
+        }
+      ]
+    }
+  ]
+}

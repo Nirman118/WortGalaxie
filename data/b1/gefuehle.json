@@ -1,0 +1,203 @@
+{
+  "id": "gefuehle",
+  "level": "B1",
+  "topic": "Gefühle",
+  "chapter": "B1 · Emotions & Feelings",
+  "keys": [
+    "gefühle",
+    "emotions",
+    "angst",
+    "freude",
+    "liebe"
+  ],
+  "words": [
+    {
+      "g": "Freude",
+      "e": "joy",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "sich freuen",
+          "e": "to be happy"
+        },
+        {
+          "d": "Begeisterung",
+          "e": "enthusiasm"
+        }
+      ]
+    },
+    {
+      "g": "Angst",
+      "e": "fear",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Angst haben",
+          "e": "to be afraid"
+        },
+        {
+          "d": "Panik",
+          "e": "panic"
+        },
+        {
+          "d": "Nervosität",
+          "e": "nervousness"
+        }
+      ]
+    },
+    {
+      "g": "Trauer",
+      "e": "sadness",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "traurig sein",
+          "e": "to be sad"
+        },
+        {
+          "d": "weinen",
+          "e": "to cry"
+        }
+      ]
+    },
+    {
+      "g": "Wut",
+      "e": "anger",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "wütend sein",
+          "e": "to be angry"
+        },
+        {
+          "d": "Ärger",
+          "e": "annoyance"
+        }
+      ]
+    },
+    {
+      "g": "sich freuen",
+      "e": "to be happy about",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "jubeln",
+          "e": "to cheer"
+        },
+        {
+          "d": "genießen",
+          "e": "to enjoy"
+        }
+      ]
+    },
+    {
+      "g": "fürchten",
+      "e": "to fear",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "Angst haben",
+          "e": "to be afraid"
+        },
+        {
+          "d": "vermeiden",
+          "e": "to avoid"
+        }
+      ]
+    },
+    {
+      "g": "glücklich",
+      "e": "happy",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "zufrieden",
+          "e": "content"
+        },
+        {
+          "d": "fröhlich",
+          "e": "cheerful"
+        },
+        {
+          "d": "unglücklich",
+          "e": "unhappy"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Ich fühle große Freude, wenn ich meine Familie sehe.",
+      "e": "I feel great joy when I see my family."
+    },
+    {
+      "g": "Sie hat Angst vor dem Vorstellungsgespräch.",
+      "e": "She is afraid of the job interview."
+    },
+    {
+      "g": "Wir sind sehr glücklich über die guten Neuigkeiten.",
+      "e": "We are very happy about the good news."
+    }
+  ],
+  "story": "Emotionen sind ein wichtiger Teil des Lebens. Manchmal fühle ich große Freude — zum Beispiel wenn ich Freunde treffe. Manchmal habe ich auch Angst, besonders vor wichtigen Prüfungen. Wut kommt, wenn etwas unfair ist. Aber meistens bin ich glücklich und zufrieden.",
+  "story_en": "Emotions are an important part of life. Sometimes I feel great joy — for example when I meet friends. Sometimes I also feel fear, especially before important exams. Anger comes when something is unfair. But mostly I am happy and content.",
+  "sa": [
+    {
+      "w": "sich freuen",
+      "t": "verb",
+      "e": "to be happy",
+      "syn": [
+        {
+          "d": "jubeln",
+          "e": "to cheer"
+        },
+        {
+          "d": "genießen",
+          "e": "to enjoy"
+        }
+      ],
+      "ant": [
+        {
+          "d": "trauern",
+          "e": "to grieve"
+        },
+        {
+          "d": "weinen",
+          "e": "to cry"
+        }
+      ]
+    },
+    {
+      "w": "glücklich",
+      "t": "adjective",
+      "e": "happy",
+      "syn": [
+        {
+          "d": "zufrieden",
+          "e": "content"
+        },
+        {
+          "d": "fröhlich",
+          "e": "cheerful"
+        }
+      ],
+      "ant": [
+        {
+          "d": "unglücklich",
+          "e": "unhappy"
+        },
+        {
+          "d": "traurig",
+          "e": "sad"
+        }
+      ]
+    }
+  ]
+}

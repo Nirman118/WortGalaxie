@@ -1,0 +1,207 @@
+{
+  "id": "arbeit",
+  "level": "A2",
+  "topic": "Arbeit",
+  "chapter": "A2 · Work & Office",
+  "keys": [
+    "arbeit",
+    "büro",
+    "kollege",
+    "gehalt",
+    "bewerbung"
+  ],
+  "words": [
+    {
+      "g": "Büro",
+      "e": "office",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Homeoffice",
+          "e": "home office"
+        },
+        {
+          "d": "Großraumbüro",
+          "e": "open-plan office"
+        }
+      ]
+    },
+    {
+      "g": "Kollege",
+      "e": "colleague",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Kollegin",
+          "e": "female colleague"
+        },
+        {
+          "d": "Team",
+          "e": "team"
+        },
+        {
+          "d": "Abteilung",
+          "e": "department"
+        }
+      ]
+    },
+    {
+      "g": "Gehalt",
+      "e": "salary",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Lohn",
+          "e": "wage"
+        },
+        {
+          "d": "Gehaltserhöhung",
+          "e": "pay rise"
+        },
+        {
+          "d": "Bonus",
+          "e": "bonus"
+        }
+      ]
+    },
+    {
+      "g": "Bewerbung",
+      "e": "job application",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Lebenslauf",
+          "e": "CV"
+        },
+        {
+          "d": "Vorstellungsgespräch",
+          "e": "interview"
+        }
+      ]
+    },
+    {
+      "g": "Urlaub",
+      "e": "holiday",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Urlaubstag",
+          "e": "day off"
+        },
+        {
+          "d": "Überstunden",
+          "e": "overtime"
+        },
+        {
+          "d": "Feierabend",
+          "e": "end of working day"
+        }
+      ]
+    },
+    {
+      "g": "bewerben",
+      "e": "to apply for a job",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "eingestellt werden",
+          "e": "to be hired"
+        },
+        {
+          "d": "kündigen",
+          "e": "to resign"
+        }
+      ]
+    },
+    {
+      "g": "stressig",
+      "e": "stressful",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "anstrengend",
+          "e": "exhausting"
+        },
+        {
+          "d": "entspannt",
+          "e": "relaxed"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Ich arbeite im Büro mit netten Kollegen.",
+      "e": "I work in the office with nice colleagues."
+    },
+    {
+      "g": "Die Stelle ist stressig, aber das Gehalt ist gut.",
+      "e": "The job is stressful, but the salary is good."
+    },
+    {
+      "g": "Ich bewerbe mich auf eine neue Stelle.",
+      "e": "I am applying for a new position."
+    }
+  ],
+  "story": "Ich arbeite seit zwei Jahren in einem Büro in München. Meine Kollegen sind freundlich. Das Gehalt ist gut, aber die Arbeit ist manchmal stressig. Letzte Woche hatte ich viele Überstunden. Nächsten Monat habe ich endlich Urlaub.",
+  "story_en": "I have been working in an office in Munich for two years. My colleagues are friendly. The salary is good but work is sometimes stressful. Last week I had a lot of overtime. Next month I finally have a holiday.",
+  "sa": [
+    {
+      "w": "bewerben",
+      "t": "verb",
+      "e": "to apply",
+      "syn": [
+        {
+          "d": "kandidieren",
+          "e": "to apply"
+        },
+        {
+          "d": "einreichen",
+          "e": "to submit"
+        }
+      ],
+      "ant": [
+        {
+          "d": "ablehnen",
+          "e": "to decline"
+        },
+        {
+          "d": "kündigen",
+          "e": "to resign"
+        }
+      ]
+    },
+    {
+      "w": "stressig",
+      "t": "adjective",
+      "e": "stressful",
+      "syn": [
+        {
+          "d": "anstrengend",
+          "e": "exhausting"
+        },
+        {
+          "d": "belastend",
+          "e": "burdensome"
+        }
+      ],
+      "ant": [
+        {
+          "d": "entspannend",
+          "e": "relaxing"
+        },
+        {
+          "d": "ruhig",
+          "e": "calm"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,503 @@
+{
+  "id": "umwelt",
+  "level": "B1",
+  "topic": "Umwelt",
+  "chapter": "B1 · Environment & Climate",
+  "keys": [
+    "umwelt",
+    "natur",
+    "klimawandel",
+    "recycling",
+    "energie",
+    "nachhaltigkeit",
+    "verschmutzung"
+  ],
+  "words": [
+    {
+      "g": "Umweltverschmutzung",
+      "e": "environmental pollution",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Luftverschmutzung",
+          "e": "air pollution"
+        },
+        {
+          "d": "Wasserverschmutzung",
+          "e": "water pollution"
+        },
+        {
+          "d": "Lärmverschmutzung",
+          "e": "noise pollution"
+        }
+      ]
+    },
+    {
+      "g": "Nachhaltigkeit",
+      "e": "sustainability",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "nachhaltig handeln",
+          "e": "to act sustainably"
+        },
+        {
+          "d": "ökologisch",
+          "e": "ecological"
+        },
+        {
+          "d": "zukunftsfähig",
+          "e": "future-proof"
+        }
+      ]
+    },
+    {
+      "g": "Recycling",
+      "e": "recycling",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Mülltrennung",
+          "e": "waste separation"
+        },
+        {
+          "d": "Wiederverwertung",
+          "e": "reuse/recycling"
+        },
+        {
+          "d": "Wertstoffhof",
+          "e": "recycling centre"
+        }
+      ]
+    },
+    {
+      "g": "erneuerbare Energie",
+      "e": "renewable energy",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Solarenergie",
+          "e": "solar energy"
+        },
+        {
+          "d": "Windkraft",
+          "e": "wind power"
+        },
+        {
+          "d": "Wasserkraft",
+          "e": "hydropower"
+        }
+      ]
+    },
+    {
+      "g": "Treibhausgas",
+      "e": "greenhouse gas",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "CO₂-Ausstoß",
+          "e": "CO₂ emissions"
+        },
+        {
+          "d": "Kohlendioxid",
+          "e": "carbon dioxide"
+        },
+        {
+          "d": "Methan",
+          "e": "methane"
+        }
+      ]
+    },
+    {
+      "g": "Artenschutz",
+      "e": "species protection",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "bedrohte Tierart",
+          "e": "endangered species"
+        },
+        {
+          "d": "Naturschutzgebiet",
+          "e": "nature reserve"
+        },
+        {
+          "d": "Biodiversität",
+          "e": "biodiversity"
+        }
+      ]
+    },
+    {
+      "g": "Plastikabfall",
+      "e": "plastic waste",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Einwegplastik",
+          "e": "single-use plastic"
+        },
+        {
+          "d": "Plastikmüll",
+          "e": "plastic rubbish"
+        },
+        {
+          "d": "plastikfrei leben",
+          "e": "to live plastic-free"
+        }
+      ]
+    },
+    {
+      "g": "Klimaschutz",
+      "e": "climate protection",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Klimaziele",
+          "e": "climate targets"
+        },
+        {
+          "d": "Pariser Abkommen",
+          "e": "Paris Agreement"
+        },
+        {
+          "d": "Emissionshandel",
+          "e": "emissions trading"
+        }
+      ]
+    },
+    {
+      "g": "Wald",
+      "e": "forest",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Regenwald",
+          "e": "rainforest"
+        },
+        {
+          "d": "Abholzung",
+          "e": "deforestation"
+        },
+        {
+          "d": "Aufforstung",
+          "e": "reforestation"
+        }
+      ]
+    },
+    {
+      "g": "Fußabdruck",
+      "e": "footprint",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "CO₂-Fußabdruck",
+          "e": "carbon footprint"
+        },
+        {
+          "d": "ökologischer Fußabdruck",
+          "e": "ecological footprint"
+        },
+        {
+          "d": "Fußabdruck reduzieren",
+          "e": "to reduce one's footprint"
+        }
+      ]
+    },
+    {
+      "g": "schützen",
+      "e": "to protect",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "bewahren",
+          "e": "to preserve"
+        },
+        {
+          "d": "erhalten",
+          "e": "to conserve"
+        },
+        {
+          "d": "schonen",
+          "e": "to conserve/spare"
+        }
+      ]
+    },
+    {
+      "g": "verbrauchen",
+      "e": "to consume",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "Energie verbrauchen",
+          "e": "to consume energy"
+        },
+        {
+          "d": "Ressourcen nutzen",
+          "e": "to use resources"
+        },
+        {
+          "d": "vergeuden",
+          "e": "to waste"
+        }
+      ]
+    },
+    {
+      "g": "recyceln",
+      "e": "to recycle",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "wiederverwenden",
+          "e": "to reuse"
+        },
+        {
+          "d": "in die richtige Tonne werfen",
+          "e": "to put in the correct bin"
+        },
+        {
+          "d": "kompostieren",
+          "e": "to compost"
+        }
+      ]
+    },
+    {
+      "g": "reduzieren",
+      "e": "to reduce",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "verringern",
+          "e": "to decrease"
+        },
+        {
+          "d": "minimieren",
+          "e": "to minimise"
+        },
+        {
+          "d": "einschränken",
+          "e": "to limit"
+        }
+      ]
+    },
+    {
+      "g": "nachhaltig",
+      "e": "sustainable",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "umweltfreundlich",
+          "e": "eco-friendly"
+        },
+        {
+          "d": "ökologisch",
+          "e": "ecological"
+        },
+        {
+          "d": "ressourcenschonend",
+          "e": "resource-efficient"
+        }
+      ]
+    },
+    {
+      "g": "erneuerbar",
+      "e": "renewable",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "regenerativ",
+          "e": "regenerative"
+        },
+        {
+          "d": "unbegrenzt verfügbar",
+          "e": "infinitely available"
+        },
+        {
+          "d": "grüne Energie",
+          "e": "green energy"
+        }
+      ]
+    },
+    {
+      "g": "bedroht",
+      "e": "threatened / endangered",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "gefährdet",
+          "e": "at risk"
+        },
+        {
+          "d": "vom Aussterben bedroht",
+          "e": "facing extinction"
+        },
+        {
+          "d": "vulnerable",
+          "e": "vulnerable"
+        }
+      ]
+    },
+    {
+      "g": "bewusst",
+      "e": "conscious / aware",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "umweltbewusst",
+          "e": "environmentally conscious"
+        },
+        {
+          "d": "achtsam",
+          "e": "mindful"
+        },
+        {
+          "d": "verantwortungsbewusst",
+          "e": "responsible"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Durch Mülltrennung und Recycling können wir die Umweltverschmutzung reduzieren.",
+      "e": "Through waste separation and recycling we can reduce environmental pollution."
+    },
+    {
+      "g": "Erneuerbare Energien wie Solarenergie und Windkraft sind wichtig für den Klimaschutz.",
+      "e": "Renewable energies such as solar energy and wind power are important for climate protection."
+    },
+    {
+      "g": "Viele Tierarten sind durch die Abholzung des Regenwaldes bedroht.",
+      "e": "Many species are threatened by the deforestation of the rainforest."
+    },
+    {
+      "g": "Jeder Mensch kann seinen CO₂-Fußabdruck durch bewusste Entscheidungen reduzieren.",
+      "e": "Every person can reduce their carbon footprint through conscious decisions."
+    },
+    {
+      "g": "Die Bundesregierung hat sich verpflichtet, bis 2045 klimaneutral zu sein.",
+      "e": "The federal government has committed to becoming climate-neutral by 2045."
+    },
+    {
+      "g": "Nachhaltig zu leben bedeutet, Ressourcen zu schonen und weniger Plastikabfall zu produzieren.",
+      "e": "Living sustainably means conserving resources and producing less plastic waste."
+    }
+  ],
+  "story": "Jonas ist umweltbewusst. Er fährt mit dem Fahrrad zur Arbeit, trennt seinen Müll sorgfältig und kauft nur nachhaltige Produkte. Er ärgert sich, wenn er sieht, wie viel Plastikabfall produziert wird. In seiner Freizeit engagiert er sich in einer Umweltorganisation, die bedrohte Tierarten schützt und Aufforstungsprojekte organisiert. Er glaubt, dass jeder Mensch verantwortlich ist, die Erde für zukünftige Generationen zu erhalten.",
+  "story_en": "Jonas is environmentally conscious. He cycles to work, carefully separates his waste and only buys sustainable products. He gets annoyed when he sees how much plastic waste is produced. In his free time he is involved in an environmental organisation that protects endangered species and organises reforestation projects. He believes that every person is responsible for preserving the earth for future generations.",
+  "sa": [
+    {
+      "w": "schützen",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "bewahren",
+          "e": "to preserve"
+        },
+        {
+          "d": "erhalten",
+          "e": "to conserve"
+        }
+      ],
+      "ant": [
+        {
+          "d": "zerstören",
+          "e": "to destroy"
+        },
+        {
+          "d": "gefährden",
+          "e": "to endanger"
+        }
+      ]
+    },
+    {
+      "w": "reduzieren",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "verringern",
+          "e": "to decrease"
+        },
+        {
+          "d": "minimieren",
+          "e": "to minimise"
+        }
+      ],
+      "ant": [
+        {
+          "d": "erhöhen",
+          "e": "to increase"
+        },
+        {
+          "d": "steigern",
+          "e": "to raise"
+        }
+      ]
+    },
+    {
+      "w": "nachhaltig",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "umweltfreundlich",
+          "e": "eco-friendly"
+        },
+        {
+          "d": "ökologisch",
+          "e": "ecological"
+        }
+      ],
+      "ant": [
+        {
+          "d": "verschwenderisch",
+          "e": "wasteful"
+        },
+        {
+          "d": "umweltschädlich",
+          "e": "environmentally harmful"
+        }
+      ]
+    },
+    {
+      "w": "bewusst",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "achtsam",
+          "e": "mindful"
+        },
+        {
+          "d": "verantwortungsvoll",
+          "e": "responsible"
+        }
+      ],
+      "ant": [
+        {
+          "d": "gleichgültig",
+          "e": "indifferent"
+        },
+        {
+          "d": "unbewusst",
+          "e": "unconscious"
+        }
+      ]
+    }
+  ]
+}

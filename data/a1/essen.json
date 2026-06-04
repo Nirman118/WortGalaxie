@@ -1,0 +1,504 @@
+{
+  "id": "essen",
+  "level": "A1",
+  "topic": "Essen & Trinken",
+  "chapter": "A1 · Food & Drink",
+  "keys": [
+    "essen",
+    "trinken",
+    "essen",
+    "brot",
+    "wasser",
+    "hunger",
+    "kochen",
+    "lebensmittel"
+  ],
+  "words": [
+    {
+      "g": "Brot",
+      "e": "bread",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Brötchen",
+          "e": "bread roll"
+        },
+        {
+          "d": "Vollkornbrot",
+          "e": "wholegrain bread"
+        },
+        {
+          "d": "Weißbrot",
+          "e": "white bread"
+        }
+      ]
+    },
+    {
+      "g": "Wasser",
+      "e": "water",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Mineralwasser",
+          "e": "mineral water"
+        },
+        {
+          "d": "Leitungswasser",
+          "e": "tap water"
+        },
+        {
+          "d": "ein Glas Wasser",
+          "e": "a glass of water"
+        }
+      ]
+    },
+    {
+      "g": "Fleisch",
+      "e": "meat",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Hähnchen",
+          "e": "chicken"
+        },
+        {
+          "d": "Rind",
+          "e": "beef"
+        },
+        {
+          "d": "Schwein",
+          "e": "pork"
+        }
+      ]
+    },
+    {
+      "g": "Gemüse",
+      "e": "vegetables",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Kartoffel",
+          "e": "potato"
+        },
+        {
+          "d": "Tomate",
+          "e": "tomato"
+        },
+        {
+          "d": "Möhre",
+          "e": "carrot"
+        }
+      ]
+    },
+    {
+      "g": "Obst",
+      "e": "fruit",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Apfel",
+          "e": "apple"
+        },
+        {
+          "d": "Banane",
+          "e": "banana"
+        },
+        {
+          "d": "Erdbeere",
+          "e": "strawberry"
+        }
+      ]
+    },
+    {
+      "g": "Kaffee",
+      "e": "coffee",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Espresso",
+          "e": "espresso"
+        },
+        {
+          "d": "Cappuccino",
+          "e": "cappuccino"
+        },
+        {
+          "d": "Milchkaffee",
+          "e": "latte"
+        }
+      ]
+    },
+    {
+      "g": "Suppe",
+      "e": "soup",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Tomatensuppe",
+          "e": "tomato soup"
+        },
+        {
+          "d": "Hühnersuppe",
+          "e": "chicken soup"
+        },
+        {
+          "d": "Brühe",
+          "e": "broth"
+        }
+      ]
+    },
+    {
+      "g": "Kuchen",
+      "e": "cake",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Schokoladenkuchen",
+          "e": "chocolate cake"
+        },
+        {
+          "d": "Torte",
+          "e": "gateau"
+        },
+        {
+          "d": "Gebäck",
+          "e": "pastries"
+        }
+      ]
+    },
+    {
+      "g": "Frühstück",
+      "e": "breakfast",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Mittagessen",
+          "e": "lunch"
+        },
+        {
+          "d": "Abendessen",
+          "e": "dinner"
+        },
+        {
+          "d": "Snack",
+          "e": "snack"
+        }
+      ]
+    },
+    {
+      "g": "Restaurant",
+      "e": "restaurant",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Speisekarte",
+          "e": "menu"
+        },
+        {
+          "d": "Kellner",
+          "e": "waiter"
+        },
+        {
+          "d": "Rechnung",
+          "e": "bill"
+        }
+      ]
+    },
+    {
+      "g": "essen",
+      "e": "to eat",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "frühstücken",
+          "e": "to have breakfast"
+        },
+        {
+          "d": "zu Abend essen",
+          "e": "to have dinner"
+        },
+        {
+          "d": "snacken",
+          "e": "to snack"
+        }
+      ]
+    },
+    {
+      "g": "trinken",
+      "e": "to drink",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "schlucken",
+          "e": "to swallow"
+        },
+        {
+          "d": "nippen",
+          "e": "to sip"
+        },
+        {
+          "d": "einen Schluck nehmen",
+          "e": "to take a sip"
+        }
+      ]
+    },
+    {
+      "g": "kochen",
+      "e": "to cook",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "braten",
+          "e": "to fry/roast"
+        },
+        {
+          "d": "backen",
+          "e": "to bake"
+        },
+        {
+          "d": "zubereiten",
+          "e": "to prepare"
+        }
+      ]
+    },
+    {
+      "g": "bestellen",
+      "e": "to order",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "eine Bestellung aufgeben",
+          "e": "to place an order"
+        },
+        {
+          "d": "reservieren",
+          "e": "to reserve"
+        },
+        {
+          "d": "auswählen",
+          "e": "to choose"
+        }
+      ]
+    },
+    {
+      "g": "schmecken",
+      "e": "to taste",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "gut schmecken",
+          "e": "to taste good"
+        },
+        {
+          "d": "probieren",
+          "e": "to try/taste"
+        },
+        {
+          "d": "kosten",
+          "e": "to taste (a small amount)"
+        }
+      ]
+    },
+    {
+      "g": "lecker",
+      "e": "delicious",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "köstlich",
+          "e": "tasty/exquisite"
+        },
+        {
+          "d": "wohlschmeckend",
+          "e": "flavoursome"
+        },
+        {
+          "d": "yummy (umgangssprachlich)",
+          "e": "yummy (informal)"
+        }
+      ]
+    },
+    {
+      "g": "frisch",
+      "e": "fresh",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "frisch zubereitet",
+          "e": "freshly prepared"
+        },
+        {
+          "d": "erntefrisch",
+          "e": "freshly harvested"
+        },
+        {
+          "d": "ungekühlt",
+          "e": "unrefrigerated (fresh)"
+        }
+      ]
+    },
+    {
+      "g": "Hunger haben",
+      "e": "to be hungry",
+      "t": "phrase",
+      "a": null,
+      "v": [
+        {
+          "d": "Durst haben",
+          "e": "to be thirsty"
+        },
+        {
+          "d": "satt sein",
+          "e": "to be full"
+        },
+        {
+          "d": "Appetit haben",
+          "e": "to have an appetite"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Zum Frühstück esse ich meistens Brot mit Käse und trinke Kaffee.",
+      "e": "For breakfast I usually eat bread with cheese and drink coffee."
+    },
+    {
+      "g": "Das Restaurant hat eine große Speisekarte mit vielen vegetarischen Gerichten.",
+      "e": "The restaurant has a large menu with many vegetarian dishes."
+    },
+    {
+      "g": "Meine Mutter kocht jeden Abend frisches Gemüse und Fleisch.",
+      "e": "My mother cooks fresh vegetables and meat every evening."
+    },
+    {
+      "g": "Der Kuchen schmeckt sehr lecker — hast du ihn selbst gebacken?",
+      "e": "The cake tastes delicious — did you bake it yourself?"
+    },
+    {
+      "g": "Ich habe Hunger. Können wir etwas essen?",
+      "e": "I am hungry. Can we eat something?"
+    },
+    {
+      "g": "Wir haben einen Tisch im Restaurant für Samstagabend reserviert.",
+      "e": "We have reserved a table at the restaurant for Saturday evening."
+    }
+  ],
+  "story": "Tom hat großen Hunger. Er geht in ein kleines Restaurant in der Stadtmitte. Der Kellner bringt ihm die Speisekarte. Tom bestellt eine Tomatensuppe, dann Hähnchen mit Gemüse und Kartoffeln. Zum Nachtisch nimmt er ein Stück Schokoladenkuchen. Alles schmeckt sehr lecker und frisch. Er trinkt dazu ein Glas Wasser und einen Kaffee.",
+  "story_en": "Tom is very hungry. He goes to a small restaurant in the city centre. The waiter brings him the menu. Tom orders a tomato soup, then chicken with vegetables and potatoes. For dessert he has a piece of chocolate cake. Everything tastes very delicious and fresh. He drinks a glass of water and a coffee with it.",
+  "sa": [
+    {
+      "w": "essen",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "speisen",
+          "e": "to dine"
+        },
+        {
+          "d": "schlemmen",
+          "e": "to feast"
+        }
+      ],
+      "ant": [
+        {
+          "d": "fasten",
+          "e": "to fast"
+        },
+        {
+          "d": "hungern",
+          "e": "to starve"
+        }
+      ]
+    },
+    {
+      "w": "kochen",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "zubereiten",
+          "e": "to prepare"
+        },
+        {
+          "d": "brutzeln",
+          "e": "to sizzle/fry"
+        }
+      ],
+      "ant": [
+        {
+          "d": "bestellen",
+          "e": "to order (food)"
+        },
+        {
+          "d": "kaufen",
+          "e": "to buy"
+        }
+      ]
+    },
+    {
+      "w": "lecker",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "köstlich",
+          "e": "exquisite"
+        },
+        {
+          "d": "wohlschmeckend",
+          "e": "flavoursome"
+        }
+      ],
+      "ant": [
+        {
+          "d": "ekelhaft",
+          "e": "disgusting"
+        },
+        {
+          "d": "fade",
+          "e": "bland"
+        }
+      ]
+    },
+    {
+      "w": "frisch",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "neu",
+          "e": "new"
+        },
+        {
+          "d": "unverarbeitet",
+          "e": "unprocessed"
+        }
+      ],
+      "ant": [
+        {
+          "d": "abgestanden",
+          "e": "stale"
+        },
+        {
+          "d": "verdorben",
+          "e": "spoiled"
+        }
+      ]
+    }
+  ]
+}

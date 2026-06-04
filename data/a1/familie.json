@@ -1,0 +1,479 @@
+{
+  "id": "familie",
+  "level": "A1",
+  "topic": "Familie",
+  "chapter": "A1 · People & Family",
+  "keys": [
+    "familie",
+    "mutter",
+    "vater",
+    "kind",
+    "geschwister",
+    "eltern",
+    "großeltern"
+  ],
+  "words": [
+    {
+      "g": "Mutter",
+      "e": "mother",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Mama",
+          "e": "mum"
+        },
+        {
+          "d": "Stiefmutter",
+          "e": "stepmother"
+        },
+        {
+          "d": "Schwiegermutter",
+          "e": "mother-in-law"
+        }
+      ]
+    },
+    {
+      "g": "Vater",
+      "e": "father",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Papa",
+          "e": "dad"
+        },
+        {
+          "d": "Stiefvater",
+          "e": "stepfather"
+        },
+        {
+          "d": "Schwiegervater",
+          "e": "father-in-law"
+        }
+      ]
+    },
+    {
+      "g": "Kind",
+      "e": "child",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Sohn",
+          "e": "son"
+        },
+        {
+          "d": "Tochter",
+          "e": "daughter"
+        },
+        {
+          "d": "Einzelkind",
+          "e": "only child"
+        }
+      ]
+    },
+    {
+      "g": "Geschwister",
+      "e": "siblings",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Bruder",
+          "e": "brother"
+        },
+        {
+          "d": "Schwester",
+          "e": "sister"
+        },
+        {
+          "d": "Halbgeschwister",
+          "e": "half-siblings"
+        }
+      ]
+    },
+    {
+      "g": "Großmutter",
+      "e": "grandmother",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Oma",
+          "e": "grandma"
+        },
+        {
+          "d": "Großeltern",
+          "e": "grandparents"
+        },
+        {
+          "d": "Urgroßmutter",
+          "e": "great-grandmother"
+        }
+      ]
+    },
+    {
+      "g": "Großvater",
+      "e": "grandfather",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Opa",
+          "e": "grandpa"
+        },
+        {
+          "d": "Großeltern",
+          "e": "grandparents"
+        },
+        {
+          "d": "Urgroßvater",
+          "e": "great-grandfather"
+        }
+      ]
+    },
+    {
+      "g": "Onkel",
+      "e": "uncle",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Tante",
+          "e": "aunt"
+        },
+        {
+          "d": "Neffe",
+          "e": "nephew"
+        },
+        {
+          "d": "Nichte",
+          "e": "niece"
+        }
+      ]
+    },
+    {
+      "g": "Cousin",
+      "e": "cousin (male)",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Cousine",
+          "e": "cousin (female)"
+        },
+        {
+          "d": "Verwandter",
+          "e": "relative"
+        },
+        {
+          "d": "entfernte Verwandtschaft",
+          "e": "distant relatives"
+        }
+      ]
+    },
+    {
+      "g": "Ehemann",
+      "e": "husband",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Ehepartner",
+          "e": "spouse"
+        },
+        {
+          "d": "Mann",
+          "e": "man / husband (informal)"
+        },
+        {
+          "d": "Ex-Mann",
+          "e": "ex-husband"
+        }
+      ]
+    },
+    {
+      "g": "Ehefrau",
+      "e": "wife",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Partnerin",
+          "e": "partner (f.)"
+        },
+        {
+          "d": "Frau",
+          "e": "woman / wife (informal)"
+        },
+        {
+          "d": "Ex-Frau",
+          "e": "ex-wife"
+        }
+      ]
+    },
+    {
+      "g": "lieben",
+      "e": "to love",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "ich liebe dich",
+          "e": "I love you"
+        },
+        {
+          "d": "jdn. lieben",
+          "e": "to love someone"
+        },
+        {
+          "d": "verliebt sein",
+          "e": "to be in love"
+        }
+      ]
+    },
+    {
+      "g": "heiraten",
+      "e": "to marry",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "die Hochzeit",
+          "e": "the wedding"
+        },
+        {
+          "d": "verheiratet sein",
+          "e": "to be married"
+        },
+        {
+          "d": "sich verloben",
+          "e": "to get engaged"
+        }
+      ]
+    },
+    {
+      "g": "aufwachsen",
+      "e": "to grow up",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "großziehen",
+          "e": "to raise (a child)"
+        },
+        {
+          "d": "Kindheit",
+          "e": "childhood"
+        },
+        {
+          "d": "erwachsen werden",
+          "e": "to become an adult"
+        }
+      ]
+    },
+    {
+      "g": "zusammenleben",
+      "e": "to live together",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "wohnen",
+          "e": "to live/reside"
+        },
+        {
+          "d": "Haushalt",
+          "e": "household"
+        },
+        {
+          "d": "einziehen",
+          "e": "to move in"
+        }
+      ]
+    },
+    {
+      "g": "Familie gründen",
+      "e": "to start a family",
+      "t": "phrase",
+      "a": null,
+      "v": [
+        {
+          "d": "Nachwuchs bekommen",
+          "e": "to have children"
+        },
+        {
+          "d": "schwanger sein",
+          "e": "to be pregnant"
+        },
+        {
+          "d": "Eltern werden",
+          "e": "to become parents"
+        }
+      ]
+    },
+    {
+      "g": "jung",
+      "e": "young",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "jünger",
+          "e": "younger"
+        },
+        {
+          "d": "jüngste",
+          "e": "youngest"
+        },
+        {
+          "d": "jugendlich",
+          "e": "youthful"
+        }
+      ]
+    },
+    {
+      "g": "alt",
+      "e": "old",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "älter",
+          "e": "older"
+        },
+        {
+          "d": "älteste",
+          "e": "oldest"
+        },
+        {
+          "d": "betagte Person",
+          "e": "elderly person"
+        }
+      ]
+    },
+    {
+      "g": "verwandt",
+      "e": "related",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "Verwandtschaft",
+          "e": "kinship / relatives"
+        },
+        {
+          "d": "entfernt verwandt",
+          "e": "distantly related"
+        },
+        {
+          "d": "eng verwandt",
+          "e": "closely related"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Meine Mutter ist Lehrerin und mein Vater arbeitet als Arzt.",
+      "e": "My mother is a teacher and my father works as a doctor."
+    },
+    {
+      "g": "Ich habe zwei Geschwister: einen Bruder und eine Schwester.",
+      "e": "I have two siblings: a brother and a sister."
+    },
+    {
+      "g": "Am Wochenende besuchen wir unsere Großeltern.",
+      "e": "At the weekend we visit our grandparents."
+    },
+    {
+      "g": "Meine Cousine wohnt in München und kommt uns im Sommer besuchen.",
+      "e": "My cousin lives in Munich and comes to visit us in summer."
+    },
+    {
+      "g": "Sie haben letztes Jahr geheiratet und möchten bald eine Familie gründen.",
+      "e": "They got married last year and want to start a family soon."
+    },
+    {
+      "g": "In unserer Familie sprechen wir offen über Probleme.",
+      "e": "In our family we speak openly about problems."
+    }
+  ],
+  "story": "Anna wächst in einer kleinen Familie auf. Ihre Mutter ist Ärztin und ihr Vater Koch. Sie hat einen jüngeren Bruder namens Felix. Jeden Sonntag besuchen sie die Großeltern, die in der Nähe wohnen. Oma backt immer Kuchen und Opa erzählt Geschichten aus seiner Jugend. Anna liebt ihre Familie sehr.",
+  "story_en": "Anna grows up in a small family. Her mother is a doctor and her father is a chef. She has a younger brother named Felix. Every Sunday they visit the grandparents, who live nearby. Grandma always bakes cake and Grandpa tells stories from his youth. Anna loves her family very much.",
+  "sa": [
+    {
+      "w": "lieben",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "mögen",
+          "e": "to like"
+        },
+        {
+          "d": "verehren",
+          "e": "to adore"
+        }
+      ],
+      "ant": [
+        {
+          "d": "hassen",
+          "e": "to hate"
+        },
+        {
+          "d": "ablehnen",
+          "e": "to reject"
+        }
+      ]
+    },
+    {
+      "w": "jung",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "jugendlich",
+          "e": "youthful"
+        },
+        {
+          "d": "kindlich",
+          "e": "childlike"
+        }
+      ],
+      "ant": [
+        {
+          "d": "alt",
+          "e": "old"
+        },
+        {
+          "d": "reif",
+          "e": "mature"
+        }
+      ]
+    },
+    {
+      "w": "verwandt",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "zugehörig",
+          "e": "belonging to"
+        },
+        {
+          "d": "verbunden",
+          "e": "connected"
+        }
+      ],
+      "ant": [
+        {
+          "d": "fremd",
+          "e": "foreign/unrelated"
+        },
+        {
+          "d": "unbekannt",
+          "e": "unknown"
+        }
+      ]
+    }
+  ]
+}

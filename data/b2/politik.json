@@ -1,0 +1,504 @@
+{
+  "id": "politik",
+  "level": "B2",
+  "topic": "Politik",
+  "chapter": "B2 · Politics & Society",
+  "keys": [
+    "politik",
+    "demokratie",
+    "wahl",
+    "regierung",
+    "partei",
+    "gesetz",
+    "parlament",
+    "bürger"
+  ],
+  "words": [
+    {
+      "g": "Demokratie",
+      "e": "democracy",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "parlamentarische Demokratie",
+          "e": "parliamentary democracy"
+        },
+        {
+          "d": "direkte Demokratie",
+          "e": "direct democracy"
+        },
+        {
+          "d": "Volksherrschaft",
+          "e": "rule of the people"
+        }
+      ]
+    },
+    {
+      "g": "Parlament",
+      "e": "parliament",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Bundestag",
+          "e": "German Federal Parliament"
+        },
+        {
+          "d": "Bundesrat",
+          "e": "Federal Council"
+        },
+        {
+          "d": "Abgeordneter",
+          "e": "MP / member of parliament"
+        }
+      ]
+    },
+    {
+      "g": "Regierung",
+      "e": "government",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Koalition",
+          "e": "coalition"
+        },
+        {
+          "d": "Bundesregierung",
+          "e": "federal government"
+        },
+        {
+          "d": "Kabinett",
+          "e": "cabinet"
+        }
+      ]
+    },
+    {
+      "g": "Wahl",
+      "e": "election",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Bundestagswahl",
+          "e": "federal election"
+        },
+        {
+          "d": "Wahlrecht",
+          "e": "right to vote"
+        },
+        {
+          "d": "Wahlkampf",
+          "e": "election campaign"
+        }
+      ]
+    },
+    {
+      "g": "Gesetz",
+      "e": "law",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Gesetzentwurf",
+          "e": "bill / draft law"
+        },
+        {
+          "d": "Grundgesetz",
+          "e": "Basic Law (German constitution)"
+        },
+        {
+          "d": "Rechtsstaat",
+          "e": "rule-of-law state"
+        }
+      ]
+    },
+    {
+      "g": "Bürger",
+      "e": "citizen",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Staatsbürgerschaft",
+          "e": "citizenship"
+        },
+        {
+          "d": "Bürgerrechte",
+          "e": "civil rights"
+        },
+        {
+          "d": "Zivilgesellschaft",
+          "e": "civil society"
+        }
+      ]
+    },
+    {
+      "g": "Opposition",
+      "e": "opposition",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Oppositionspartei",
+          "e": "opposition party"
+        },
+        {
+          "d": "Kritik üben",
+          "e": "to criticise"
+        },
+        {
+          "d": "Gegenstimme",
+          "e": "dissenting voice"
+        }
+      ]
+    },
+    {
+      "g": "Meinungsfreiheit",
+      "e": "freedom of speech",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Pressefreiheit",
+          "e": "freedom of the press"
+        },
+        {
+          "d": "Grundrecht",
+          "e": "fundamental right"
+        },
+        {
+          "d": "Zensur",
+          "e": "censorship"
+        }
+      ]
+    },
+    {
+      "g": "Referendum",
+      "e": "referendum",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Volksentscheid",
+          "e": "public vote"
+        },
+        {
+          "d": "Volksabstimmung",
+          "e": "popular vote"
+        },
+        {
+          "d": "Abstimmung",
+          "e": "vote/ballot"
+        }
+      ]
+    },
+    {
+      "g": "Außenpolitik",
+      "e": "foreign policy",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Diplomatie",
+          "e": "diplomacy"
+        },
+        {
+          "d": "Außenminister",
+          "e": "foreign minister"
+        },
+        {
+          "d": "bilaterale Beziehungen",
+          "e": "bilateral relations"
+        }
+      ]
+    },
+    {
+      "g": "wählen",
+      "e": "to vote / to elect",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "abstimmen",
+          "e": "to vote/ballot"
+        },
+        {
+          "d": "seine Stimme abgeben",
+          "e": "to cast one's vote"
+        },
+        {
+          "d": "kandidieren",
+          "e": "to stand for election"
+        }
+      ]
+    },
+    {
+      "g": "regieren",
+      "e": "to govern",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "verwalten",
+          "e": "to administer"
+        },
+        {
+          "d": "lenken",
+          "e": "to steer/direct"
+        },
+        {
+          "d": "führen",
+          "e": "to lead"
+        }
+      ]
+    },
+    {
+      "g": "debattieren",
+      "e": "to debate",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "diskutieren",
+          "e": "to discuss"
+        },
+        {
+          "d": "argumentieren",
+          "e": "to argue"
+        },
+        {
+          "d": "Stellung nehmen",
+          "e": "to take a position"
+        }
+      ]
+    },
+    {
+      "g": "verabschieden",
+      "e": "to pass (a law)",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "ein Gesetz beschließen",
+          "e": "to enact a law"
+        },
+        {
+          "d": "ratifizieren",
+          "e": "to ratify"
+        },
+        {
+          "d": "in Kraft treten",
+          "e": "to come into force"
+        }
+      ]
+    },
+    {
+      "g": "demokratisch",
+      "e": "democratic",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "repräsentativ",
+          "e": "representative"
+        },
+        {
+          "d": "freiheitlich",
+          "e": "liberal/free"
+        },
+        {
+          "d": "pluralistisch",
+          "e": "pluralistic"
+        }
+      ]
+    },
+    {
+      "g": "politisch",
+      "e": "political",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "parteipolitisch",
+          "e": "party-political"
+        },
+        {
+          "d": "staatlich",
+          "e": "state/governmental"
+        },
+        {
+          "d": "gesellschaftlich",
+          "e": "social/societal"
+        }
+      ]
+    },
+    {
+      "g": "konservativ",
+      "e": "conservative",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "traditionell",
+          "e": "traditional"
+        },
+        {
+          "d": "rechts der Mitte",
+          "e": "right of centre"
+        },
+        {
+          "d": "bewahrend",
+          "e": "preservationist"
+        }
+      ]
+    },
+    {
+      "g": "progressiv",
+      "e": "progressive",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "fortschrittlich",
+          "e": "forward-thinking"
+        },
+        {
+          "d": "reformorientiert",
+          "e": "reform-oriented"
+        },
+        {
+          "d": "links der Mitte",
+          "e": "left of centre"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "In einer Demokratie haben alle Bürger das Recht, an Wahlen teilzunehmen.",
+      "e": "In a democracy all citizens have the right to participate in elections."
+    },
+    {
+      "g": "Der Bundestag hat das neue Gesetz nach langer Debatte verabschiedet.",
+      "e": "The Bundestag passed the new law after a long debate."
+    },
+    {
+      "g": "Die Regierungskoalition besteht aus zwei Parteien mit unterschiedlichen politischen Zielen.",
+      "e": "The governing coalition consists of two parties with different political goals."
+    },
+    {
+      "g": "Meinungsfreiheit ist ein fundamentales Grundrecht in demokratischen Gesellschaften.",
+      "e": "Freedom of speech is a fundamental right in democratic societies."
+    },
+    {
+      "g": "Die Opposition kritisiert den Gesetzentwurf als zu konservativ und fordert Reformen.",
+      "e": "The opposition criticises the draft law as too conservative and demands reforms."
+    },
+    {
+      "g": "Bei der letzten Bundestagswahl haben über 70 Prozent der Wahlberechtigten abgestimmt.",
+      "e": "In the last federal election over 70 percent of eligible voters cast their votes."
+    }
+  ],
+  "story": "In Deutschland findet alle vier Jahre eine Bundestagswahl statt. Die Bürger wählen ihre Abgeordneten ins Parlament und entscheiden damit, welche Parteien die Regierung bilden. Nach der letzten Wahl haben drei Parteien eine Koalition gebildet und gemeinsam regiert. Im Parlament werden Gesetze debattiert und verabschiedet — demokratisch, transparent und im Sinne der Bevölkerung. Meinungsfreiheit und Pressefreiheit sind dabei unverzichtbare Grundrechte.",
+  "story_en": "In Germany a federal election takes place every four years. Citizens elect their representatives to parliament and thereby decide which parties form the government. After the last election three parties formed a coalition and governed together. In parliament laws are debated and passed — democratically, transparently and in the interest of the population. Freedom of speech and freedom of the press are indispensable fundamental rights.",
+  "sa": [
+    {
+      "w": "wählen",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "abstimmen",
+          "e": "to vote"
+        },
+        {
+          "d": "bestimmen",
+          "e": "to determine"
+        }
+      ],
+      "ant": [
+        {
+          "d": "boykottieren",
+          "e": "to boycott"
+        },
+        {
+          "d": "verweigern",
+          "e": "to refuse"
+        }
+      ]
+    },
+    {
+      "w": "debattieren",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "diskutieren",
+          "e": "to discuss"
+        },
+        {
+          "d": "erörtern",
+          "e": "to deliberate"
+        }
+      ],
+      "ant": [
+        {
+          "d": "schweigen",
+          "e": "to remain silent"
+        },
+        {
+          "d": "ignorieren",
+          "e": "to ignore"
+        }
+      ]
+    },
+    {
+      "w": "demokratisch",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "freiheitlich",
+          "e": "liberal"
+        },
+        {
+          "d": "repräsentativ",
+          "e": "representative"
+        }
+      ],
+      "ant": [
+        {
+          "d": "autoritär",
+          "e": "authoritarian"
+        },
+        {
+          "d": "diktatorisch",
+          "e": "dictatorial"
+        }
+      ]
+    },
+    {
+      "w": "progressiv",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "fortschrittlich",
+          "e": "forward-thinking"
+        },
+        {
+          "d": "modern",
+          "e": "modern"
+        }
+      ],
+      "ant": [
+        {
+          "d": "konservativ",
+          "e": "conservative"
+        },
+        {
+          "d": "rückständig",
+          "e": "backward"
+        }
+      ]
+    }
+  ]
+}

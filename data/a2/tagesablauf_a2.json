@@ -1,0 +1,198 @@
+{
+  "id": "tagesablauf_a2",
+  "level": "A2",
+  "topic": "Tagesablauf",
+  "chapter": "A2 · Daily Routine",
+  "keys": [
+    "tagesablauf",
+    "routine",
+    "pendeln",
+    "alltag"
+  ],
+  "words": [
+    {
+      "g": "aufwachen",
+      "e": "to wake up",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "aufstehen",
+          "e": "to get up"
+        },
+        {
+          "d": "Wecker stellen",
+          "e": "to set alarm"
+        },
+        {
+          "d": "verschlafen",
+          "e": "to oversleep"
+        }
+      ]
+    },
+    {
+      "g": "sich duschen",
+      "e": "to shower",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "Zähne putzen",
+          "e": "to brush teeth"
+        },
+        {
+          "d": "sich anziehen",
+          "e": "to get dressed"
+        }
+      ]
+    },
+    {
+      "g": "pendeln",
+      "e": "to commute",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "mit dem Zug",
+          "e": "by train"
+        },
+        {
+          "d": "mit dem Auto",
+          "e": "by car"
+        },
+        {
+          "d": "mit dem Fahrrad",
+          "e": "by bike"
+        }
+      ]
+    },
+    {
+      "g": "Mittagspause",
+      "e": "lunch break",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Pause machen",
+          "e": "to take a break"
+        },
+        {
+          "d": "Kaffeepause",
+          "e": "coffee break"
+        }
+      ]
+    },
+    {
+      "g": "Feierabend",
+      "e": "end of working day",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Freizeit",
+          "e": "free time"
+        },
+        {
+          "d": "Abendessen",
+          "e": "evening meal"
+        }
+      ]
+    },
+    {
+      "g": "schlafen gehen",
+      "e": "to go to bed",
+      "t": "phrase",
+      "a": null,
+      "v": [
+        {
+          "d": "einschlafen",
+          "e": "to fall asleep"
+        },
+        {
+          "d": "Nachtruhe",
+          "e": "night's rest"
+        }
+      ]
+    },
+    {
+      "g": "regelmäßig",
+      "e": "regularly",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "täglich",
+          "e": "daily"
+        },
+        {
+          "d": "wöchentlich",
+          "e": "weekly"
+        },
+        {
+          "d": "unregelmäßig",
+          "e": "irregular"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Jeden Morgen wache ich um sechs Uhr auf und dusche mich.",
+      "e": "Every morning I wake up at six and shower."
+    },
+    {
+      "g": "Nach der Mittagspause arbeite ich noch drei Stunden.",
+      "e": "After the lunch break I work for three more hours."
+    },
+    {
+      "g": "Ich mache regelmäßig Sport nach dem Feierabend.",
+      "e": "I regularly exercise after finishing work."
+    }
+  ],
+  "story": "Mein Tagesablauf ist sehr regelmäßig. Ich wache um sechs Uhr auf und dusche mich. Dann frühstücke ich schnell. Ich pendle mit dem Zug zur Arbeit. Um zwölf Uhr mache ich Mittagspause. Um 17 Uhr ist Feierabend. Abends gehe ich um 22 Uhr schlafen.",
+  "story_en": "My daily routine is very regular. I wake up at six, shower and have a quick breakfast. I commute by train to work. At twelve I take my lunch break. At 5pm work is over. In the evenings I go to bed at 10pm.",
+  "sa": [
+    {
+      "w": "pendeln",
+      "t": "verb",
+      "e": "to commute",
+      "syn": [
+        {
+          "d": "fahren",
+          "e": "to travel"
+        }
+      ],
+      "ant": [
+        {
+          "d": "zu Hause bleiben",
+          "e": "to stay home"
+        }
+      ]
+    },
+    {
+      "w": "regelmäßig",
+      "t": "adjective",
+      "e": "regular",
+      "syn": [
+        {
+          "d": "gleichmäßig",
+          "e": "even"
+        },
+        {
+          "d": "täglich",
+          "e": "daily"
+        }
+      ],
+      "ant": [
+        {
+          "d": "unregelmäßig",
+          "e": "irregular"
+        },
+        {
+          "d": "sporadisch",
+          "e": "sporadic"
+        }
+      ]
+    }
+  ]
+}

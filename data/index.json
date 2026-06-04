@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-06-03T19:35:33.354Z",
+  "generated_at": "2026-06-04T14:03:13.291Z",
   "total_topics": 21,
-  "total_words": 147,
+  "total_words": 268,
   "levels": {
     "A1": [
       {
@@ -43,13 +43,15 @@
         "keys": [
           "essen",
           "trinken",
-          "food",
+          "essen",
           "brot",
-          "obst",
-          "kochen"
+          "wasser",
+          "hunger",
+          "kochen",
+          "lebensmittel"
         ],
-        "word_count": 7,
-        "sa_count": 2,
+        "word_count": 18,
+        "sa_count": 4,
         "has_story": true,
         "file": "a1/essen.json"
       },
@@ -62,10 +64,12 @@
           "mutter",
           "vater",
           "kind",
-          "geschwister"
+          "geschwister",
+          "eltern",
+          "großeltern"
         ],
-        "word_count": 7,
-        "sa_count": 2,
+        "word_count": 18,
+        "sa_count": 3,
         "has_story": true,
         "file": "a1/familie.json"
       },
@@ -75,13 +79,16 @@
         "chapter": "A1 · Daily Routine",
         "keys": [
           "tagesablauf",
-          "routine",
           "morgen",
           "abend",
-          "alltag"
+          "routine",
+          "aufstehen",
+          "schlafen",
+          "frühstück",
+          "tag"
         ],
-        "word_count": 7,
-        "sa_count": 2,
+        "word_count": 18,
+        "sa_count": 4,
         "has_story": true,
         "file": "a1/tagesablauf_a1.json"
       },
@@ -172,13 +179,16 @@
         "chapter": "A2 · Travel & Holidays",
         "keys": [
           "urlaub",
-          "reisen",
-          "strand",
+          "reise",
           "hotel",
-          "flughafen"
+          "flugzeug",
+          "koffer",
+          "strand",
+          "ferien",
+          "reisen"
         ],
-        "word_count": 7,
-        "sa_count": 2,
+        "word_count": 18,
+        "sa_count": 4,
         "has_story": true,
         "file": "a2/urlaub.json"
       },
@@ -188,13 +198,16 @@
         "chapter": "A2 · Weather & Seasons",
         "keys": [
           "wetter",
-          "regen",
           "sonne",
+          "regen",
+          "schnee",
           "temperatur",
-          "jahreszeit"
+          "jahreszeit",
+          "wolke",
+          "wind"
         ],
-        "word_count": 7,
-        "sa_count": 2,
+        "word_count": 18,
+        "sa_count": 4,
         "has_story": true,
         "file": "a2/wetter.json"
       }
@@ -222,13 +235,16 @@
         "chapter": "B1 · Health & Body",
         "keys": [
           "gesundheit",
-          "health",
-          "ernährung",
+          "arzt",
           "krank",
-          "medikament"
+          "medikament",
+          "schmerz",
+          "krankenhaus",
+          "körper",
+          "krankheit"
         ],
-        "word_count": 7,
-        "sa_count": 2,
+        "word_count": 18,
+        "sa_count": 4,
         "has_story": true,
         "file": "b1/gesundheit.json"
       },
@@ -239,12 +255,15 @@
         "keys": [
           "karriere",
           "bewerbung",
-          "lebenslauf",
-          "beförderung",
-          "weiterbildung"
+          "beruf",
+          "job",
+          "gehalt",
+          "arbeit",
+          "stelle",
+          "lebenslauf"
         ],
-        "word_count": 7,
-        "sa_count": 2,
+        "word_count": 18,
+        "sa_count": 4,
         "has_story": true,
         "file": "b1/karriere.json"
       },
@@ -270,13 +289,15 @@
         "chapter": "B1 · Environment & Climate",
         "keys": [
           "umwelt",
-          "klima",
+          "natur",
+          "klimawandel",
           "recycling",
-          "nachhaltig",
-          "energie"
+          "energie",
+          "nachhaltigkeit",
+          "verschmutzung"
         ],
-        "word_count": 7,
-        "sa_count": 2,
+        "word_count": 18,
+        "sa_count": 4,
         "has_story": true,
         "file": "b1/umwelt.json"
       }
@@ -304,12 +325,15 @@
         "chapter": "B2 · Communication",
         "keys": [
           "kommunikation",
-          "dialog",
-          "missverständnis",
-          "ausdrücken"
+          "sprache",
+          "gespräch",
+          "medien",
+          "digital",
+          "information",
+          "argumentation"
         ],
-        "word_count": 7,
-        "sa_count": 2,
+        "word_count": 18,
+        "sa_count": 4,
         "has_story": true,
         "file": "b2/kommunikation.json"
       },
@@ -321,11 +345,14 @@
           "politik",
           "demokratie",
           "wahl",
+          "regierung",
+          "partei",
+          "gesetz",
           "parlament",
-          "partei"
+          "bürger"
         ],
-        "word_count": 7,
-        "sa_count": 2,
+        "word_count": 18,
+        "sa_count": 4,
         "has_story": true,
         "file": "b2/politik.json"
       },
@@ -338,10 +365,13 @@
           "inflation",
           "steuern",
           "unternehmen",
-          "börse"
+          "börse",
+          "wachstum",
+          "investition",
+          "markt"
         ],
-        "word_count": 7,
-        "sa_count": 2,
+        "word_count": 18,
+        "sa_count": 4,
         "has_story": true,
         "file": "b2/wirtschaft.json"
       }

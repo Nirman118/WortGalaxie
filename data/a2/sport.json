@@ -1,0 +1,211 @@
+{
+  "id": "sport",
+  "level": "A2",
+  "topic": "Sport",
+  "chapter": "A2 · Sport & Fitness",
+  "keys": [
+    "sport",
+    "fußball",
+    "laufen",
+    "schwimmen",
+    "training"
+  ],
+  "words": [
+    {
+      "g": "Fußball",
+      "e": "football",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Tor",
+          "e": "goal"
+        },
+        {
+          "d": "Mannschaft",
+          "e": "team"
+        },
+        {
+          "d": "Fußballplatz",
+          "e": "pitch"
+        }
+      ]
+    },
+    {
+      "g": "Fitnessstudio",
+      "e": "gym",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Mitgliedschaft",
+          "e": "membership"
+        },
+        {
+          "d": "Laufband",
+          "e": "treadmill"
+        }
+      ]
+    },
+    {
+      "g": "Mannschaft",
+      "e": "team",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Spieler",
+          "e": "player"
+        },
+        {
+          "d": "Trainer",
+          "e": "coach"
+        },
+        {
+          "d": "Kapitän",
+          "e": "captain"
+        }
+      ]
+    },
+    {
+      "g": "trainieren",
+      "e": "to train",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "täglich trainieren",
+          "e": "to train daily"
+        },
+        {
+          "d": "Ausdauer trainieren",
+          "e": "endurance training"
+        }
+      ]
+    },
+    {
+      "g": "laufen",
+      "e": "to run",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "joggen",
+          "e": "to jog"
+        },
+        {
+          "d": "sprinten",
+          "e": "to sprint"
+        },
+        {
+          "d": "Marathon laufen",
+          "e": "to run a marathon"
+        }
+      ]
+    },
+    {
+      "g": "schwimmen",
+      "e": "to swim",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "im Freibad",
+          "e": "outdoor pool"
+        },
+        {
+          "d": "tauchen",
+          "e": "to dive"
+        }
+      ]
+    },
+    {
+      "g": "fit",
+      "e": "fit",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "sportlich",
+          "e": "sporty"
+        },
+        {
+          "d": "in Form",
+          "e": "in shape"
+        },
+        {
+          "d": "unfit",
+          "e": "unfit"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Ich trainiere dreimal pro Woche im Fitnessstudio.",
+      "e": "I train three times a week at the gym."
+    },
+    {
+      "g": "Fußball ist in Deutschland sehr beliebt.",
+      "e": "Football is very popular in Germany."
+    },
+    {
+      "g": "Regelmäßig laufen hält mich fit und gesund.",
+      "e": "Running regularly keeps me fit and healthy."
+    }
+  ],
+  "story": "Ich mache sehr gern Sport. Jeden Morgen laufe ich eine halbe Stunde durch den Park. Am Dienstag und Donnerstag trainiere ich im Fitnessstudio. Am Wochenende schwimme ich im Hallenbad. Mein Lieblingssport ist Fußball — meine Mannschaft ist die beste! Durch Sport bleibe ich fit und glücklich.",
+  "story_en": "I love sport. Every morning I run for half an hour through the park. On Tuesday and Thursday I train at the gym. At the weekend I swim. My favourite sport is football — my team is the best! Through sport I stay fit and happy.",
+  "sa": [
+    {
+      "w": "trainieren",
+      "t": "verb",
+      "e": "to train",
+      "syn": [
+        {
+          "d": "üben",
+          "e": "to practise"
+        },
+        {
+          "d": "sport treiben",
+          "e": "to do sport"
+        }
+      ],
+      "ant": [
+        {
+          "d": "faulenzen",
+          "e": "to laze"
+        },
+        {
+          "d": "ausruhen",
+          "e": "to rest"
+        }
+      ]
+    },
+    {
+      "w": "fit",
+      "t": "adjective",
+      "e": "fit",
+      "syn": [
+        {
+          "d": "gesund",
+          "e": "healthy"
+        },
+        {
+          "d": "sportlich",
+          "e": "sporty"
+        }
+      ],
+      "ant": [
+        {
+          "d": "unfit",
+          "e": "unfit"
+        },
+        {
+          "d": "faul",
+          "e": "lazy"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,504 @@
+{
+  "id": "urlaub",
+  "level": "A2",
+  "topic": "Urlaub",
+  "chapter": "A2 · Travel & Holidays",
+  "keys": [
+    "urlaub",
+    "reise",
+    "hotel",
+    "flugzeug",
+    "koffer",
+    "strand",
+    "ferien",
+    "reisen"
+  ],
+  "words": [
+    {
+      "g": "Reise",
+      "e": "journey / trip",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Geschäftsreise",
+          "e": "business trip"
+        },
+        {
+          "d": "Urlaubsreise",
+          "e": "holiday trip"
+        },
+        {
+          "d": "Weltreise",
+          "e": "world trip"
+        }
+      ]
+    },
+    {
+      "g": "Hotel",
+      "e": "hotel",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Zimmer buchen",
+          "e": "to book a room"
+        },
+        {
+          "d": "Doppelzimmer",
+          "e": "double room"
+        },
+        {
+          "d": "Rezeption",
+          "e": "reception/front desk"
+        }
+      ]
+    },
+    {
+      "g": "Flugzeug",
+      "e": "aeroplane",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Flug",
+          "e": "flight"
+        },
+        {
+          "d": "Flughafen",
+          "e": "airport"
+        },
+        {
+          "d": "Boarding",
+          "e": "boarding"
+        }
+      ]
+    },
+    {
+      "g": "Koffer",
+      "e": "suitcase",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Handgepäck",
+          "e": "hand luggage"
+        },
+        {
+          "d": "Rucksack",
+          "e": "backpack"
+        },
+        {
+          "d": "packen",
+          "e": "to pack"
+        }
+      ]
+    },
+    {
+      "g": "Strand",
+      "e": "beach",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Sandstrand",
+          "e": "sandy beach"
+        },
+        {
+          "d": "Strandkorb",
+          "e": "beach chair"
+        },
+        {
+          "d": "Sonnenliege",
+          "e": "sun lounger"
+        }
+      ]
+    },
+    {
+      "g": "Pass",
+      "e": "passport",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Reisepass",
+          "e": "travel passport"
+        },
+        {
+          "d": "Personalausweis",
+          "e": "ID card"
+        },
+        {
+          "d": "Visum",
+          "e": "visa"
+        }
+      ]
+    },
+    {
+      "g": "Sehenswürdigkeit",
+      "e": "sight / tourist attraction",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Museum",
+          "e": "museum"
+        },
+        {
+          "d": "Denkmal",
+          "e": "monument"
+        },
+        {
+          "d": "Stadtführung",
+          "e": "city tour"
+        }
+      ]
+    },
+    {
+      "g": "Unterkunft",
+      "e": "accommodation",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Hostel",
+          "e": "hostel"
+        },
+        {
+          "d": "Ferienwohnung",
+          "e": "holiday apartment"
+        },
+        {
+          "d": "Campingplatz",
+          "e": "campsite"
+        }
+      ]
+    },
+    {
+      "g": "Souvenir",
+      "e": "souvenir",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Mitbringsel",
+          "e": "gift to bring back"
+        },
+        {
+          "d": "Andenken",
+          "e": "keepsake"
+        },
+        {
+          "d": "Postkarte",
+          "e": "postcard"
+        }
+      ]
+    },
+    {
+      "g": "Reiseführer",
+      "e": "travel guide",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Stadtplan",
+          "e": "city map"
+        },
+        {
+          "d": "Reisebüro",
+          "e": "travel agency"
+        },
+        {
+          "d": "Reiseplanung",
+          "e": "travel planning"
+        }
+      ]
+    },
+    {
+      "g": "reisen",
+      "e": "to travel",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "verreisen",
+          "e": "to go on a trip"
+        },
+        {
+          "d": "einen Ausflug machen",
+          "e": "to go on an excursion"
+        },
+        {
+          "d": "ins Ausland reisen",
+          "e": "to travel abroad"
+        }
+      ]
+    },
+    {
+      "g": "buchen",
+      "e": "to book",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "reservieren",
+          "e": "to reserve"
+        },
+        {
+          "d": "stornieren",
+          "e": "to cancel"
+        },
+        {
+          "d": "online buchen",
+          "e": "to book online"
+        }
+      ]
+    },
+    {
+      "g": "ankommen",
+      "e": "to arrive",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "landen",
+          "e": "to land"
+        },
+        {
+          "d": "einchecken",
+          "e": "to check in"
+        },
+        {
+          "d": "einreisen",
+          "e": "to enter a country"
+        }
+      ]
+    },
+    {
+      "g": "erkunden",
+      "e": "to explore",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "besichtigen",
+          "e": "to visit (a sight)"
+        },
+        {
+          "d": "entdecken",
+          "e": "to discover"
+        },
+        {
+          "d": "herumwandern",
+          "e": "to wander around"
+        }
+      ]
+    },
+    {
+      "g": "fotografieren",
+      "e": "to photograph",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "ein Foto machen",
+          "e": "to take a photo"
+        },
+        {
+          "d": "ein Selfie machen",
+          "e": "to take a selfie"
+        },
+        {
+          "d": "knipsen",
+          "e": "to snap (informal)"
+        }
+      ]
+    },
+    {
+      "g": "entspannt",
+      "e": "relaxed",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "ruhig",
+          "e": "calm"
+        },
+        {
+          "d": "erholsam",
+          "e": "restful"
+        },
+        {
+          "d": "stressfrei",
+          "e": "stress-free"
+        }
+      ]
+    },
+    {
+      "g": "abenteuerlich",
+      "e": "adventurous",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "aufregend",
+          "e": "exciting"
+        },
+        {
+          "d": "spannend",
+          "e": "thrilling"
+        },
+        {
+          "d": "mutig",
+          "e": "brave"
+        }
+      ]
+    },
+    {
+      "g": "unvergesslich",
+      "e": "unforgettable",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "einmalig",
+          "e": "unique"
+        },
+        {
+          "d": "wunderschön",
+          "e": "wonderful"
+        },
+        {
+          "d": "bleibende Erinnerung",
+          "e": "lasting memory"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Wir haben ein Hotel in der Nähe des Strandes gebucht.",
+      "e": "We have booked a hotel near the beach."
+    },
+    {
+      "g": "Am Flughafen hat er festgestellt, dass er seinen Pass vergessen hatte.",
+      "e": "At the airport he realised that he had forgotten his passport."
+    },
+    {
+      "g": "Die Reise war abenteuerlich — wir haben viele Sehenswürdigkeiten erkundet.",
+      "e": "The trip was adventurous — we explored many tourist attractions."
+    },
+    {
+      "g": "Sie fotografiert am liebsten Sonnenuntergänge am Strand.",
+      "e": "She most likes to photograph sunsets at the beach."
+    },
+    {
+      "g": "Der Urlaub war so entspannt und unvergesslich — ich möchte nächstes Jahr wieder hinfahren.",
+      "e": "The holiday was so relaxed and unforgettable — I want to go again next year."
+    },
+    {
+      "g": "Wir haben den Koffer gepackt und sind früh morgens abgereist.",
+      "e": "We packed the suitcase and set off early in the morning."
+    }
+  ],
+  "story": "Mia und Jonas planen ihren Sommerurlaub. Sie buchen ein Doppelzimmer in einem Hotel direkt am Strand. Am Flughafen checken sie ein und fliegen nach Mallorca. Dort erkunden sie die Altstadt und besichtigen viele Sehenswürdigkeiten. Mia fotografiert alles und kauft Souvenirs für die Familie. Der Urlaub ist abenteuerlich und unvergesslich — sie kommen entspannt und glücklich nach Hause zurück.",
+  "story_en": "Mia and Jonas plan their summer holiday. They book a double room in a hotel right on the beach. At the airport they check in and fly to Majorca. There they explore the old town and visit many tourist attractions. Mia photographs everything and buys souvenirs for the family. The holiday is adventurous and unforgettable — they return home relaxed and happy.",
+  "sa": [
+    {
+      "w": "reisen",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "verreisen",
+          "e": "to go on a trip"
+        },
+        {
+          "d": "touren",
+          "e": "to tour"
+        }
+      ],
+      "ant": [
+        {
+          "d": "zu Hause bleiben",
+          "e": "to stay at home"
+        },
+        {
+          "d": "sesshaft sein",
+          "e": "to be settled/stationary"
+        }
+      ]
+    },
+    {
+      "w": "buchen",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "reservieren",
+          "e": "to reserve"
+        },
+        {
+          "d": "vorbestellen",
+          "e": "to pre-order"
+        }
+      ],
+      "ant": [
+        {
+          "d": "stornieren",
+          "e": "to cancel"
+        },
+        {
+          "d": "absagen",
+          "e": "to call off"
+        }
+      ]
+    },
+    {
+      "w": "entspannt",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "ruhig",
+          "e": "calm"
+        },
+        {
+          "d": "locker",
+          "e": "laid-back"
+        }
+      ],
+      "ant": [
+        {
+          "d": "gestresst",
+          "e": "stressed"
+        },
+        {
+          "d": "angespannt",
+          "e": "tense"
+        }
+      ]
+    },
+    {
+      "w": "unvergesslich",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "einmalig",
+          "e": "unique"
+        },
+        {
+          "d": "einprägsam",
+          "e": "memorable"
+        }
+      ],
+      "ant": [
+        {
+          "d": "alltäglich",
+          "e": "everyday"
+        },
+        {
+          "d": "banal",
+          "e": "banal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "id": "berufe",
+  "level": "A1",
+  "topic": "Berufe",
+  "chapter": "A1 · Work & Professions",
+  "keys": [
+    "berufe",
+    "beruf",
+    "job",
+    "arzt",
+    "lehrer"
+  ],
+  "words": [
+    {
+      "g": "Arzt",
+      "e": "doctor",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Ärztin",
+          "e": "female doctor"
+        },
+        {
+          "d": "Zahnarzt",
+          "e": "dentist"
+        }
+      ]
+    },
+    {
+      "g": "Lehrer",
+      "e": "teacher",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Lehrerin",
+          "e": "female teacher"
+        },
+        {
+          "d": "Unterricht",
+          "e": "lesson"
+        }
+      ]
+    },
+    {
+      "g": "Ingenieur",
+      "e": "engineer",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Ingenieurin",
+          "e": "female engineer"
+        }
+      ]
+    },
+    {
+      "g": "Koch",
+      "e": "chef",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Köchin",
+          "e": "female chef"
+        },
+        {
+          "d": "Küchenchef",
+          "e": "head chef"
+        }
+      ]
+    },
+    {
+      "g": "arbeiten",
+      "e": "to work",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "Vollzeit",
+          "e": "full-time"
+        },
+        {
+          "d": "Teilzeit",
+          "e": "part-time"
+        }
+      ]
+    },
+    {
+      "g": "verdienen",
+      "e": "to earn",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "Gehalt",
+          "e": "salary"
+        },
+        {
+          "d": "Lohn",
+          "e": "wage"
+        }
+      ]
+    },
+    {
+      "g": "fleißig",
+      "e": "hardworking",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "emsig",
+          "e": "diligent"
+        },
+        {
+          "d": "faul",
+          "e": "lazy"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Mein Vater ist Arzt. Er arbeitet im Krankenhaus.",
+      "e": "My father is a doctor. He works in the hospital."
+    },
+    {
+      "g": "Ich möchte Lehrerin werden.",
+      "e": "I would like to become a teacher."
+    },
+    {
+      "g": "Der Koch kocht sehr lecker.",
+      "e": "The chef cooks very deliciously."
+    }
+  ],
+  "story": "Meine Mutter ist Lehrerin. Sie arbeitet in einer Schule in Berlin. Mein Vater ist Ingenieur und verdient gut. Mein Bruder möchte Koch werden. Ich möchte Ärztin werden. Fleißig arbeiten ist wichtig.",
+  "story_en": "My mother is a teacher in Berlin. My father is an engineer. My brother wants to be a chef. I want to be a doctor. Working hard is important.",
+  "sa": [
+    {
+      "w": "arbeiten",
+      "t": "verb",
+      "e": "to work",
+      "syn": [
+        {
+          "d": "tätig sein",
+          "e": "to be active"
+        }
+      ],
+      "ant": [
+        {
+          "d": "faulenzen",
+          "e": "to laze"
+        }
+      ]
+    },
+    {
+      "w": "fleißig",
+      "t": "adjective",
+      "e": "hardworking",
+      "syn": [
+        {
+          "d": "emsig",
+          "e": "diligent"
+        },
+        {
+          "d": "engagiert",
+          "e": "dedicated"
+        }
+      ],
+      "ant": [
+        {
+          "d": "faul",
+          "e": "lazy"
+        },
+        {
+          "d": "träge",
+          "e": "sluggish"
+        }
+      ]
+    }
+  ]
+}

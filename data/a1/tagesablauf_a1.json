@@ -1,0 +1,504 @@
+{
+  "id": "tagesablauf_a1",
+  "level": "A1",
+  "topic": "Tagesablauf",
+  "chapter": "A1 · Daily Routine",
+  "keys": [
+    "tagesablauf",
+    "morgen",
+    "abend",
+    "routine",
+    "aufstehen",
+    "schlafen",
+    "frühstück",
+    "tag"
+  ],
+  "words": [
+    {
+      "g": "aufstehen",
+      "e": "to get up",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "aufwachen",
+          "e": "to wake up"
+        },
+        {
+          "d": "früh aufstehen",
+          "e": "to get up early"
+        },
+        {
+          "d": "ausschlafen",
+          "e": "to sleep in"
+        }
+      ]
+    },
+    {
+      "g": "sich waschen",
+      "e": "to wash (oneself)",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "duschen",
+          "e": "to shower"
+        },
+        {
+          "d": "Baden",
+          "e": "to have a bath"
+        },
+        {
+          "d": "sich die Hände waschen",
+          "e": "to wash one's hands"
+        }
+      ]
+    },
+    {
+      "g": "frühstücken",
+      "e": "to have breakfast",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "Frühstück machen",
+          "e": "to make breakfast"
+        },
+        {
+          "d": "Kaffee kochen",
+          "e": "to make coffee"
+        },
+        {
+          "d": "Brot schneiden",
+          "e": "to slice bread"
+        }
+      ]
+    },
+    {
+      "g": "zur Arbeit gehen",
+      "e": "to go to work",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "pendeln",
+          "e": "to commute"
+        },
+        {
+          "d": "mit dem Bus fahren",
+          "e": "to take the bus"
+        },
+        {
+          "d": "zu Fuß gehen",
+          "e": "to walk"
+        }
+      ]
+    },
+    {
+      "g": "Mittagspause",
+      "e": "lunch break",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "zu Mittag essen",
+          "e": "to have lunch"
+        },
+        {
+          "d": "Pause machen",
+          "e": "to take a break"
+        },
+        {
+          "d": "Kantine",
+          "e": "canteen"
+        }
+      ]
+    },
+    {
+      "g": "einkaufen",
+      "e": "to go shopping",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "Lebensmittel kaufen",
+          "e": "to buy groceries"
+        },
+        {
+          "d": "Supermarkt besuchen",
+          "e": "to visit the supermarket"
+        },
+        {
+          "d": "Einkaufsliste",
+          "e": "shopping list"
+        }
+      ]
+    },
+    {
+      "g": "kochen",
+      "e": "to cook",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "Abendessen zubereiten",
+          "e": "to prepare dinner"
+        },
+        {
+          "d": "ein Rezept befolgen",
+          "e": "to follow a recipe"
+        },
+        {
+          "d": "Tisch decken",
+          "e": "to set the table"
+        }
+      ]
+    },
+    {
+      "g": "fernsehen",
+      "e": "to watch TV",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "Nachrichten schauen",
+          "e": "to watch the news"
+        },
+        {
+          "d": "eine Serie gucken",
+          "e": "to watch a series"
+        },
+        {
+          "d": "Netflix",
+          "e": "Netflix"
+        }
+      ]
+    },
+    {
+      "g": "schlafen gehen",
+      "e": "to go to sleep",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "ins Bett gehen",
+          "e": "to go to bed"
+        },
+        {
+          "d": "einschlafen",
+          "e": "to fall asleep"
+        },
+        {
+          "d": "Gute Nacht sagen",
+          "e": "to say goodnight"
+        }
+      ]
+    },
+    {
+      "g": "Uhrzeit",
+      "e": "time (of day)",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Wie spät ist es?",
+          "e": "What time is it?"
+        },
+        {
+          "d": "Es ist halb acht",
+          "e": "It is half past seven"
+        },
+        {
+          "d": "Viertel nach neun",
+          "e": "quarter past nine"
+        }
+      ]
+    },
+    {
+      "g": "Morgen",
+      "e": "morning",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Vormittag",
+          "e": "late morning"
+        },
+        {
+          "d": "früh morgens",
+          "e": "early in the morning"
+        },
+        {
+          "d": "Morgenroutine",
+          "e": "morning routine"
+        }
+      ]
+    },
+    {
+      "g": "Abend",
+      "e": "evening",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Nachmittag",
+          "e": "afternoon"
+        },
+        {
+          "d": "abends",
+          "e": "in the evenings"
+        },
+        {
+          "d": "Feierabend",
+          "e": "end of working day"
+        }
+      ]
+    },
+    {
+      "g": "Wecker",
+      "e": "alarm clock",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Alarm stellen",
+          "e": "to set an alarm"
+        },
+        {
+          "d": "Klingeln",
+          "e": "ringing"
+        },
+        {
+          "d": "Schlummerfunktion",
+          "e": "snooze function"
+        }
+      ]
+    },
+    {
+      "g": "regelmäßig",
+      "e": "regularly",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "täglich",
+          "e": "daily"
+        },
+        {
+          "d": "jeden Tag",
+          "e": "every day"
+        },
+        {
+          "d": "routinemäßig",
+          "e": "routinely"
+        }
+      ]
+    },
+    {
+      "g": "müde",
+      "e": "tired",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "erschöpft",
+          "e": "exhausted"
+        },
+        {
+          "d": "schläfrig",
+          "e": "sleepy"
+        },
+        {
+          "d": "übermüdet",
+          "e": "overtired"
+        }
+      ]
+    },
+    {
+      "g": "pünktlich",
+      "e": "punctual / on time",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "rechtzeitig",
+          "e": "in time"
+        },
+        {
+          "d": "genau",
+          "e": "precise"
+        },
+        {
+          "d": "zu spät",
+          "e": "late"
+        }
+      ]
+    },
+    {
+      "g": "Routine",
+      "e": "routine",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Gewohnheit",
+          "e": "habit"
+        },
+        {
+          "d": "tägliche Routine",
+          "e": "daily routine"
+        },
+        {
+          "d": "Ritual",
+          "e": "ritual"
+        }
+      ]
+    },
+    {
+      "g": "beschäftigt",
+      "e": "busy",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "viel zu tun haben",
+          "e": "to have a lot to do"
+        },
+        {
+          "d": "ausgelastet",
+          "e": "fully occupied"
+        },
+        {
+          "d": "gestresst",
+          "e": "stressed"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Ich stehe jeden Morgen um sieben Uhr auf und frühstücke in der Küche.",
+      "e": "I get up every morning at seven o'clock and have breakfast in the kitchen."
+    },
+    {
+      "g": "Nach der Arbeit kaufe ich Lebensmittel ein und koche das Abendessen.",
+      "e": "After work I buy groceries and cook dinner."
+    },
+    {
+      "g": "Abends schaue ich meistens eine Stunde fern, bevor ich schlafen gehe.",
+      "e": "In the evenings I usually watch TV for an hour before going to sleep."
+    },
+    {
+      "g": "Mein Wecker klingelt um halb sieben — aber ich drücke oft noch die Schlummerfunktion.",
+      "e": "My alarm goes off at half past six — but I often press snooze."
+    },
+    {
+      "g": "Am Wochenende schlafe ich aus und esse ein gemütliches Frühstück mit der Familie.",
+      "e": "At the weekend I sleep in and have a relaxed breakfast with the family."
+    },
+    {
+      "g": "Sie ist immer pünktlich und folgt einer festen Morgenroutine.",
+      "e": "She is always punctual and follows a fixed morning routine."
+    }
+  ],
+  "story": "Lena hat eine feste Tagesroutine. Sie steht jeden Morgen um 6:30 Uhr auf, duscht sich und frühstückt. Um 8 Uhr fährt sie mit dem Bus zur Arbeit. In der Mittagspause isst sie in der Kantine. Nach der Arbeit geht sie einkaufen und kocht das Abendessen. Abends sieht sie eine Stunde fern oder liest ein Buch. Um 22:30 Uhr geht sie schlafen — damit sie am nächsten Morgen wieder pünktlich und fit aufwacht.",
+  "story_en": "Lena has a fixed daily routine. She gets up every morning at 6:30, showers and has breakfast. At 8 o'clock she takes the bus to work. During her lunch break she eats in the canteen. After work she goes shopping and cooks dinner. In the evenings she watches TV for an hour or reads a book. At 10:30pm she goes to sleep — so that she wakes up punctually and fit the next morning.",
+  "sa": [
+    {
+      "w": "aufstehen",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "aufwachen",
+          "e": "to wake up"
+        },
+        {
+          "d": "aus dem Bett kommen",
+          "e": "to get out of bed"
+        }
+      ],
+      "ant": [
+        {
+          "d": "schlafen gehen",
+          "e": "to go to sleep"
+        },
+        {
+          "d": "sich hinlegen",
+          "e": "to lie down"
+        }
+      ]
+    },
+    {
+      "w": "müde",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "erschöpft",
+          "e": "exhausted"
+        },
+        {
+          "d": "schläfrig",
+          "e": "sleepy"
+        }
+      ],
+      "ant": [
+        {
+          "d": "ausgeruht",
+          "e": "rested"
+        },
+        {
+          "d": "wach",
+          "e": "awake/alert"
+        }
+      ]
+    },
+    {
+      "w": "pünktlich",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "rechtzeitig",
+          "e": "in time"
+        },
+        {
+          "d": "termingerecht",
+          "e": "on schedule"
+        }
+      ],
+      "ant": [
+        {
+          "d": "zu spät",
+          "e": "late"
+        },
+        {
+          "d": "unpünktlich",
+          "e": "unpunctual"
+        }
+      ]
+    },
+    {
+      "w": "regelmäßig",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "täglich",
+          "e": "daily"
+        },
+        {
+          "d": "beständig",
+          "e": "consistent"
+        }
+      ],
+      "ant": [
+        {
+          "d": "unregelmäßig",
+          "e": "irregular"
+        },
+        {
+          "d": "sporadisch",
+          "e": "sporadic"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "id": "sprache",
+  "level": "B1",
+  "topic": "Sprache lernen",
+  "chapter": "B1 · Language & Learning",
+  "keys": [
+    "sprache",
+    "vokabeln",
+    "grammatik",
+    "aussprache",
+    "fremdsprache"
+  ],
+  "words": [
+    {
+      "g": "Vokabeln",
+      "e": "vocabulary",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Wortschatz",
+          "e": "lexicon"
+        },
+        {
+          "d": "Wort",
+          "e": "word"
+        },
+        {
+          "d": "Ausdruck",
+          "e": "expression"
+        }
+      ]
+    },
+    {
+      "g": "Grammatik",
+      "e": "grammar",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Satzbau",
+          "e": "sentence structure"
+        },
+        {
+          "d": "Konjugation",
+          "e": "conjugation"
+        }
+      ]
+    },
+    {
+      "g": "Aussprache",
+      "e": "pronunciation",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Akzent",
+          "e": "accent"
+        },
+        {
+          "d": "Betonung",
+          "e": "stress"
+        },
+        {
+          "d": "Intonation",
+          "e": "intonation"
+        }
+      ]
+    },
+    {
+      "g": "Sprachkurs",
+      "e": "language course",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Intensivkurs",
+          "e": "intensive course"
+        },
+        {
+          "d": "Tandem",
+          "e": "language tandem"
+        }
+      ]
+    },
+    {
+      "g": "übersetzen",
+      "e": "to translate",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "dolmetschen",
+          "e": "to interpret"
+        },
+        {
+          "d": "übertragen",
+          "e": "to render"
+        }
+      ]
+    },
+    {
+      "g": "beherrschen",
+      "e": "to master",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "fließend sprechen",
+          "e": "to speak fluently"
+        },
+        {
+          "d": "meistern",
+          "e": "to master"
+        }
+      ]
+    },
+    {
+      "g": "fließend",
+      "e": "fluent",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "flüssig",
+          "e": "smooth/flowing"
+        },
+        {
+          "d": "gebrochen",
+          "e": "broken/halting"
+        },
+        {
+          "d": "mühelos",
+          "e": "effortless"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Um eine Sprache zu beherrschen, muss man regelmäßig Vokabeln lernen.",
+      "e": "To master a language, one must regularly learn vocabulary."
+    },
+    {
+      "g": "Meine Aussprache verbessert sich durch viel Hören und Sprechen.",
+      "e": "My pronunciation improves through a lot of listening and speaking."
+    },
+    {
+      "g": "Ich möchte Deutsch fließend sprechen können.",
+      "e": "I would like to be able to speak German fluently."
+    }
+  ],
+  "story": "Ich lerne Deutsch seit einem Jahr. Am Anfang war die Grammatik sehr schwierig. Jeden Tag lerne ich neue Vokabeln und übe die Aussprache. In meinem Sprachkurs helfen mir meine Lehrerin und meine Mitschüler. Mein Ziel ist es, Deutsch fließend zu beherrschen.",
+  "story_en": "I have been learning German for one year. At the beginning the grammar was very difficult. Every day I learn new vocabulary and practise pronunciation. In my language course my teacher and classmates help me. My goal is to master German fluently.",
+  "sa": [
+    {
+      "w": "übersetzen",
+      "t": "verb",
+      "e": "to translate",
+      "syn": [
+        {
+          "d": "dolmetschen",
+          "e": "to interpret"
+        },
+        {
+          "d": "übertragen",
+          "e": "to render"
+        }
+      ],
+      "ant": [
+        {
+          "d": "missverstehen",
+          "e": "to misunderstand"
+        }
+      ]
+    },
+    {
+      "w": "fließend",
+      "t": "adjective",
+      "e": "fluent",
+      "syn": [
+        {
+          "d": "flüssig",
+          "e": "smooth"
+        },
+        {
+          "d": "mühelos",
+          "e": "effortless"
+        }
+      ],
+      "ant": [
+        {
+          "d": "gebrochen",
+          "e": "broken"
+        },
+        {
+          "d": "stockend",
+          "e": "halting"
+        }
+      ]
+    }
+  ]
+}

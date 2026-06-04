@@ -1,0 +1,503 @@
+{
+  "id": "kommunikation",
+  "level": "B2",
+  "topic": "Kommunikation",
+  "chapter": "B2 · Communication",
+  "keys": [
+    "kommunikation",
+    "sprache",
+    "gespräch",
+    "medien",
+    "digital",
+    "information",
+    "argumentation"
+  ],
+  "words": [
+    {
+      "g": "Kommunikation",
+      "e": "communication",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "verbale Kommunikation",
+          "e": "verbal communication"
+        },
+        {
+          "d": "nonverbale Kommunikation",
+          "e": "non-verbal communication"
+        },
+        {
+          "d": "Kommunikationsmittel",
+          "e": "means of communication"
+        }
+      ]
+    },
+    {
+      "g": "Argumentation",
+      "e": "argumentation",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Argument",
+          "e": "argument"
+        },
+        {
+          "d": "These",
+          "e": "thesis"
+        },
+        {
+          "d": "Gegenargument",
+          "e": "counter-argument"
+        }
+      ]
+    },
+    {
+      "g": "Missverständnis",
+      "e": "misunderstanding",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Kommunikationsfehler",
+          "e": "communication error"
+        },
+        {
+          "d": "falsch verstehen",
+          "e": "to misunderstand"
+        },
+        {
+          "d": "Klärung",
+          "e": "clarification"
+        }
+      ]
+    },
+    {
+      "g": "Medien",
+      "e": "media",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "soziale Medien",
+          "e": "social media"
+        },
+        {
+          "d": "Printmedien",
+          "e": "print media"
+        },
+        {
+          "d": "digitale Medien",
+          "e": "digital media"
+        }
+      ]
+    },
+    {
+      "g": "Rhetorik",
+      "e": "rhetoric",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Überzeugungskraft",
+          "e": "persuasiveness"
+        },
+        {
+          "d": "Redekunst",
+          "e": "art of speaking"
+        },
+        {
+          "d": "rhetorische Figur",
+          "e": "rhetorical device"
+        }
+      ]
+    },
+    {
+      "g": "Zielgruppe",
+      "e": "target audience",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Leserschaft",
+          "e": "readership"
+        },
+        {
+          "d": "Publikum",
+          "e": "audience"
+        },
+        {
+          "d": "Empfänger",
+          "e": "receiver"
+        }
+      ]
+    },
+    {
+      "g": "Feedback",
+      "e": "feedback",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Rückmeldung",
+          "e": "feedback/response"
+        },
+        {
+          "d": "konstruktive Kritik",
+          "e": "constructive criticism"
+        },
+        {
+          "d": "Bewertung",
+          "e": "evaluation"
+        }
+      ]
+    },
+    {
+      "g": "Kontext",
+      "e": "context",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Hintergrund",
+          "e": "background"
+        },
+        {
+          "d": "Zusammenhang",
+          "e": "connection/context"
+        },
+        {
+          "d": "Umfeld",
+          "e": "environment"
+        }
+      ]
+    },
+    {
+      "g": "Botschaft",
+      "e": "message",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Kernaussage",
+          "e": "key message"
+        },
+        {
+          "d": "Aussage",
+          "e": "statement"
+        },
+        {
+          "d": "Mitteilung",
+          "e": "communication/message"
+        }
+      ]
+    },
+    {
+      "g": "Sprachbarriere",
+      "e": "language barrier",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Verständigungsschwierigkeit",
+          "e": "communication difficulty"
+        },
+        {
+          "d": "Übersetzung",
+          "e": "translation"
+        },
+        {
+          "d": "Dolmetscher",
+          "e": "interpreter"
+        }
+      ]
+    },
+    {
+      "g": "kommunizieren",
+      "e": "to communicate",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "sich verständigen",
+          "e": "to make oneself understood"
+        },
+        {
+          "d": "übermitteln",
+          "e": "to transmit"
+        },
+        {
+          "d": "austauschen",
+          "e": "to exchange"
+        }
+      ]
+    },
+    {
+      "g": "überzeugen",
+      "e": "to convince / persuade",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "argumentieren",
+          "e": "to argue"
+        },
+        {
+          "d": "beeinflussen",
+          "e": "to influence"
+        },
+        {
+          "d": "gewinnen",
+          "e": "to win over"
+        }
+      ]
+    },
+    {
+      "g": "interpretieren",
+      "e": "to interpret",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "auslegen",
+          "e": "to construe"
+        },
+        {
+          "d": "deuten",
+          "e": "to interpret/read"
+        },
+        {
+          "d": "verstehen",
+          "e": "to understand"
+        }
+      ]
+    },
+    {
+      "g": "formulieren",
+      "e": "to formulate",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "ausdrücken",
+          "e": "to express"
+        },
+        {
+          "d": "in Worte fassen",
+          "e": "to put into words"
+        },
+        {
+          "d": "präzisieren",
+          "e": "to specify"
+        }
+      ]
+    },
+    {
+      "g": "präzise",
+      "e": "precise",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "genau",
+          "e": "exact"
+        },
+        {
+          "d": "klar",
+          "e": "clear"
+        },
+        {
+          "d": "unmissverständlich",
+          "e": "unambiguous"
+        }
+      ]
+    },
+    {
+      "g": "eloquent",
+      "e": "eloquent",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "redegewandt",
+          "e": "articulate"
+        },
+        {
+          "d": "ausdrucksstark",
+          "e": "expressive"
+        },
+        {
+          "d": "wortgewandt",
+          "e": "fluent/verbal"
+        }
+      ]
+    },
+    {
+      "g": "mehrdeutig",
+      "e": "ambiguous",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "zweideutig",
+          "e": "equivocal"
+        },
+        {
+          "d": "unklar",
+          "e": "unclear"
+        },
+        {
+          "d": "interpretierbar",
+          "e": "open to interpretation"
+        }
+      ]
+    },
+    {
+      "g": "interkulturell",
+      "e": "intercultural",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "kulturübergreifend",
+          "e": "cross-cultural"
+        },
+        {
+          "d": "international",
+          "e": "international"
+        },
+        {
+          "d": "vielsprachig",
+          "e": "multilingual"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Klare und präzise Kommunikation verhindert Missverständnisse im Berufsleben.",
+      "e": "Clear and precise communication prevents misunderstandings in professional life."
+    },
+    {
+      "g": "In interkulturellen Teams ist es wichtig, Sprachbarrieren aktiv zu überwinden.",
+      "e": "In intercultural teams it is important to actively overcome language barriers."
+    },
+    {
+      "g": "Ein eloquenter Redner kann sein Publikum durch starke Rhetorik überzeugen.",
+      "e": "An eloquent speaker can convince his audience through strong rhetoric."
+    },
+    {
+      "g": "Feedback sollte immer konstruktiv sein und konkrete Verbesserungsvorschläge enthalten.",
+      "e": "Feedback should always be constructive and include concrete suggestions for improvement."
+    },
+    {
+      "g": "Die Botschaft einer Kampagne muss klar auf die Zielgruppe zugeschnitten sein.",
+      "e": "The message of a campaign must be clearly tailored to the target audience."
+    },
+    {
+      "g": "Mehrdeutige Formulierungen führen häufig zu Missverständnissen in schriftlicher Kommunikation.",
+      "e": "Ambiguous formulations frequently lead to misunderstandings in written communication."
+    }
+  ],
+  "story": "Sophie arbeitet in einem internationalen Unternehmen mit Kollegen aus zwölf verschiedenen Ländern. Jeden Tag muss sie präzise und interkulturell kommunizieren — auf Deutsch, Englisch und manchmal Französisch. In Meetings formuliert sie ihre Argumente klar und überzeugt ihre Zuhörer durch gut strukturierte Rhetorik. Wenn Missverständnisse entstehen, fragt sie sofort nach und klärt den Kontext. Gute Kommunikation, sagt sie, ist die wichtigste Kompetenz in einer globalisierten Arbeitswelt.",
+  "story_en": "Sophie works in an international company with colleagues from twelve different countries. Every day she has to communicate precisely and interculturally — in German, English and sometimes French. In meetings she formulates her arguments clearly and convinces her listeners through well-structured rhetoric. When misunderstandings arise, she immediately asks for clarification and resolves the context. Good communication, she says, is the most important skill in a globalised world of work.",
+  "sa": [
+    {
+      "w": "kommunizieren",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "sich verständigen",
+          "e": "to make oneself understood"
+        },
+        {
+          "d": "austauschen",
+          "e": "to exchange"
+        }
+      ],
+      "ant": [
+        {
+          "d": "schweigen",
+          "e": "to remain silent"
+        },
+        {
+          "d": "isolieren",
+          "e": "to isolate"
+        }
+      ]
+    },
+    {
+      "w": "überzeugen",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "beeinflussen",
+          "e": "to influence"
+        },
+        {
+          "d": "gewinnen",
+          "e": "to win over"
+        }
+      ],
+      "ant": [
+        {
+          "d": "abschrecken",
+          "e": "to deter"
+        },
+        {
+          "d": "widersprechen",
+          "e": "to contradict"
+        }
+      ]
+    },
+    {
+      "w": "präzise",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "genau",
+          "e": "exact"
+        },
+        {
+          "d": "klar",
+          "e": "clear"
+        }
+      ],
+      "ant": [
+        {
+          "d": "vage",
+          "e": "vague"
+        },
+        {
+          "d": "ungenau",
+          "e": "imprecise"
+        }
+      ]
+    },
+    {
+      "w": "mehrdeutig",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "unklar",
+          "e": "unclear"
+        },
+        {
+          "d": "zweideutig",
+          "e": "equivocal"
+        }
+      ],
+      "ant": [
+        {
+          "d": "eindeutig",
+          "e": "unambiguous"
+        },
+        {
+          "d": "klar",
+          "e": "clear"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,508 @@
+{
+  "id": "wetter",
+  "level": "A2",
+  "topic": "Wetter",
+  "chapter": "A2 · Weather & Seasons",
+  "keys": [
+    "wetter",
+    "sonne",
+    "regen",
+    "schnee",
+    "temperatur",
+    "jahreszeit",
+    "wolke",
+    "wind"
+  ],
+  "words": [
+    {
+      "g": "Sonne",
+      "e": "sun",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Sonnenschein",
+          "e": "sunshine"
+        },
+        {
+          "d": "sonnig",
+          "e": "sunny"
+        },
+        {
+          "d": "Sonnenuntergang",
+          "e": "sunset"
+        }
+      ]
+    },
+    {
+      "g": "Regen",
+      "e": "rain",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Regenschauer",
+          "e": "rain shower"
+        },
+        {
+          "d": "Nieselregen",
+          "e": "drizzle"
+        },
+        {
+          "d": "Regenschirm",
+          "e": "umbrella"
+        }
+      ]
+    },
+    {
+      "g": "Schnee",
+      "e": "snow",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Schneeflocke",
+          "e": "snowflake"
+        },
+        {
+          "d": "Schneefall",
+          "e": "snowfall"
+        },
+        {
+          "d": "Schneesturm",
+          "e": "blizzard"
+        }
+      ]
+    },
+    {
+      "g": "Wolke",
+      "e": "cloud",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "bewölkt",
+          "e": "cloudy"
+        },
+        {
+          "d": "Gewitterwolke",
+          "e": "thundercloud"
+        },
+        {
+          "d": "Wolkendecke",
+          "e": "cloud cover"
+        }
+      ]
+    },
+    {
+      "g": "Wind",
+      "e": "wind",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "Brise",
+          "e": "breeze"
+        },
+        {
+          "d": "Sturm",
+          "e": "storm"
+        },
+        {
+          "d": "windig",
+          "e": "windy"
+        }
+      ]
+    },
+    {
+      "g": "Temperatur",
+      "e": "temperature",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Grad Celsius",
+          "e": "degrees Celsius"
+        },
+        {
+          "d": "Höchsttemperatur",
+          "e": "maximum temperature"
+        },
+        {
+          "d": "Tiefsttemperatur",
+          "e": "minimum temperature"
+        }
+      ]
+    },
+    {
+      "g": "Gewitter",
+      "e": "thunderstorm",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Blitz",
+          "e": "lightning"
+        },
+        {
+          "d": "Donner",
+          "e": "thunder"
+        },
+        {
+          "d": "Hagel",
+          "e": "hail"
+        }
+      ]
+    },
+    {
+      "g": "Jahreszeit",
+      "e": "season",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Frühling",
+          "e": "spring"
+        },
+        {
+          "d": "Sommer",
+          "e": "summer"
+        },
+        {
+          "d": "Herbst",
+          "e": "autumn"
+        },
+        {
+          "d": "Winter",
+          "e": "winter"
+        }
+      ]
+    },
+    {
+      "g": "Nebel",
+      "e": "fog",
+      "t": "noun",
+      "a": "der",
+      "v": [
+        {
+          "d": "neblig",
+          "e": "foggy"
+        },
+        {
+          "d": "Morgennebel",
+          "e": "morning fog"
+        },
+        {
+          "d": "Sichtweite",
+          "e": "visibility"
+        }
+      ]
+    },
+    {
+      "g": "Wettervorhersage",
+      "e": "weather forecast",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Wetterbericht",
+          "e": "weather report"
+        },
+        {
+          "d": "Wetterapp",
+          "e": "weather app"
+        },
+        {
+          "d": "Meteorologe",
+          "e": "meteorologist"
+        }
+      ]
+    },
+    {
+      "g": "regnen",
+      "e": "to rain",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "es regnet",
+          "e": "it is raining"
+        },
+        {
+          "d": "in Strömen regnen",
+          "e": "to pour with rain"
+        },
+        {
+          "d": "nass werden",
+          "e": "to get wet"
+        }
+      ]
+    },
+    {
+      "g": "schneien",
+      "e": "to snow",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "es schneit",
+          "e": "it is snowing"
+        },
+        {
+          "d": "zuschneien",
+          "e": "to be snowed in"
+        },
+        {
+          "d": "Schnee räumen",
+          "e": "to clear snow"
+        }
+      ]
+    },
+    {
+      "g": "scheinen",
+      "e": "to shine",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "die Sonne scheint",
+          "e": "the sun is shining"
+        },
+        {
+          "d": "leuchten",
+          "e": "to gleam"
+        },
+        {
+          "d": "strahlen",
+          "e": "to beam"
+        }
+      ]
+    },
+    {
+      "g": "sich umziehen",
+      "e": "to get dressed for the weather",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "einen Mantel anziehen",
+          "e": "to put on a coat"
+        },
+        {
+          "d": "sich warm anziehen",
+          "e": "to dress warmly"
+        },
+        {
+          "d": "Regenjacke mitnehmen",
+          "e": "to take a rain jacket"
+        }
+      ]
+    },
+    {
+      "g": "warm",
+      "e": "warm",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "heiß",
+          "e": "hot"
+        },
+        {
+          "d": "schwül",
+          "e": "humid/muggy"
+        },
+        {
+          "d": "angenehm warm",
+          "e": "pleasantly warm"
+        }
+      ]
+    },
+    {
+      "g": "kalt",
+      "e": "cold",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "frostig",
+          "e": "frosty"
+        },
+        {
+          "d": "eisig",
+          "e": "icy"
+        },
+        {
+          "d": "bitterkalt",
+          "e": "bitterly cold"
+        }
+      ]
+    },
+    {
+      "g": "bewölkt",
+      "e": "cloudy",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "bedeckt",
+          "e": "overcast"
+        },
+        {
+          "d": "grau",
+          "e": "grey"
+        },
+        {
+          "d": "trüb",
+          "e": "dull/gloomy"
+        }
+      ]
+    },
+    {
+      "g": "trocken",
+      "e": "dry",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "niederschlagsfrei",
+          "e": "precipitation-free"
+        },
+        {
+          "d": "dürr",
+          "e": "arid"
+        },
+        {
+          "d": "witterungsbeständig",
+          "e": "weather-resistant"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Heute ist das Wetter schön — die Sonne scheint und es ist warm.",
+      "e": "Today the weather is nice — the sun is shining and it is warm."
+    },
+    {
+      "g": "Laut Wettervorhersage soll es morgen regnen. Nimm einen Regenschirm mit!",
+      "e": "According to the weather forecast it should rain tomorrow. Take an umbrella!"
+    },
+    {
+      "g": "Im Winter schneit es oft in den Alpen und die Temperaturen fallen unter null.",
+      "e": "In winter it often snows in the Alps and temperatures drop below zero."
+    },
+    {
+      "g": "Das Gewitter kam plötzlich — es blitzte und donnerte sehr laut.",
+      "e": "The thunderstorm came suddenly — there was lightning and very loud thunder."
+    },
+    {
+      "g": "Im Herbst ist es oft bewölkt und die Tage werden kürzer.",
+      "e": "In autumn it is often cloudy and the days become shorter."
+    },
+    {
+      "g": "Bei diesem kalten Wetter solltest du dir einen warmen Mantel anziehen.",
+      "e": "In this cold weather you should put on a warm coat."
+    }
+  ],
+  "story": "Es ist Montag und Lisa schaut auf die Wettervorhersage. Der Wetterbericht sagt: am Morgen Nebel, dann sonnig und warm, aber am Nachmittag Gewitter möglich. Lisa zieht sich warm an und nimmt ihren Regenschirm mit. Tatsächlich scheint den ganzen Morgen die Sonne. Doch um 15 Uhr ziehen dunkle Wolken auf und es beginnt stark zu regnen. Lisa ist froh, dass sie ihren Schirm dabeihat.",
+  "story_en": "It is Monday and Lisa checks the weather forecast. The weather report says: fog in the morning, then sunny and warm, but thunderstorms possible in the afternoon. Lisa dresses warmly and takes her umbrella. Indeed the sun shines all morning. But at 3pm dark clouds appear and it begins to rain heavily. Lisa is glad she brought her umbrella.",
+  "sa": [
+    {
+      "w": "regnen",
+      "t": "verb",
+      "syn": [
+        {
+          "d": "niederschlagen",
+          "e": "to precipitate"
+        },
+        {
+          "d": "schütten",
+          "e": "to pour"
+        }
+      ],
+      "ant": [
+        {
+          "d": "aufklaren",
+          "e": "to clear up"
+        },
+        {
+          "d": "trocknen",
+          "e": "to dry"
+        }
+      ]
+    },
+    {
+      "w": "warm",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "heiß",
+          "e": "hot"
+        },
+        {
+          "d": "mild",
+          "e": "mild"
+        }
+      ],
+      "ant": [
+        {
+          "d": "kalt",
+          "e": "cold"
+        },
+        {
+          "d": "kühl",
+          "e": "cool"
+        }
+      ]
+    },
+    {
+      "w": "bewölkt",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "bedeckt",
+          "e": "overcast"
+        },
+        {
+          "d": "trüb",
+          "e": "gloomy"
+        }
+      ],
+      "ant": [
+        {
+          "d": "sonnig",
+          "e": "sunny"
+        },
+        {
+          "d": "klar",
+          "e": "clear"
+        }
+      ]
+    },
+    {
+      "w": "trocken",
+      "t": "adjective",
+      "syn": [
+        {
+          "d": "niederschlagsfrei",
+          "e": "precipitation-free"
+        },
+        {
+          "d": "dürr",
+          "e": "dry/arid"
+        }
+      ],
+      "ant": [
+        {
+          "d": "nass",
+          "e": "wet"
+        },
+        {
+          "d": "feucht",
+          "e": "damp"
+        }
+      ]
+    }
+  ]
+}

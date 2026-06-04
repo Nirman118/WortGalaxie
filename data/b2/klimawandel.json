@@ -1,0 +1,207 @@
+{
+  "id": "klimawandel",
+  "level": "B2",
+  "topic": "Klimawandel",
+  "chapter": "B2 · Climate Change",
+  "keys": [
+    "klimawandel",
+    "emissionen",
+    "erneuerbar",
+    "co2",
+    "energiewende"
+  ],
+  "words": [
+    {
+      "g": "Emissionen",
+      "e": "emissions",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "CO2-Ausstoß",
+          "e": "CO2 output"
+        },
+        {
+          "d": "Treibhausgas",
+          "e": "greenhouse gas"
+        },
+        {
+          "d": "Schadstoff",
+          "e": "pollutant"
+        }
+      ]
+    },
+    {
+      "g": "Extremwetter",
+      "e": "extreme weather",
+      "t": "noun",
+      "a": "das",
+      "v": [
+        {
+          "d": "Überschwemmung",
+          "e": "flood"
+        },
+        {
+          "d": "Dürre",
+          "e": "drought"
+        },
+        {
+          "d": "Hitzewelle",
+          "e": "heatwave"
+        }
+      ]
+    },
+    {
+      "g": "Energiewende",
+      "e": "energy transition",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "Solarausbau",
+          "e": "solar expansion"
+        },
+        {
+          "d": "Windpark",
+          "e": "wind farm"
+        }
+      ]
+    },
+    {
+      "g": "Ressource",
+      "e": "resource",
+      "t": "noun",
+      "a": "die",
+      "v": [
+        {
+          "d": "fossile Brennstoffe",
+          "e": "fossil fuels"
+        },
+        {
+          "d": "Rohstoff",
+          "e": "raw material"
+        }
+      ]
+    },
+    {
+      "g": "reduzieren",
+      "e": "to reduce",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "verringern",
+          "e": "to decrease"
+        },
+        {
+          "d": "senken",
+          "e": "to lower"
+        },
+        {
+          "d": "begrenzen",
+          "e": "to limit"
+        }
+      ]
+    },
+    {
+      "g": "anpassen",
+      "e": "to adapt",
+      "t": "verb",
+      "a": null,
+      "v": [
+        {
+          "d": "reagieren auf",
+          "e": "to react to"
+        },
+        {
+          "d": "transformieren",
+          "e": "to transform"
+        }
+      ]
+    },
+    {
+      "g": "katastrophal",
+      "e": "catastrophic",
+      "t": "adjective",
+      "a": null,
+      "v": [
+        {
+          "d": "verheerend",
+          "e": "devastating"
+        },
+        {
+          "d": "bedrohlich",
+          "e": "threatening"
+        }
+      ]
+    }
+  ],
+  "sents": [
+    {
+      "g": "Die Emissionen müssen dringend reduziert werden.",
+      "e": "Emissions must be urgently reduced."
+    },
+    {
+      "g": "Extremwetterereignisse wie Überschwemmungen nehmen zu.",
+      "e": "Extreme weather events like floods are increasing."
+    },
+    {
+      "g": "Wir müssen uns an die neuen Klimabedingungen anpassen.",
+      "e": "We must adapt to the new climate conditions."
+    }
+  ],
+  "story": "Der Klimawandel ist die größte Herausforderung des 21. Jahrhunderts. Steigende CO2-Emissionen führen zu katastrophalen Extremwetterereignissen. Die Energiewende ist ein Schlüssel zur Lösung. Durch das Pariser Abkommen haben viele Länder versprochen, ihre Emissionen zu senken. Jede Gesellschaft muss sich anpassen — und schnell.",
+  "story_en": "Climate change is the greatest challenge of the 21st century. Rising CO2 emissions lead to catastrophic extreme weather events. The energy transition is a key solution. Through the Paris Agreement many countries have promised to reduce their emissions. Every society must adapt — and quickly.",
+  "sa": [
+    {
+      "w": "reduzieren",
+      "t": "verb",
+      "e": "to reduce",
+      "syn": [
+        {
+          "d": "verringern",
+          "e": "to decrease"
+        },
+        {
+          "d": "senken",
+          "e": "to lower"
+        }
+      ],
+      "ant": [
+        {
+          "d": "erhöhen",
+          "e": "to increase"
+        },
+        {
+          "d": "steigern",
+          "e": "to raise"
+        }
+      ]
+    },
+    {
+      "w": "katastrophal",
+      "t": "adjective",
+      "e": "catastrophic",
+      "syn": [
+        {
+          "d": "verheerend",
+          "e": "devastating"
+        },
+        {
+          "d": "schwerwiegend",
+          "e": "serious"
+        }
+      ],
+      "ant": [
+        {
+          "d": "harmlos",
+          "e": "harmless"
+        },
+        {
+          "d": "positiv",
+          "e": "positive"
+        }
+      ]
+    }
+  ]
+}
